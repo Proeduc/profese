@@ -1,0 +1,59 @@
+.login{
+    width: 80%;
+    border: 1px solid black;
+    margin: auto; 
+    display: flex;
+    margin-top: 20px;
+}
+.login_text{
+    width: 45%;
+    background-color: rgb(146, 66, 93);
+    padding-top: 30px;
+    padding-left: 80px;
+    min-height: 350px; 
+    color: white;
+}
+.login_text p{
+    max-width: 350px;
+    margin-top: 10px;
+}
+.login_text a{
+    color: white;
+}
+
+.login_input{
+    width: 45%;
+    padding: 20px;
+}
+.social_login, .manual_login{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.social_login button{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10px;
+    line-height: 30px;
+    background-color: transparent;
+    border-radius: 20px;
+    outline: none;
+    font-weight: bolder;
+}
+
+.manual_login input, label, button{
+    width: 75%; 
+    margin: auto;
+    border-radius: 10px;
+    line-height: 30px;
+    outline: none;
+}
+.manual_login button{
+    background-color: rgb(192, 192, 192);
+}
+.manual_login a{
+    margin: auto;
+    margin-top: 10px;
+    color: slateblue;
+    text-decoration: none;
+}
