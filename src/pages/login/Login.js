@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
 import './Login.css';
-import { db, auth, provider } from '../../firebase';
+import { db, auth, provider, providerFacebook } from '../../firebase';
 
 function Login() {
   const [mail, setMail] = useState('');
@@ -25,7 +25,21 @@ function Login() {
     history.push('/');
   };
 
-  const logInFacebook = () => {};
+  const logInFacebook = () => {
+    //facebook popup
+    auth
+      .signInWithPopup(providerFacebook)
+      .then((cred) => {
+        //adding user to the database
+        return db.collection('users').doc(cred.user.uid).set({
+          name: cred.user.displayName,
+          id: cred.user.uid,
+        });
+      })
+      .catch((error) => alert(error.message));
+
+    history.push('/');
+  };
 
   const logIn = (e) => {
     e.preventDefault();
