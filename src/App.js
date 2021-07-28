@@ -1,27 +1,59 @@
+import { useEffect } from 'react';
 import './App.css';
 import NavOne from './components/NavOne/NavOne';
 import NavTwo from './components/NavTwo/NavTwo';
 import Home from './components/Home/Home';
 import Signup from './pages/signup/Signup';
 import Login from './pages/login/Login';
-import {Switch, Route} from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom';
+import Profile from './pages/profile/Profile';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectUser, login, logout } from './features/userSlice';
+import { db, auth } from './firebase';
 
 function App() {
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+
+  console.log(user);
+
+  useEffect(() => {
+    auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        // user is logged in
+        dispatch(
+          login({
+            uid: authUser.uid,
+            photo: authUser.photoURL,
+            email: authUser.email,
+            displayName: authUser.displayName,
+          })
+        );
+      } else {
+        // user is logged out
+        dispatch(logout());
+      }
+    });
+  }, []);
+
   return (
     <div className="App">
-       <NavOne />
-       <NavTwo /> 
-       <Switch>
-          <Route exact path="/">
-              <Home />
-          </Route>
-          <Route exact path="/login">
-              <Login />
-          </Route>
-          <Route exact path="/signup">
-              <Signup />
-          </Route>
-       </Switch>
+      <NavOne />
+      <NavTwo />
+      <Switch>
+        <Route exact path="/login">
+          <Login />
+        </Route>
+        <Route exact path="/signup">
+          <Signup />
+        </Route>
+        <Route exact path="/profile">
+          <Profile />
+        </Route>
+        <Route exact path="/">
+          <Home />
+        </Route>
+      </Switch>
     </div>
   );
 }

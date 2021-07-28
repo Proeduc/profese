@@ -8,9 +8,11 @@ function Login() {
   const [mail, setMail] = useState('');
   const [password, setPassword] = useState('');
   const history = useHistory();
+  const [loading, setLoading] = useState(false);
 
   const logInGoogle = () => {
     //gmail popup
+    setLoading(true);
     auth
       .signInWithPopup(provider)
       .then((cred) => {
@@ -22,7 +24,14 @@ function Login() {
       })
       .catch((error) => alert(error.message));
 
-    history.push('/');
+    auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        setLoading(false);
+      }
+    });
+    if (loading === false) {
+      history.push('/profile');
+    }
   };
 
   const logInFacebook = () => {
@@ -38,19 +47,17 @@ function Login() {
       })
       .catch((error) => alert(error.message));
 
-    history.push('/');
+    history.push('profile');
   };
 
   const logIn = (e) => {
     e.preventDefault();
-
     //request with email and password
     auth
       .signInWithEmailAndPassword(mail, password)
       .catch((error) => alert(error.message));
-
     // if response get then redirect
-    history.push('./');
+    history.push('/profile');
   };
   return (
     <>

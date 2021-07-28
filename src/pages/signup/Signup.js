@@ -49,7 +49,7 @@ export default function Signup() {
       });
     });
     // redirect to home page
-    history.push('./');
+    history.push('/profile');
   };
   return (
     <>
