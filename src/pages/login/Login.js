@@ -17,10 +17,14 @@ function Login() {
       .signInWithPopup(provider)
       .then((cred) => {
         //adding user to the database
-        return db.collection('users').doc(cred.user.uid).set({
-          name: cred.user.displayName,
-          id: cred.user.uid,
-        });
+        return db
+          .collection('users')
+          .doc(cred.user.uid)
+          .collection('data')
+          .add({
+            name: cred.user.displayName,
+            id: cred.user.uid,
+          });
       })
       .catch((error) => alert(error.message));
 
@@ -40,10 +44,14 @@ function Login() {
       .signInWithPopup(providerFacebook)
       .then((cred) => {
         //adding user to the database
-        return db.collection('users').doc(cred.user.uid).set({
-          name: cred.user.displayName,
-          id: cred.user.uid,
-        });
+        return db
+          .collection('users')
+          .doc(cred.user.uid)
+          .collection('data')
+          .add({
+            name: cred.user.displayName,
+            id: cred.user.uid,
+          });
       })
       .catch((error) => alert(error.message));
 
