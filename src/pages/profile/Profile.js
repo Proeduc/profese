@@ -3,7 +3,7 @@ import './Profile.css';
 import { auth, firebase } from '../../firebase';
 import { useSelector } from 'react-redux';
 import { selectUser } from '../../features/userSlice';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const Profile = () => {
   const user = useSelector(selectUser);
@@ -24,6 +24,9 @@ const Profile = () => {
           Hello {user?.displayName} {user?.email}
         </h1>
         <button onClick={logOut}>LogOut</button>
+        <Link to="settings">
+          <button className="profile__settings">Settings</button>
+        </Link>
       </div>
     );
   }

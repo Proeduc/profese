@@ -40,7 +40,7 @@ export default function Signup() {
 
     // post request if validate is true
     auth.createUserWithEmailAndPassword(email, password).then((cred) => {
-      return db.collection('users').doc(cred.user.uid).set({
+      return db.collection('users').doc(cred.user.uid).collection('data').add({
         email: email,
         id: cred.user.uid,
         birth_date: birth_date,

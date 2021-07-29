@@ -10,6 +10,7 @@ import Profile from './pages/profile/Profile';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectUser, login, logout } from './features/userSlice';
 import { db, auth } from './firebase';
+import Settings from './pages/settings/Settings';
 
 function App() {
   const user = useSelector(selectUser);
@@ -41,6 +42,9 @@ function App() {
       <NavOne />
       <NavTwo />
       <Switch>
+        <Route exact path="/settings">
+          <Settings />
+        </Route>
         <Route exact path="/login">
           <Login />
         </Route>
