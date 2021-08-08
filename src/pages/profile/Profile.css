@@ -1,0 +1,50 @@
+.user{
+    padding: 1%;
+    background-color: rgb(230, 227, 227); 
+}
+.user_details{
+    background-color: white;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 20px; 
+    border: 1px solid black;
+}
+.profile_pic{
+    height: 150px;
+    width: 180px;
+    margin: auto;
+    border: 1px solid black;
+}
+.user_name{
+    text-align: center;
+    font-weight: bold;
+}
+.user_profile{
+    text-align: center;
+}
+.user_speciality .fa{
+    color: gray;  
+}
+.user_speciality_name{
+    margin-left: 60px;
+}
+.msg_user_btn{
+    margin-left: 40px;
+    padding: 10px;
+    background-color: palevioletred;
+    color: white;
+    font-weight: bold;
+} 
+.user_overview, .user_about{
+    padding: 10px;
+}
+.user_overview_content, .user_about{
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+.user_overview_content p, .user_about p{
+    font-weight: bold;
+    font-size: large;
+} 

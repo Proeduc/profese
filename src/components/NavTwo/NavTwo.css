@@ -1,0 +1,57 @@
+.navtwo{
+    line-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px 10px ;
+}
+
+.navtwo_section{
+    display: flex; 
+}
+
+.link{
+    text-decoration: none;
+    color: palevioletred;
+}
+
+.link:hover, .navtwo_courses .navtwo_dropdn:hover{
+    color: rgb(207, 27, 87);
+}
+
+.navtwo_courses .navtwo_dropdn{
+    background-color: transparent;
+    outline: transparent;
+    border: transparent;
+    font-size: 23px;
+    color: palevioletred;
+    font-weight: bold;
+}
+     
+.dropdn-content {
+    display: none;
+    position: absolute; 
+    float: left;
+    background-color: rgba(255, 255, 255, 0.9);
+    min-width: 160px;  
+    border: 1px solid black;
+    padding: 10px;
+    z-index: 1;
+  }
+  
+.dropdn-content a {
+    color: black; 
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+}
+
+.navtwo_courses:hover .dropdn-content{
+    display: block;
+    cursor: pointer;
+}
+
+.navtwo_courses, .navtwo_services, .navtwo_careers, .navtwo_support, .navtwo_login, .navtwo_signup{
+    font-size: 23px;
+    margin: 10px 20px 10px 20px;
+    font-weight: bolder;
+}
