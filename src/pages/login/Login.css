@@ -30,7 +30,7 @@
     display: flex;
     flex-direction: column;
 }
-.social_login button{
+.social_login .social_btn{
     width: 80%;
     margin: auto;
     margin-bottom: 10px;
@@ -41,14 +41,14 @@
     font-weight: bolder;
 }
 
-.manual_login input, label, button{
+.manual_login input, label, .login_btn{
     width: 75%; 
     margin: auto;
     border-radius: 10px;
     line-height: 30px;
     outline: none;
 }
-.manual_login button{
+.manual_login .login_btn{
     background-color: rgb(192, 192, 192);
 }
 .manual_login a{

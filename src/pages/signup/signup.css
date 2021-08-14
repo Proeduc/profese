@@ -40,7 +40,7 @@
     flex-direction: column;
 }
 
-.signup_form input, label, button{
+.signup_form input, label, .signup_btn{
     width: 75%; 
     margin: auto;
     border-radius: 10px;
@@ -48,7 +48,7 @@
     outline: none;
 }
 
-.signup_form button{
+.signup_form .signup_btn{
     background-color: rgb(192, 192, 192);
 }
 

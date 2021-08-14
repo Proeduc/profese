@@ -80,8 +80,8 @@ function Login() {
 
         <div className="login_input">
           <div className="social_login">
-            <button onClick={logInGoogle}>Continue with Google</button>
-            <button onClick={logInFacebook}>Continue with Facebook</button>
+            <button className="social_btn" onClick={logInGoogle}>Continue with Google</button>
+            <button className="social_btn" onClick={logInFacebook}>Continue with Facebook</button>
           </div>
 
           <div className="manual_login">
