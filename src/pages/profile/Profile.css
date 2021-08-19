@@ -1,4 +1,3 @@
- 
 .user {
   padding: 1%;
   background-color: rgb(230, 227, 227);
@@ -30,7 +29,7 @@
 }
 .msg_user_btn {
   padding: 10px;
-  background-color:#153280;
+  background-color:palevioletred;
   color: white;
   font-weight: bold;
   width: 70%;
