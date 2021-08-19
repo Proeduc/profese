@@ -1,59 +1,52 @@
-.login{
-    width: 80%;
+.login{ 
+    margin-top: 50px;
+    min-height: 50vh;
     border: 1px solid black;
-    margin: auto; 
-    display: flex;
+}
+.login_input{
     margin-top: 20px;
 }
-.login_text{
-    width: 45%;
-    background-color: rgb(146, 66, 93);
-    padding-top: 30px;
-    padding-left: 80px;
-    min-height: 350px; 
-    color: white;
+.social_login, .manual_login{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.login_text p{
-    max-width: 350px;
-    margin-top: 10px;
+.social_login .g_btn, .f_btn{
+    width: 80%;
+    margin: 10px;
+    border-radius: 20px;
+    font-weight: bold; 
+    cursor: pointer;
+}
+.f_btn:focus,.f_btn:active, .g_btn:focus, .g_btn:active {
+   outline: none !important;
+   box-shadow: none;
+   background-color: #153280;
+   color: white;
+}
+.manual_login{
+    width: 80%; 
+    align-items: flex-start;
+}
+.manual_login input, .login_btn{
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.manual_login label{
+    color: #153280;
+}
+.login_text{
+    padding: 5%;
+    background-color: #153280;
+    color: white;
+    min-height: 50vh; 
 }
 .login_text a{
     color: white;
+    text-decoration: underline;
+}
+.login_text h1{
+    font-size: 40px;
 }
 
-.login_input{
-    width: 45%;
-    padding: 20px;
-}
-.social_login, .manual_login{
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-}
-.social_login .social_btn{
-    width: 80%;
-    margin: auto;
-    margin-bottom: 10px;
-    line-height: 30px;
-    background-color: transparent;
-    border-radius: 20px;
-    outline: none;
-    font-weight: bolder;
-}
-
-.manual_login input, label, .login_btn{
-    width: 75%; 
-    margin: auto;
-    border-radius: 10px;
-    line-height: 30px;
-    outline: none;
-}
-.manual_login .login_btn{
-    background-color: rgb(192, 192, 192);
-}
-.manual_login a{
-    margin: auto;
-    margin-top: 10px;
-    color: slateblue;
-    text-decoration: none;
-}
+ 
