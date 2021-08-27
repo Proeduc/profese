@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectUser, login, logout } from './features/userSlice';
 import { db, auth } from './firebase';
 import Settings from './pages/settings/Settings';
+import Reviews from './pages/reviews/Reviews';
 
 function App() {
   const user = useSelector(selectUser);
@@ -53,6 +54,9 @@ function App() {
         </Route>
         <Route exact path="/profile">
           <Profile />
+        </Route>
+        <Route exact path="/reviews">
+          <Reviews />
         </Route>
         <Route exact path="/">
           <Home />

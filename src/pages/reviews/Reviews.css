@@ -1,0 +1,49 @@
+.review_header_title{
+    background-color: #153280;
+    width: max-content;
+    border-radius: 15px;
+    color: white;
+    padding: 5px 25px 5px 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.review_header_content1{
+    font-weight: bold; 
+}
+.row{
+    padding: 10px; 
+    color: black;
+    margin-top: 20px;
+}
+.reviews{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 15px;
+    background-color: rgb(216, 216, 214);
+} 
+.review{ 
+    min-width: 350px;
+    height: 250px;
+    object-fit: contain; 
+    transition: transform 400ms;
+    margin-right: 30px; 
+    background-color: white;
+    box-shadow: 4px 4px 8px rgb(185, 185, 185);
+}
+.review:hover{
+    transform: scale(1.06); 
+} 
+.review_content{
+    padding: 10px;
+}
+.img-circle{
+    padding-top: 12px;
+}
+.review_button{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 200px;
+    height: 50px;
+    font-size: large;
+}

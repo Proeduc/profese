@@ -10,7 +10,8 @@ export default function NavOne() {
             <div className="container-fluid">
                 <div className="navbar-header">
                     <ul className="nav navbar-nav">
-                        <li><NavLink to="#"><i className="fa fa-twitter"></i></NavLink></li>
+                        <li><NavLink to="#"><i className="fa fa-linkedin"></i></NavLink></li>
+                        <li><NavLink to="#"><i className="fa fa-whatsapp"></i></NavLink></li>
                         <li><NavLink to="#"><i className="fa fa-facebook-f"></i></NavLink></li>
                         <li><NavLink to="#"><i className="fa fa-instagram"></i></NavLink></li>
                     </ul>
@@ -21,7 +22,7 @@ export default function NavOne() {
                     <li><NavLink to="#">BLOGS</NavLink></li>
                     <li><NavLink to="#">DISCUSSION BOARD</NavLink></li>
                     <li><NavLink to="#">ASK A TUTOR</NavLink></li>
-                    <li><NavLink to="#">REVIEWS</NavLink></li>
+                    <li><NavLink to="/reviews">REVIEWS</NavLink></li>
                 </ul>
             </div>
         </nav> 
