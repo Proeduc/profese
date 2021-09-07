@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+
+.home {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.home_main {
+  background-image: url('./bg.jpg');
+  height: 90vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.home_banner {
+  position: absolute;
+  left: 0;
+  top: 35%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  min-height: 30vh;
+  border-radius: 5px;
+}
+.home_banner h1 {
+  /* font-family: 'Oxygen', sans-serif; */
+  font-weight: bold;
+}
+.home_banner h3 {
+  /* font-family: 'Oxygen', sans-serif; */
+}
+.home_banner button {
+  font-size: large;
+  margin: 20px 0 20px 0;
+}
+.home_down {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -100%);
+  text-align: center;
+}
+.home_down p {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.home_btn_down {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+.home_btn_down .fa-angle-down {
+  color: white;
+  font-weight: bolder;
+  font-size: 30px;
+}
+.search {
+  min-height: 30vh;
+  padding: 30px;
+  display: grid;
+  place-items: center;
+}
+.search > form {
+  width: 100%;
+}
+.input-group .form-control:first-child,
+.input-group-btn:last-child > .btn {
+  height: 50px;
+}
+.inp,
+.search_btn {
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.search_btn {
+  border-radius: 20px;
+  width: 80px;
+}
+.lesson_details {
+  background-color: rgb(236, 236, 236);
+  padding: 20px;
+  /* font-family: 'Oxygen', sans-serif; */
+}
+.lesson_details h1 {
+  text-align: center;
+  color: #153280;
+  font-weight: bolder;
+  font-size: 50px;
+}
+.lesson_details h2 {
+  color: black;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+.lesson_details_text {
+  padding-top: 100px;
+}
+.lesson_details_text h3 i {
+  margin: 0 20px 0 20px;
+}
+.lesson_details_image img {
+  width: 100%;
+}

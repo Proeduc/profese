@@ -1,0 +1,15 @@
+.navbar {
+  margin-bottom: 10px;
+  border-radius: 0;
+}
+
+ul > li:before {
+  content: none !important;
+}
+
+.navbar__one {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}

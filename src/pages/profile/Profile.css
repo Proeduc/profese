@@ -1,0 +1,88 @@
+.user {
+  padding: 1%;
+  background-color: rgb(230, 227, 227);
+  height: calc(100vh - 125px);
+}
+.user_details {
+  background-color: white;
+  margin-left: 3%;
+  margin-right: 3%;
+  padding: 20px;
+}
+.profile_pic {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  object-fit: fill;
+  border-radius: 100%;
+}
+.user_name {
+  text-align: center;
+  font-weight: bold;
+}
+.profile__userProfile {
+  width: 100%;
+  text-align: center;
+}
+.user_speciality .fa {
+  color: gray;
+}
+.user_speciality_name {
+  text-align: center;
+}
+.msg_user_btn {
+  padding: 10px;
+  background-color: palevioletred;
+  color: white;
+  font-weight: bold;
+  width: 70%;
+  margin-left: 15% !important;
+  margin-right: 15% !important;
+}
+.user_overview,
+.user_about {
+  padding: 10px;
+}
+.user_overview_content,
+.user_about {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+.user_overview_content p,
+.user_about p {
+  font-weight: bold;
+  font-size: large;
+}
+
+.user__overviewDescription {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.user__overviewDescription:hover {
+  background-color: rgb(212, 212, 212);
+}
+
+.profile__save {
+  cursor: pointer;
+  font-size: 20px !important;
+  margin-left: 10px;
+}
+
+.profile__edition {
+  display: flex;
+  align-items: center;
+}
+
+.profile__input {
+  width: 90%;
+}
+
+.profile__authentication {
+  width: 100%;
+  margin-top: 20%;
+  display: grid;
+  place-items: center;
+}
