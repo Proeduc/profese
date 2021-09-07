@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 import { selectUser } from '../../features/userSlice'
 import { Link, useHistory } from 'react-router-dom'
 import { auth, firebase } from '../../firebase'
+import logo from './logo.png'
 
 export default function NavTwo() {
   const user = useSelector(selectUser)
@@ -51,8 +52,8 @@ export default function NavTwo() {
           <li>
             <img
               class="img-responsive"
-              style={{ height: '60px' }}
-              src="https://profilersuzanne.com/wp-content/uploads/2018/02/logo-dummy.png"
+              style={{ height: '65px', width:'150px' }}
+              src={logo}
               alt="logo"
             />
           </li>
