@@ -24,9 +24,9 @@
   /* font-family: 'Oxygen', sans-serif; */
   font-weight: bold;
 }
-.home_banner h3 {
-  /* font-family: 'Oxygen', sans-serif; */
-}
+/* .home_banner h3 {
+  font-family: 'Oxygen', sans-serif; 
+} */
 .home_banner button {
   font-size: large;
   margin: 20px 0 20px 0;
@@ -100,4 +100,27 @@
 }
 .lesson_details_image img {
   width: 100%;
+} 
+.reviews__home{
+  margin: 60px;
+}
+.reviews_row__home {
+  display: flex; 
+  align-items: center;
+}
+.review__home{
+  min-width: 30%;
+  height: 250px;
+  object-fit: contain;
+  transition: transform 400ms;
+  margin-right: 1.5%;
+  background-color: white;
+  box-shadow: 4px 4px 8px rgb(185 185 185);
+}
+.view__more__btn{
+  border-radius: 50%; 
+}
+.view__more__btn:hover{
+  background-color: rgb(207, 215, 226);
+  color: #153280;
 }

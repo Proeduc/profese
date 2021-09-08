@@ -4,6 +4,7 @@ import image from './img.png'
 import Services from './Services/Services'
 import Slide from 'react-reveal/Slide'
 import Fade from 'react-reveal/Fade'
+import { NavLink } from 'react-router-dom'
 
 function Home() {
   return (
@@ -50,6 +51,7 @@ function Home() {
           </form>
         </div>
         <Services />{' '}
+
         <Fade>
           <div className="container-fluid lesson_details">
             <h1>Online lessons. Just for you</h1>
@@ -75,6 +77,83 @@ function Home() {
             </div>
           </div>
         </Fade>
+           
+        <div className="reviews__home container-fluid">
+          <div className="reviews_row__home container">
+             <div className="review__home">
+                <div className="reviewer_profile row">
+                    <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                      <img
+                        className="profile_img img-responsive img-circle"
+                        alt=""
+                        src="https://picsum.photos/id/237/100/90"
+                      ></img>
+                    </div>
+                    <div className="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                      <h3 className="username">User Name</h3>
+                      <p>Student at XYZ University</p>
+                    </div>
+                </div>
+                <div className="review_content">
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s.
+                    </p>
+                </div>
+             </div>
+
+             <div className="review__home">
+                <div className="reviewer_profile row">
+                    <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                      <img
+                        className="profile_img img-responsive img-circle"
+                        alt=""
+                        src="https://picsum.photos/id/237/100/90"
+                      ></img>
+                    </div>
+                    <div className="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                      <h3 className="username">User Name</h3>
+                      <p>Student at XYZ University</p>
+                    </div>
+                </div>
+                <div className="review_content">
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s.
+                    </p>
+                </div>
+             </div>
+
+             <div className="review__home">
+                <div className="reviewer_profile row">
+                    <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                      <img
+                        className="profile_img img-responsive img-circle"
+                        alt=""
+                        src="https://picsum.photos/id/237/100/90"
+                      ></img>
+                    </div>
+                    <div className="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                      <h3 className="username">User Name</h3>
+                      <p>Student at XYZ University</p>
+                    </div>
+                </div>
+                <div className="review_content">
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum has been the industry's
+                      standard dummy text ever since the 1500s.
+                    </p>
+                </div>
+              </div>
+
+              <div className="view_more">
+                <NavLink className="view__more__btn btn btn-primary" to='/reviews'><i class="glyphicon glyphicon-arrow-right"></i></NavLink>
+              </div>
+          </div>
+        </div>
       </div>
     </>
   )
