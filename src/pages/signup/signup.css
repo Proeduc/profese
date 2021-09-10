@@ -32,3 +32,29 @@
 .signup_text h1 {
   font-size: 30px;
 }
+
+@media(max-width:650px){
+  .signup{
+    margin-top: 0;
+  }
+  .signup_text{
+    min-height: 0;
+    background-color: white;
+    color:#153280;
+    text-align: center;
+  }
+  .signup_text a {
+    color: #153280;
+    text-decoration: underline;
+  }
+  .signup_text h1 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .signup_text h4{
+    font-size: 12px;
+  }
+  .manual_signup{
+    width: 90%;
+  }
+}
