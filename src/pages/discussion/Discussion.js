@@ -89,7 +89,7 @@ function Discussion() {
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
                 </p>
-                <div className="thumbnail">
+                <div className="thumbnail__discussion">
                   <img
                     className="img-responsive"
                     alt=""
@@ -134,7 +134,7 @@ function Discussion() {
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
                 </p>
-                <div className="thumbnail">
+                <div className="thumbnail__discussion">
                   <img
                     className="img-responsive"
                     alt=""
@@ -179,7 +179,7 @@ function Discussion() {
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
                 </p>
-                <div className="thumbnail">
+                <div className="thumbnail__discussion">
                   <img
                     className="img-responsive"
                     alt=""
@@ -224,7 +224,7 @@ function Discussion() {
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
                 </p>
-                <div className="thumbnail">
+                <div className="thumbnail__discussion">
                   <img
                     className="img-responsive"
                     alt=""

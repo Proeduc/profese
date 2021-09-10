@@ -110,7 +110,7 @@
 }
 .review__home{
   min-width: 30%;
-  height: 250px;
+  height: 30%;
   object-fit: contain;
   transition: transform 400ms;
   margin-right: 1.5%;
@@ -118,9 +118,24 @@
   box-shadow: 4px 4px 8px rgb(185 185 185);
 }
 .view__more__btn{
-  border-radius: 50%; 
+  border-radius: 10%; 
 }
 .view__more__btn:hover{
   background-color: rgb(207, 215, 226);
   color: #153280;
+}
+
+@media(max-width:650px){
+  .reviews_row__home{
+    flex-direction: column;
+  }
+  .review__home{
+    margin-bottom: 10px;
+  }
+  .view__more__btn{
+    margin-top: 10px;
+  }
+  .search{
+    min-height: 10vh;
+  }
 }

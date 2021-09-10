@@ -150,7 +150,7 @@ function Home() {
               </div>
 
               <div className="view_more">
-                <NavLink className="view__more__btn btn btn-primary" to='/reviews'><i class="glyphicon glyphicon-arrow-right"></i></NavLink>
+                <NavLink className="view__more__btn btn btn-primary" to='/reviews'>More &nbsp;<i class="glyphicon glyphicon-arrow-right"></i></NavLink>
               </div>
           </div>
         </div>
