@@ -18,11 +18,11 @@ function Home() {
                 Excel in your course with personalized 1-on-1 learning and help
                 of our skilled subject experts.
               </h3>
-              <button className="btn btn-primary">FIND A TUTOR</button>
+              <button className="btn btn-primary home__banner__btn">FIND A TUTOR</button>
             </div>
           </Slide>
           <div className="home_down">
-            <p>See how personalized learning can work for you</p>
+            <p className="home__down__text">See how personalized learning can work for you</p>
             <button
               className="home_btn_down"
               onClick={() => {

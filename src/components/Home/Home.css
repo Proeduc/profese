@@ -12,9 +12,9 @@
   background-repeat: no-repeat;
 }
 .home_banner {
-  position: absolute;
+  position: relative;
   left: 0;
-  top: 35%;
+  top: 18%;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 30px;
   min-height: 30vh;
@@ -27,7 +27,7 @@
 /* .home_banner h3 {
   font-family: 'Oxygen', sans-serif; 
 } */
-.home_banner button {
+.home__banner__btn {
   font-size: large;
   margin: 20px 0 20px 0;
 }
@@ -137,5 +137,26 @@
   }
   .search{
     min-height: 10vh;
+  }
+  .home_banner{
+    top: 18%; 
+    height: 50vh;
+    width: 60vw;
+  }
+  .home_banner h1{
+    font-size: 19px;
+  }
+  .home_banner h3{
+    font-size: 14px;
+  }
+  .reviews__home{
+    margin: 0px;
+    margin-top: 20px;
+  }
+  .home__banner__btn{
+    font-size: small;
+  }
+  .home__down__text, .home_btn_down{
+    font-size: small;
   }
 }
