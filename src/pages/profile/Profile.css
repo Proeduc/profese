@@ -86,3 +86,12 @@
   display: grid;
   place-items: center;
 }
+
+@media(max-width:650px){
+  .user_details{
+    margin: 0%;
+  }
+  .user_overview{
+    padding: 20px;
+  }
+}

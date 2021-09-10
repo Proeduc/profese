@@ -66,17 +66,17 @@ const Profile = () => {
             <div className="user_overview_content">
               <p>Overview</p>
               <div className="row">
-                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-6">
                   <h4>
-                    <i class="fa fa-star"></i>5 Reviews
+                    <i className="fa fa-star"></i>&nbsp;5 Reviews
                   </h4>
                 </div>
-                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-6">
                   <h4 className="user__overviewDescription">{description}</h4>
 
                   {/* here i didn't got appropriate icons */}
                 </div>
-                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                   <h4 className="user__overviewDescription">{specialities}</h4>
 
                   {/* here i didn't got appropriate icons */}
