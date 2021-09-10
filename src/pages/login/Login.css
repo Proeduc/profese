@@ -53,3 +53,25 @@
 .login_text h1 {
   font-size: 40px;
 }
+
+@media(max-width:650px){
+  .login{
+    margin-top: 0;
+  }
+  .login_text{
+    min-height: 0;
+    background-color: white;
+    color:#153280;
+    text-align: center;
+  }
+  .login_text a {
+    color: #153280;
+    text-decoration: underline;
+  }
+  .login_text h1 {
+    font-size: 30px;
+  }
+  .login_text h4{
+    font-size: 15px;
+  }
+}
