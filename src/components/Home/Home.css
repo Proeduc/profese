@@ -100,15 +100,15 @@
 }
 .lesson_details_image img {
   width: 100%;
-} 
-.reviews__home{
+}
+.reviews__home {
   margin: 60px;
 }
 .reviews_row__home {
-  display: flex; 
+  display: flex;
   align-items: center;
 }
-.review__home{
+.review__home {
   min-width: 30%;
   height: 30%;
   object-fit: contain;
@@ -117,46 +117,46 @@
   background-color: white;
   box-shadow: 4px 4px 8px rgb(185 185 185);
 }
-.view__more__btn{
-  border-radius: 10%; 
+.view__more__btn {
+  border-radius: 10px;
 }
-.view__more__btn:hover{
-  background-color: rgb(207, 215, 226);
-  color: #153280;
+.view__more__btn:hover {
+  background-color: #153280;
 }
 
-@media(max-width:650px){
-  .reviews_row__home{
+@media (max-width: 650px) {
+  .reviews_row__home {
     flex-direction: column;
   }
-  .review__home{
+  .review__home {
     margin-bottom: 10px;
   }
-  .view__more__btn{
+  .view__more__btn {
     margin-top: 10px;
   }
-  .search{
+  .search {
     min-height: 10vh;
   }
-  .home_banner{
-    top: 18%; 
+  .home_banner {
+    top: 18%;
     height: 50vh;
     width: 60vw;
   }
-  .home_banner h1{
+  .home_banner h1 {
     font-size: 19px;
   }
-  .home_banner h3{
+  .home_banner h3 {
     font-size: 14px;
   }
-  .reviews__home{
+  .reviews__home {
     margin: 0px;
     margin-top: 20px;
   }
-  .home__banner__btn{
+  .home__banner__btn {
     font-size: small;
   }
-  .home__down__text, .home_btn_down{
+  .home__down__text,
+  .home_btn_down {
     font-size: small;
   }
 }

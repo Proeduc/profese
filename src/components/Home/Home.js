@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './Home.css'
 import image from './img.png'
 import Services from './Services/Services'
 import Slide from 'react-reveal/Slide'
 import Fade from 'react-reveal/Fade'
 import { NavLink } from 'react-router-dom'
+import { db } from '../../firebase'
 
 function Home() {
+  const [reviews, setReviews] = useState([])
+
+  useEffect(() => {
+    db.collection('reviews').onSnapshot((snapshot) =>
+      setReviews(
+        snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() })),
+      ),
+    )
+  }, [])
+
   return (
     <>
       <div className="container-fluid home">
@@ -75,12 +86,7 @@ function Home() {
                 </h3>
               </div>
               <div className="lesson_details_image col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <img
-                  alt=""
-                  className="img-responsive"
-                  src={image}
-                  alt="image"
-                />
+                <img alt="" className="img-responsive" src={image} alt="" />
               </div>
             </div>
           </div>
@@ -89,74 +95,26 @@ function Home() {
           {' '}
           <h1 style={{ textAlign: 'center', marginBottom: '50px' }}>Reviews</h1>
           <div className="reviews_row__home container">
-            <div className="review__home">
-              <div className="reviewer_profile row">
-                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                  <img
-                    className="profile_img img-responsive img-circle"
-                    alt=""
-                    src="https://picsum.photos/id/237/100/90"
-                  ></img>
+            {reviews.map((r) => (
+              <div className="review">
+                <div className="reviewer_profile row">
+                  <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <img
+                      className="profile_img img-responsive img-circle"
+                      alt=""
+                      src={r.data.image}
+                    ></img>
+                  </div>
+                  <div className="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <h3 className="username">{r.data.name}</h3>
+                    <p>Student at {r.data.university}</p>
+                  </div>
                 </div>
-                <div className="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                  <h3 className="username">User Name</h3>
-                  <p>Student at XYZ University</p>
-                </div>
-              </div>
-              <div className="review_content">
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s.
-                </p>
-              </div>
-            </div>
-
-            <div className="review__home">
-              <div className="reviewer_profile row">
-                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                  <img
-                    className="profile_img img-responsive img-circle"
-                    alt=""
-                    src="https://picsum.photos/id/237/100/90"
-                  ></img>
-                </div>
-                <div className="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                  <h3 className="username">User Name</h3>
-                  <p>Student at XYZ University</p>
+                <div className="review_content">
+                  <p>{r.data.text}</p>
                 </div>
               </div>
-              <div className="review_content">
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s.
-                </p>
-              </div>
-            </div>
-
-            <div className="review__home">
-              <div className="reviewer_profile row">
-                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                  <img
-                    className="profile_img img-responsive img-circle"
-                    alt=""
-                    src="https://picsum.photos/id/237/100/90"
-                  ></img>
-                </div>
-                <div className="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                  <h3 className="username">User Name</h3>
-                  <p>Student at XYZ University</p>
-                </div>
-              </div>
-              <div className="review_content">
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s.
-                </p>
-              </div>
-            </div>
+            ))}
 
             <div className="view_more">
               <NavLink
