@@ -1,14 +1,23 @@
 .user {
-  padding: 1%;
+  display: grid;
+  place-items: center;
   background-color: rgb(230, 227, 227);
   height: calc(100vh - 125px);
+  width: 100%;
+  padding-bottom: 30px;
 }
+
+.user__container {
+  display: flex;
+  max-width: 1000px;
+}
+
 .user_details {
   background-color: white;
-  margin-left: 3%;
-  margin-right: 3%;
   padding: 20px;
+  min-width: 300px;
 }
+
 .profile_pic {
   height: 100px;
   width: 100px;
@@ -16,20 +25,25 @@
   object-fit: fill;
   border-radius: 100%;
 }
+
 .user_name {
   text-align: center;
   font-weight: bold;
 }
+
 .profile__userProfile {
   width: 100%;
   text-align: center;
 }
+
 .user_speciality .fa {
   color: gray;
 }
+
 .user_speciality_name {
   text-align: center;
 }
+
 .msg_user_btn {
   padding: 10px;
   background-color: palevioletred;
@@ -39,15 +53,19 @@
   margin-left: 15% !important;
   margin-right: 15% !important;
 }
-.user_overview,
-.user_about {
-  padding: 10px;
+.profile__reviews {
+  margin-top: 10px;
 }
+
+.user_about {
+  margin-top: 20px;
+}
+
 .user_overview_content,
 .user_about {
   background-color: white;
-  padding: 10px;
-  margin-bottom: 30px;
+  padding: 20px;
+  margin-left: 20px;
 }
 .user_overview_content p,
 .user_about p {
@@ -59,10 +77,6 @@
   cursor: pointer;
   padding: 10px;
   border-radius: 10px;
-}
-
-.user__overviewDescription:hover {
-  background-color: rgb(212, 212, 212);
 }
 
 .profile__save {
@@ -85,13 +99,4 @@
   margin-top: 20%;
   display: grid;
   place-items: center;
-}
-
-@media(max-width:650px){
-  .user_details{
-    margin: 0%;
-  }
-  .user_overview{
-    padding: 20px;
-  }
 }
