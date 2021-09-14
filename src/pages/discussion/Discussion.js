@@ -64,7 +64,7 @@ function Discussion() {
 
             <div className="discussions">
               {topics.map((t) => (
-                <>
+                <div className="discussion__question">
                   <div className="discussions_profile discussion__row">
                     <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                       <img
@@ -101,15 +101,8 @@ function Discussion() {
                   </div>
                   <div className="discussions_ans">
                     <p>{t.data.text}</p>
-                    <div className="thumbnail__discussion">
-                      <img
-                        className="img-responsive"
-                        alt=""
-                        src="https://picsum.photos/id/237/300/100"
-                      ></img>
-                    </div>
                   </div>
-                </>
+                </div>
               ))}
             </div>
           </div>

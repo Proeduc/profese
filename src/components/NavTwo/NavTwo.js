@@ -18,14 +18,14 @@ export default function NavTwo() {
   }
 
   return (
-    <nav class="navbar navtwo">
-      <div class="container-fluid">
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
+    <nav className="navbar navtwo">
+      <div className="container-fluid navbarTwoMobile">
+        <ul className="nav navbarOption navbar-nav">
+          <li className="dropdown">
             <NavLink class="dropdown-toggle" data-toggle="dropdown" to="#">
               Courses &nbsp;<span className="caret"></span>
             </NavLink>
-            <ul class="dropdown-menu">
+            <ul className="dropdown-menu">
               <li>
                 <NavLink to="#">Mathematics</NavLink>
               </li>
@@ -52,7 +52,7 @@ export default function NavTwo() {
           <li>
             <img
               class="img-responsive"
-              style={{ height: '65px', width:'150px' }}
+              style={{ height: '65px', width: '150px' }}
               src={logo}
               alt="logo"
             />

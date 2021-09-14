@@ -72,15 +72,26 @@
   flex-direction: column;
   width: 100%;
   justify-content: center;
+  padding-top: 50px;
 }
 .form__input {
   width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .form__textArea {
   width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn-ask {
   width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.discussion__question {
+  margin-top: 50px;
 }
