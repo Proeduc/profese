@@ -18,7 +18,7 @@
 .thumbnail img {
   width: 100%;
   height: 40vh;
-  object-fit: fill;
+  object-fit: cover;
 }
 .thumbnail h1,
 .thumbnail h4 {
@@ -36,4 +36,3 @@
   margin-left: 25% !important;
   margin-right: 25% !important;
 }
- 
