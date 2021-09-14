@@ -6,6 +6,7 @@ import { Link, useHistory } from 'react-router-dom'
 import Footer from '../../components/Footer/Footer'
 import SaveIcon from '@material-ui/icons/Save'
 import { db } from '../../firebase'
+import Loader from 'react-loader-spinner'
 
 const Profile = () => {
   const user = useSelector(selectUser)
@@ -32,7 +33,17 @@ const Profile = () => {
 
   if (!user) {
     return (
-      <h1 className="profile__authentication">Proceeding Authentication....</h1>
+      <div
+        style={{
+          height: 'calc(100vh - 125px)',
+          width: '100%',
+          display: 'grid',
+          placeItems: 'center',
+          backgroundColor: 'rgb(230, 227, 227)',
+        }}
+      >
+        <Loader type="ThreeDots" color="#153280" height={120} width={120} />
+      </div>
     )
   } else {
     return (
