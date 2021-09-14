@@ -8,7 +8,7 @@ import SaveIcon from '@material-ui/icons/Save'
 import { db } from '../../firebase'
 import Loader from 'react-loader-spinner'
 
-const Profile = () => {
+const Profile = ({ avatarUrl }) => {
   const user = useSelector(selectUser)
   const history = useHistory()
 
@@ -51,11 +51,21 @@ const Profile = () => {
         <div className="user">
           <div className="user__container">
             <div className="user_details">
-              <img
-                className="profile_pic img-responsive"
-                src={`${user?.photo}`}
-                alt=""
-              ></img>
+              {avatarUrl === '' && (
+                <img
+                  className="profile_pic img-responsive"
+                  src={`${user?.photo}`}
+                  alt=""
+                />
+              )}
+              {avatarUrl !== '' && (
+                <img
+                  className="profile_pic img-responsive"
+                  src={`${avatarUrl}`}
+                  alt=""
+                />
+              )}
+
               <h2 className="user_name">{user?.displayName}</h2>
               <p className="profile__userProfile">User Profile</p>
               <div className="user_speciality">

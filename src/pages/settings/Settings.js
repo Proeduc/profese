@@ -2,20 +2,22 @@ import React, { useEffect, useState } from 'react'
 import './Settings.css'
 import { db, firebase, storage } from '../../firebase'
 import { selectUser } from '../../features/userSlice'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { Avatar } from '@material-ui/core'
+import { login, logout } from '../../features/userSlice'
 
 const Settings = () => {
   const user = useSelector(selectUser)
+  const dispatch = useDispatch()
   const [image, setImage] = useState(null)
   const [userData, setUserData] = useState([])
   //inputs
   const [specialities, setSpecialities] = useState('')
   const [description, setDescription] = useState('')
   const [about, setAbout] = useState('')
+  const [avatar, setAvatar] = useState(user?.photo)
+  const [avatarUrl, setAvatarUrl] = useState('')
   const [progress, setProgress] = useState(null)
-
-  console.log(user)
 
   useEffect(() => {
     db.collection('users')
@@ -30,12 +32,20 @@ const Settings = () => {
           setAbout(`${doc.data().about}`)
           setDescription(`${doc.data().description}`)
           setSpecialities(`${doc.data().specialities}`)
+          setAvatarUrl(`${doc.data().avatarUrl}`)
         }
       })
+    if (avatarUrl !== '') {
+      dispatch(
+        login({
+          photo: avatarUrl,
+        }),
+      )
+    }
   }, [user?.uid])
 
   console.table(userData)
-  console.log(about, specialities, description)
+  console.log(about, specialities, description, avatarUrl, user?.photo)
 
   const handleChange = (e) => {
     if (e.target.files[0]) {
@@ -44,43 +54,43 @@ const Settings = () => {
     }
   }
 
-  const changeAvatar = () => {
+  const uploadAvatar = () => {
     if (image) {
       const uploadTask = storage.ref(`images/${image.name}`).put(image)
 
       uploadTask.on(
         'state_changed',
-
-        uploadTask.on(
-          'state_changed',
-          (snapshot) => {
-            // progress
-            const progress = Math.round(
-              (snapshot.bytesTransferred / snapshot.totalBytes) * 100,
-            )
-            setProgress(progress)
-          },
-          (error) => {
-            // Error
-            console.log('ERRROR', error)
-            alert(error.message)
-          },
-          () => {
-            // complete
-            storage
-              .ref('images')
-              .child(image.name)
-              .getDownloadURL()
-              .then((url) => {
-                //post image
-                db.collection('users').doc(user.uid).collection('avatar').add({
-                  timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-                  image: url,
+        (snapshot) => {
+          // progress
+          const progress = Math.round(
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100,
+          )
+          setProgress(progress)
+        },
+        (error) => {
+          // Error
+          console.log('ERRROR', error)
+          alert(error.message)
+        },
+        () => {
+          // complete
+          storage
+            .ref('images')
+            .child(image.name)
+            .getDownloadURL()
+            .then((url) => {
+              //post image
+              db.collection('users')
+                .doc(user?.uid)
+                .collection('data')
+                .doc('data')
+                .update({
+                  avatarUrl: url,
                 })
-                setImage(null)
-              })
-          },
-        ),
+              setAvatar(url)
+              setImage(null)
+            })
+        },
       )
     }
   }
@@ -98,17 +108,41 @@ const Settings = () => {
     <div className="settings">
       {/* <button onClick={addSth}>addSth</button> */}
       <div className="settings__container">
-        <input
-          onChange={handleChange}
-          className="settings__inputFile"
-          type="file"
-        />
-        <Avatar
-          className="settings__avatar"
-          onClick={changeAvatar}
-          src={user?.photo}
-          alt=""
-        />
+        <div className="settings__inuptFileContainer">
+          <input
+            onChange={handleChange}
+            className="settings__inputFile"
+            type="file"
+          />
+          <button className="settings__buttonInput btn-primary">
+            Pick new photo
+          </button>
+
+          <button
+            onClick={uploadAvatar}
+            className="settings__button btn-primary"
+          >
+            Save avatar
+          </button>
+        </div>
+        <progress className="settings__progress" value={progress} max="100" />
+        {avatarUrl !== null && (
+          <Avatar
+            onClick={uploadAvatar}
+            className="settings__avatar"
+            src={avatarUrl}
+            alt=""
+          />
+        )}
+        {avatarUrl === null && (
+          <Avatar
+            onClick={uploadAvatar}
+            className="settings__avatar"
+            src={avatar}
+            alt=""
+          />
+        )}
+
         <div>
           <div className="settings__row">
             {' '}
@@ -147,10 +181,6 @@ const Settings = () => {
           >
             Actualization
           </button>
-        </div>
-
-        <div className="settings__payment">
-          <h2>Payment details</h2>
         </div>
       </div>
     </div>

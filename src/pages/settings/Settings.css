@@ -35,3 +35,26 @@
   height: 100px !important;
   cursor: pointer;
 }
+.settings__inuptFileContainer {
+  display: flex;
+}
+
+.settings__inputFile {
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+}
+
+.settings__buttonInput {
+  position: absolute;
+  z-index: 0;
+}
+
+.settings__button {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.settings__progress {
+  opacity: 0;
+}

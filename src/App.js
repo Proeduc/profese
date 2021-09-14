@@ -1,25 +1,39 @@
-import { useEffect } from 'react';
-import './App.css';
-import NavOne from './components/NavOne/NavOne';
-import NavTwo from './components/NavTwo/NavTwo';
-import Home from './components/Home/Home';
-import Signup from './pages/signup/Signup';
-import Login from './pages/login/Login';
-import { Switch, Route } from 'react-router-dom';
-import Profile from './pages/profile/Profile';
-import { useDispatch, useSelector } from 'react-redux';
-import { selectUser, login, logout } from './features/userSlice';
-import { db, auth } from './firebase';
-import Settings from './pages/settings/Settings';
-import Reviews from './pages/reviews/Reviews';
-import Discussion from './pages/discussion/Discussion';
-import Ask_a_ques from './pages/discussion/Ask_a_ques';
+import { useEffect, useState } from 'react'
+import './App.css'
+import NavOne from './components/NavOne/NavOne'
+import NavTwo from './components/NavTwo/NavTwo'
+import Home from './components/Home/Home'
+import Signup from './pages/signup/Signup'
+import Login from './pages/login/Login'
+import { Switch, Route } from 'react-router-dom'
+import Profile from './pages/profile/Profile'
+import { useDispatch, useSelector } from 'react-redux'
+import { selectUser, login, logout } from './features/userSlice'
+import { db, auth } from './firebase'
+import Settings from './pages/settings/Settings'
+import Reviews from './pages/reviews/Reviews'
+import Discussion from './pages/discussion/Discussion'
+import Ask_a_ques from './pages/discussion/Ask_a_ques'
 
 function App() {
-  const user = useSelector(selectUser);
-  const dispatch = useDispatch();
+  const user = useSelector(selectUser)
+  const dispatch = useDispatch()
+  const [avatarUrl, setAvatarUrl] = useState('')
 
-  console.log(user);
+  console.log(user)
+
+  useEffect(() => {
+    db.collection('users')
+      .doc(user?.uid)
+      .collection('data')
+      .doc('data')
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          setAvatarUrl(`${doc.data().avatarUrl}`)
+        }
+      })
+  }, [user?.uid])
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
@@ -31,14 +45,16 @@ function App() {
             photo: authUser.photoURL,
             email: authUser.email,
             displayName: authUser.displayName,
-          })
-        );
+          }),
+        )
       } else {
         // user is logged out
-        dispatch(logout());
+        dispatch(logout())
       }
-    });
-  }, []);
+    })
+  }, [])
+
+  console.log(avatarUrl)
 
   return (
     <div className="App">
@@ -55,7 +71,7 @@ function App() {
           <Signup />
         </Route>
         <Route exact path="/profile">
-          <Profile />
+          <Profile avatarUrl={avatarUrl} />
         </Route>
         <Route exact path="/reviews">
           <Reviews />
@@ -67,14 +83,14 @@ function App() {
           <Ask_a_ques />
         </Route>
         <Route exact path="/settings">
-          <Settings/>
+          <Settings />
         </Route>
         <Route exact path="/">
           <Home />
         </Route>
       </Switch>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
