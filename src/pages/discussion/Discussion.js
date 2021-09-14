@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import './Discussion.css'
+import { db, firebase } from '../../firebase'
 
 function Discussion() {
+  const [topics, setTopics] = useState([])
+
+  useEffect(() => {
+    db.collection('topics').onSnapshot((snapshot) =>
+      setTopics(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))),
+    )
+  }, [])
+
+  console.table(topics[0])
   return (
     <>
       <div className="container-fluid">
@@ -53,185 +63,54 @@ function Discussion() {
             </h2>
 
             <div className="discussions">
-              <div className="discussions_profile discussion__row">
-                <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                  <img
-                    className="profile_img img-responsive img-circle"
-                    alt=""
-                    src="https://picsum.photos/id/237/100/90"
-                  ></img>
-                </div>
-                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                  <h3 className="username">Posted by User Name</h3>
-                  <p>
-                    Answered by XYZ{' '}
-                    <span style={{ fontWeight: 'bold' }}>19 AUG 2021</span>
-                  </p>
-                </div>
-                <div className="likes col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                  <span className="glyphicon glyphicon-thumbs-up">
-                    &nbsp;19
-                  </span>
-                  &nbsp;&nbsp;
-                  <span className="glyphicon glyphicon-thumbs-down">
-                    &nbsp;3
-                  </span>
-                </div>
-              </div>
-              <div className="discussions_que">
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry?
-                </p>
-              </div>
-              <div className="discussions_ans">
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-                <div className="thumbnail__discussion">
-                  <img
-                    className="img-responsive"
-                    alt=""
-                    src="https://picsum.photos/id/237/300/100"
-                  ></img>
-                </div>
-              </div>
-
-              <div className="discussions_profile discussion__row">
-                <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                  <img
-                    className="profile_img img-responsive img-circle"
-                    alt=""
-                    src="https://picsum.photos/id/237/100/90"
-                  ></img>
-                </div>
-                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                  <h3 className="username">Posted by User Name</h3>
-                  <p>
-                    Answered by XYZ{' '}
-                    <span style={{ fontWeight: 'bold' }}>19 AUG 2021</span>
-                  </p>
-                </div>
-                <div className="likes col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                  <span className="glyphicon glyphicon-thumbs-up">
-                    &nbsp;19
-                  </span>
-                  &nbsp;&nbsp;
-                  <span className="glyphicon glyphicon-thumbs-down">
-                    &nbsp;3
-                  </span>
-                </div>
-              </div>
-              <div className="discussions_que">
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry?
-                </p>
-              </div>
-              <div className="discussions_ans">
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-                <div className="thumbnail__discussion">
-                  <img
-                    className="img-responsive"
-                    alt=""
-                    src="https://picsum.photos/id/237/300/100"
-                  ></img>
-                </div>
-              </div>
-
-              <div className="discussions_profile discussion__row">
-                <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                  <img
-                    className="profile_img img-responsive img-circle"
-                    alt=""
-                    src="https://picsum.photos/id/237/100/90"
-                  ></img>
-                </div>
-                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                  <h3 className="username">Posted by User Name</h3>
-                  <p>
-                    Answered by XYZ{' '}
-                    <span style={{ fontWeight: 'bold' }}>19 AUG 2021</span>
-                  </p>
-                </div>
-                <div className="likes col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                  <span className="glyphicon glyphicon-thumbs-up">
-                    &nbsp;19
-                  </span>
-                  &nbsp;&nbsp;
-                  <span className="glyphicon glyphicon-thumbs-down">
-                    &nbsp;3
-                  </span>
-                </div>
-              </div>
-              <div className="discussions_que">
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry?
-                </p>
-              </div>
-              <div className="discussions_ans">
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-                <div className="thumbnail__discussion">
-                  <img
-                    className="img-responsive"
-                    alt=""
-                    src="https://picsum.photos/id/237/300/100"
-                  ></img>
-                </div>
-              </div>
-
-              <div className="discussions_profile discussion__row">
-                <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                  <img
-                    className="profile_img img-responsive img-circle"
-                    alt=""
-                    src="https://picsum.photos/id/237/100/90"
-                  ></img>
-                </div>
-                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                  <h3 className="username">Posted by User Name</h3>
-                  <p>
-                    Answered by XYZ{' '}
-                    <span style={{ fontWeight: 'bold' }}>19 AUG 2021</span>
-                  </p>
-                </div>
-                <div className="likes col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                  <span className="glyphicon glyphicon-thumbs-up">
-                    &nbsp;19
-                  </span>
-                  &nbsp;&nbsp;
-                  <span className="glyphicon glyphicon-thumbs-down">
-                    &nbsp;3
-                  </span>
-                </div>
-              </div>
-              <div className="discussions_que">
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry?
-                </p>
-              </div>
-              <div className="discussions_ans">
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-                <div className="thumbnail__discussion">
-                  <img
-                    className="img-responsive"
-                    alt=""
-                    src="https://picsum.photos/id/237/300/100"
-                  ></img>
-                </div>
-              </div>
+              {topics.map((t) => (
+                <>
+                  <div className="discussions_profile discussion__row">
+                    <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                      <img
+                        className="profile_img img-responsive img-circle"
+                        alt=""
+                        src={t.data.image}
+                      />
+                    </div>
+                    <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                      <h3 className="username">Posted by {t.data.name}</h3>
+                      <p>
+                        {t.data.answers && (
+                          <>
+                            Answered by XYZ{' '}
+                            <span style={{ fontWeight: 'bold' }}>
+                              19 AUG 2021
+                            </span>
+                          </>
+                        )}
+                      </p>
+                    </div>
+                    <div className="likes col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                      <span className="glyphicon glyphicon-thumbs-up">
+                        &nbsp;19
+                      </span>
+                      &nbsp;&nbsp;
+                      <span className="glyphicon glyphicon-thumbs-down">
+                        &nbsp;3
+                      </span>
+                    </div>
+                  </div>
+                  <div className="discussions_que">
+                    <p>{t.data.subject}</p>
+                  </div>
+                  <div className="discussions_ans">
+                    <p>{t.data.text}</p>
+                    <div className="thumbnail__discussion">
+                      <img
+                        className="img-responsive"
+                        alt=""
+                        src="https://picsum.photos/id/237/300/100"
+                      ></img>
+                    </div>
+                  </div>
+                </>
+              ))}
             </div>
           </div>
         </div>

@@ -50,17 +50,37 @@
   display: flex;
 }
 .inputs {
-  float: left;
   margin-top: 20px;
 }
 .inputs textarea {
   margin-top: 20px;
 }
-.discussion_tips{
+.discussion_tips {
   background-color: rgb(231, 221, 83);
   float: right;
   width: 35%;
   padding-left: 20px;
   border-radius: 10px;
   color: #153280;
+}
+
+.img-circle {
+  width: 50px;
+}
+.ask__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+.form__input {
+  width: 400px;
+}
+
+.form__textArea {
+  width: 400px;
+}
+
+.btn-ask {
+  width: 400px;
 }
