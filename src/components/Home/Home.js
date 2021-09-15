@@ -91,7 +91,7 @@ function Home() {
             </div>
           </div>
         </Fade>
-        <div className="reviews__home container-fluid">
+        {/* <div className="reviews__home container-fluid">
           {' '}
           <h1 style={{ textAlign: 'center', marginBottom: '50px' }}>Reviews</h1>
           <div className="reviews_row__home container">
@@ -100,6 +100,7 @@ function Home() {
                 <div className="reviewer_profile row">
                   <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <img
+                      style={{ width: '100px' }}
                       className="profile_img img-responsive img-circle"
                       alt=""
                       src={r.data.image}
@@ -125,7 +126,7 @@ function Home() {
               </NavLink>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   )

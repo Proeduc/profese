@@ -51,8 +51,12 @@ export default function NavTwo() {
         <ul class="logo nav navbar-nav navbar-center">
           <li>
             <img
-              class="img-responsive"
-              style={{ height: '65px', width: '150px' }}
+              style={{
+                height: '65px',
+                width: '150px',
+                objectFit: 'contain',
+                marginTop: '-5px',
+              }}
               src={logo}
               alt="logo"
             />
