@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import NavOne from './components/NavOne/NavOne'
-import NavTwo from './components/NavTwo/NavTwo'
+import NavOne from './components/NavOne/NavOne' 
+import Responsive_nav from './components/Responsive_nav/Responsive_nav'
 import Home from './components/Home/Home'
 import Signup from './pages/signup/Signup'
 import Login from './pages/login/Login'
@@ -19,9 +19,16 @@ function App() {
   const user = useSelector(selectUser)
   const dispatch = useDispatch()
   const [avatarUrl, setAvatarUrl] = useState('')
+  const [width, setwidth] = useState(window.innerWidth)
+
+  // for handling responsive navbar
+  const handleWidth = () =>{
+    setwidth(window.innerWidth)
+    // console.log(width)
+  }
+  window.addEventListener('resize', handleWidth)
 
   console.log(user)
-
   useEffect(() => {
     db.collection('users')
       .doc(user?.uid)
@@ -58,8 +65,10 @@ function App() {
 
   return (
     <div className="App">
-      <NavOne />
-      <NavTwo />
+      {
+        width > 650 ? 
+        <NavOne /> :  <Responsive_nav />
+      }
       <Switch>
         <Route exact path="/settings">
           <Settings />

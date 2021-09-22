@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import './NavOne.css'
 import { NavLink } from 'react-router-dom'
+import NavTow from '../NavTwo/NavTwo'
 
 export default function NavOne() {
     const [Search, setSearch] = useState('')
 
     return (
+        <>
         <nav className="navbar navbar-inverse">
             <div className="container-fluid">
                 <div className="navbar-header">
@@ -25,5 +27,7 @@ export default function NavOne() {
                 </ul>
             </div>
         </nav> 
+        <NavTow />
+        </>
     )
 }
