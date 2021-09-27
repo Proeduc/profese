@@ -124,6 +124,52 @@
   background-color: #153280;
 }
 
+.home__footer{ 
+  /* padding: 3%; */
+  margin-top: 30px;
+}
+
+.home__Contact__info{
+  background-color: #153280;
+  min-height: 500px; 
+  color: white;
+  padding-top: 3%;
+}
+
+.contact__info__title{
+  text-align: center;
+}
+
+.contact__info__content{
+  width: 60%;
+  display: block;
+  margin: 20px auto;
+}
+
+.home__useful__link{ 
+  background-color: rgb(235 235 235 / 49%);
+  min-height: 400px;
+  padding: 3%;
+  color: #153280;
+}
+
+.home__footer__courses, .home__footer__services, .home__footer__careers{ 
+  height: 300px;
+  font-weight: bold;
+}
+
+.home__footer__courses p, .home__footer__services p, .home__footer__careers p{
+  font-weight: bold;
+}
+
+.home__footer__courses li, .home__footer__services li, .home__footer__careers li{
+  list-style: none;
+}
+
+.home__footer__courses .fa-angle-right, .home__footer__services .fa-angle-right, .home__footer__careers .fa-angle-right{
+  font-weight: bold;
+}
+
 @media (max-width: 650px) {
   .reviews_row__home {
     flex-direction: column;
@@ -158,5 +204,11 @@
   .home__down__text,
   .home_btn_down {
     font-size: small;
+  } 
+  .home__footer__courses, .home__footer__services, .home__footer__careers{ 
+    height: 200px; 
+  }
+  .useful__links__title{
+    margin-left: 10px;
   }
 }

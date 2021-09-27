@@ -91,7 +91,9 @@ function Home() {
             </div>
           </div>
         </Fade>
-        {/* <div className="reviews__home container-fluid">
+
+        {/* home reviews start */}
+        <div className="reviews__home container-fluid">
           {' '}
           <h1 style={{ textAlign: 'center', marginBottom: '50px' }}>Reviews</h1>
           <div className="reviews_row__home container">
@@ -126,7 +128,53 @@ function Home() {
               </NavLink>
             </div>
           </div>
-        </div> */}
+        </div>
+        {/* home reviews end */}
+
+        {/* home footer start */}
+        <div className="home__footer">
+          <div className="row">
+            <div className="home__Contact__info col-lg-4 col-md-4 col-sm-12 col-xs-12">
+              <h2 className="contact__info__title">Contact Info</h2>
+              
+              <div className="contact__info__content">
+                <hr/>
+                <p className="contact__info__address"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;ADDRESS : C-4 Behind MA Plazaz , New Delhi</p>
+                <p className="contact__info__telephone"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;PHONE: +91 8299729830</p>
+                <p className="contact__info__whatsapp"><i className="fa fa-whatsapp"></i>&nbsp;WHATSAPP: +91 8299729830</p>
+              </div>
+            </div>
+            <div className="home__useful__link col-lg-8 col-md-8 col-sm-12 col-xs-12">
+              <h2 className="useful__links__title">Useful Links</h2>
+              <hr style={{borderColor:"#153280"}}/>
+
+              <div className="useful__links__content">
+                <div className="home__footer__courses col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                  <p>COURSES</p>
+                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<NavLink to="#">Mathematics</NavLink></li>
+                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<NavLink to="#">Science</NavLink></li>
+                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<NavLink to="#">Engineering</NavLink></li>
+                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<NavLink to="#">English</NavLink></li>
+                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<NavLink to="#">More</NavLink></li>
+                </div>
+                <div className="home__footer__services col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                  <p>SERVICES</p>
+                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<NavLink to="#">Assignment help</NavLink></li>
+                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<NavLink to="#">One-on-one session</NavLink></li>
+                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<NavLink to="#">Practice help</NavLink></li>
+                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<NavLink to="#">Course help</NavLink></li>
+                </div>
+                <div className="home__footer__careers col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                  <p>CAREERS</p>
+                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<NavLink to="#">Explore opportunities</NavLink></li>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* home footer end */}
       </div>
     </>
   )
