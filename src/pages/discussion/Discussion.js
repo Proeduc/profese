@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import './Discussion.css'
@@ -15,7 +17,7 @@ function Discussion() {
   console.table(topics[0])
   return (
     <>
-      <div className="container-fluid">
+      <div className="container qu">
         <div className="discussion_header container-fluid">
           <NavLink to="/discussion" className="discussion_header_title">
             Discussion Board
@@ -53,60 +55,60 @@ function Discussion() {
             </div>
           </div>
 
-          <div className="discussion_content col-lg-9 col-md-9 col-sm-9 col-xs-12">
+          <div className="discussion_content col-lg-9 col-md-9 col-sm-9 col-xs-12 ">
             <h2>
               <span
                 className="glyphicon glyphicon-star-empty"
                 style={{ color: 'yellow' }}
               ></span>
-              &nbsp;Top Question
+              &nbsp;Top Asked Questions
             </h2>
 
             <div className="discussions">
-              {topics.map((t) => (
-                <div className="discussion__question">
-                  <div className="discussions_profile discussion__row">
-                    <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                      <img
-                        className="profile_img img-responsive img-circle"
-                        alt=""
-                        src={t.data.image}
-                      />
-                    </div>
-                    <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                      <h3 className="username">Posted by {t.data.name}</h3>
-                      <p>
-                        {t.data.answers && (
-                          <>
-                            Answered by XYZ{' '}
-                            <span style={{ fontWeight: 'bold' }}>
-                              19 AUG 2021
-                            </span>
-                          </>
-                        )}
-                      </p>
-                    </div>
-                    <div className="likes col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                      <span className="glyphicon glyphicon-thumbs-up">
-                        &nbsp;19
-                      </span>
-                      &nbsp;&nbsp;
-                      <span className="glyphicon glyphicon-thumbs-down">
-                        &nbsp;3
-                      </span>
-                    </div>
-                  </div>
-                  <div className="discussions_que">
-                    <p>{t.data.subject}</p>
-                  </div>
-                  <div className="discussions_ans">
-                    <p>{t.data.text}</p>
-                  </div>
-                </div>
-              ))}
+            <div class="table-responsive que ">  
+            <table class="table ">
+    <thead>
+      <tr>
+       <th>Profile Pic </th>
+        <th>Posted By</th>
+        <th>Subject</th>
+        <th>Question</th>
+        <th>Likes And Dislikes</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+    {topics.map((t) => (
+      <tr key={t.data.id} >
+        <td> <img
+            className="profile_img img-responsive img-circle"
+            alt=""
+            src={t.data.image}
+          /></td>
+        <td><p> {t.data.name} 
+            
+          </p></td>
+        <td> <p>{t.data.subject}</p></td>
+        <td> <p>{t.data.text}</p></td>
+        <td> <p><a href={`/custom/${t.id}`} type="button" class="btn btn-primary">Answers</a></p></td>
+        <td>
+        <span className="glyphicon glyphicon-thumbs-up">
+            &nbsp;19
+          </span>
+          &nbsp;&nbsp;
+          <span className="glyphicon glyphicon-thumbs-down">
+            &nbsp;3
+          </span>
+        </td>
+        
+      </tr>
+      ))}
+    </tbody>
+  </table>
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   )
