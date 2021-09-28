@@ -1,4 +1,6 @@
-import { useEffect, useState } from 'react'
+/* eslint-disable react/jsx-pascal-case */
+/* eslint-disable react-hooks/exhaustive-deps */
+ import { useEffect, useState } from 'react'
 import './App.css'
 import NavOne from './components/NavOne/NavOne' 
 import Responsive_nav from './components/Responsive_nav/Responsive_nav'
@@ -14,11 +16,13 @@ import Settings from './pages/settings/Settings'
 import Reviews from './pages/reviews/Reviews'
 import Discussion from './pages/discussion/Discussion'
 import Ask_a_ques from './pages/discussion/Ask_a_ques'
+import Custom from './pages/discussion/Custom'
 
 function App() {
   const user = useSelector(selectUser)
   const dispatch = useDispatch()
   const [avatarUrl, setAvatarUrl] = useState('')
+ 
   const [width, setwidth] = useState(window.innerWidth)
 
   // for handling responsive navbar
@@ -61,7 +65,9 @@ function App() {
     })
   }, [])
 
-  console.log(avatarUrl)
+  // console.log(avatarUrl)
+  // if user logged in as auth changed
+ 
 
   return (
     <div className="App">
@@ -89,13 +95,16 @@ function App() {
           <Discussion />
         </Route>
         <Route exact path="/ask_a_ques">
-          <Ask_a_ques />
+          <Ask_a_ques  />
         </Route>
         <Route exact path="/settings">
           <Settings />
         </Route>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route path="/custom/:id">
+          <Custom/>
         </Route>
       </Switch>
     </div>
