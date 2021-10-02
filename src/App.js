@@ -17,6 +17,7 @@ import Reviews from './pages/reviews/Reviews'
 import Discussion from './pages/discussion/Discussion'
 import Ask_a_ques from './pages/discussion/Ask_a_ques'
 import Custom from './pages/discussion/Custom'
+import Blog from './pages/blog/Blog'
 
 function App() {
   const user = useSelector(selectUser)
@@ -105,6 +106,9 @@ function App() {
         </Route>
         <Route path="/custom/:id">
           <Custom/>
+        </Route>
+        <Route path="/blog">
+          <Blog/>
         </Route>
       </Switch>
     </div>

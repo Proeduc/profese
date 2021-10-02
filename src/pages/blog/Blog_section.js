@@ -1,0 +1,200 @@
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+
+export default function Blog_section(props) {
+    return (
+         <>
+          <div className="blog__section container-fluid">
+              <div className="blog__section__header"> 
+                  <button className="blog__Section__back btn btn-default" onClick={props.changeState}><i className="fa fa-arrow-circle-left"></i> Back</button> 
+                  <h2>{props.section}</h2>
+              </div>
+
+              <div className="blog__section__content container">
+                  <div className="row blog__section__row"> 
+                      <div className="blog__section__blog col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div className="blog__row__blog">
+                            <div className="blog__row__content"> 
+                                <img 
+                                    src="https://images.pexels.com/photos/4842544/pexels-photo-4842544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
+                                    placeholder="blog banner">
+                                </img>
+
+                                <h3 class="blog__title">
+                                    <strong>What is Lorem Ipsum?</strong>
+                                </h3> 
+                                
+                                <div class="blog__desc">
+                                    Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's....
+                                </div> 
+
+                                <div class="row blog__meta">
+                                    <div class="col-lg-8 col-xs-12">
+                                        <p style={{color: "black", padding:"10px"}}><span class="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
+                                    </div>
+                                    <div class="col-lg-4 col-xs-12">
+                                        <NavLink to="#" class="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</NavLink>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                      </div>
+
+
+                      <div className="blog__section__blog col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div className="blog__row__blog">
+                            <div className="blog__row__content"> 
+                                <img 
+                                    src="https://images.pexels.com/photos/4842544/pexels-photo-4842544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
+                                    placeholder="blog banner">
+                                </img>
+
+                                <h3 class="blog__title">
+                                    <strong>What is Lorem Ipsum?</strong>
+                                </h3> 
+                                
+                                <div class="blog__desc">
+                                    Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's....
+                                </div> 
+
+                                <div class="row blog__meta">
+                                    <div class="col-lg-8 col-xs-12">
+                                        <p style={{color: "black", padding:"10px"}}><span class="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
+                                    </div>
+                                    <div class="col-lg-4 col-xs-12">
+                                        <NavLink to="#" class="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</NavLink>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+
+
+
+                  {/* second row */}
+
+                  <div className="row blog__section__row"> 
+                      <div className="blog__section__blog col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div className="blog__row__blog">
+                            <div className="blog__row__content"> 
+                                <img 
+                                    src="https://images.pexels.com/photos/4842544/pexels-photo-4842544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
+                                    placeholder="blog banner">
+                                </img>
+
+                                <h3 class="blog__title">
+                                    <strong>What is Lorem Ipsum?</strong>
+                                </h3> 
+                                
+                                <div class="blog__desc">
+                                    Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's....
+                                </div> 
+
+                                <div class="row blog__meta">
+                                    <div class="col-lg-8 col-xs-12">
+                                        <p style={{color: "black", padding:"10px"}}><span class="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
+                                    </div>
+                                    <div class="col-lg-4 col-xs-12">
+                                        <NavLink to="#" class="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</NavLink>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                      </div>
+
+
+                      <div className="blog__section__blog col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div className="blog__row__blog">
+                            <div className="blog__row__content"> 
+                                <img 
+                                    src="https://images.pexels.com/photos/4842544/pexels-photo-4842544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
+                                    placeholder="blog banner">
+                                </img>
+
+                                <h3 class="blog__title">
+                                    <strong>What is Lorem Ipsum?</strong>
+                                </h3> 
+                                
+                                <div class="blog__desc">
+                                    Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's....
+                                </div> 
+
+                                <div class="row blog__meta">
+                                    <div class="col-lg-8 col-xs-12">
+                                        <p style={{color: "black", padding:"10px"}}><span class="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
+                                    </div>
+                                    <div class="col-lg-4 col-xs-12">
+                                        <NavLink to="#" class="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</NavLink>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+
+                {/* third row */}
+                <div className="row blog__section__row"> 
+                      <div className="blog__section__blog col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div className="blog__row__blog">
+                            <div className="blog__row__content"> 
+                                <img 
+                                    src="https://images.pexels.com/photos/4842544/pexels-photo-4842544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
+                                    placeholder="blog banner">
+                                </img>
+
+                                <h3 class="blog__title">
+                                    <strong>What is Lorem Ipsum?</strong>
+                                </h3> 
+                                
+                                <div class="blog__desc">
+                                    Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's....
+                                </div> 
+
+                                <div class="row blog__meta">
+                                    <div class="col-lg-8 col-xs-12">
+                                        <p style={{color: "black", padding:"10px"}}><span class="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
+                                    </div>
+                                    <div class="col-lg-4 col-xs-12">
+                                        <NavLink to="#" class="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</NavLink>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                      </div>
+
+
+                      <div className="blog__section__blog col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div className="blog__row__blog">
+                            <div className="blog__row__content"> 
+                                <img 
+                                    src="https://images.pexels.com/photos/4842544/pexels-photo-4842544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
+                                    placeholder="blog banner">
+                                </img>
+
+                                <h3 class="blog__title">
+                                    <strong>What is Lorem Ipsum?</strong>
+                                </h3> 
+                                
+                                <div class="blog__desc">
+                                    Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's....
+                                </div> 
+
+                                <div class="row blog__meta">
+                                    <div class="col-lg-8 col-xs-12">
+                                        <p style={{color: "black", padding:"10px"}}><span class="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
+                                    </div>
+                                    <div class="col-lg-4 col-xs-12">
+                                        <NavLink to="#" class="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</NavLink>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+         </>
+    )
+}

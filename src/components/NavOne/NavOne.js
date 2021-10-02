@@ -20,7 +20,7 @@ export default function NavOne() {
 
                 <ul className="nav navbar-nav">
                     <li><NavLink to="/">HOME</NavLink></li>
-                    <li><NavLink to="#">BLOGS</NavLink></li>
+                    <li><NavLink to="/blog">BLOGS</NavLink></li>
                     <li><NavLink to="/discussion">DISCUSSION BOARD</NavLink></li>
                     <li><NavLink to="/reviews">REVIEWS</NavLink></li>
                 </ul>
