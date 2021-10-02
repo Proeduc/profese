@@ -8,7 +8,7 @@ function Reviews() {
   const user = useSelector(selectUser)
   const [leaveReview, setLeaveReview] = useState(false)
   const [text, setText] = useState('')
-  const [university, setUniversity] = useState('')
+  const [comment, setcomment] = useState('')
   const [reviews, setReviews] = useState([])
 
   useEffect(() => {
@@ -26,7 +26,7 @@ function Reviews() {
   const addReview = () => {
     db.collection('reviews').doc(user?.uid).set({
       name: user?.displayName,
-      university: university,
+      comment: comment,
       text: text,
       image: user?.photo,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
@@ -52,8 +52,8 @@ function Reviews() {
             <div className="review__inputRow">
               <label>University</label>
               <input
-                value={university}
-                onChange={(e) => setUniversity(e.target.value)}
+                value={comment}
+                onChange={(e) => setcomment(e.target.value)}
                 type="text"
                 required
               />
@@ -88,12 +88,13 @@ function Reviews() {
                         <img
                           className="profile_img img-responsive img-circle"
                           alt=""
-                          src={r.data.image}
+                          src="https://static.vecteezy.com/system/resources/thumbnails/000/550/731/small/user_icon_004.jpg"
+                         
                         ></img>
                       </div>
                       <div className="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                         <h3 className="username">{r.data.name}</h3>
-                        <p>Student at {r.data.university}</p>
+                        <p> {r.data.comment}</p>
                       </div>
                     </div>
                     <div className="review_content">
