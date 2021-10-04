@@ -90,46 +90,7 @@ function Home() {
               </div>
             </div>
           </div>
-        </Fade>
-
-        {/* home reviews start */}
-        <div className="reviews__home container-fluid">
-          {' '}
-          <h1 style={{ textAlign: 'center', marginBottom: '50px' }}>Reviews</h1>
-          <div className="reviews_row__home container">
-            {reviews.map((r) => (
-              <div className="review">
-                <div className="reviewer_profile row">
-                  <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <img
-                      style={{ width: '100px' }}
-                      className="profile_img img-responsive img-circle"
-                      alt=""
-                      src={r.data.image}
-                    ></img>
-                  </div>
-                  <div className="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                    <h3 className="username">{r.data.name}</h3>
-                    <p>Student at {r.data.university}</p>
-                  </div>
-                </div>
-                <div className="review_content">
-                  <p>{r.data.text}</p>
-                </div>
-              </div>
-            ))}
-
-            <div className="view_more">
-              <NavLink
-                className="view__more__btn btn btn-primary"
-                to="/reviews"
-              >
-                More &nbsp;<i class="glyphicon glyphicon-arrow-right"></i>
-              </NavLink>
-            </div>
-          </div>
-        </div>
-        {/* home reviews end */}
+        </Fade> 
 
         {/* home footer start */}
         <div className="home__footer">

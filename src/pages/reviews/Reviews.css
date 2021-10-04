@@ -1,91 +1,26 @@
-.review_header_title {
-  background-color: #153280;
-  width: max-content;
-  border-radius: 15px;
-  color: white;
-  padding: 5px 25px 5px 25px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.review_header_content1 {
-  font-weight: bold;
-}
-.review__row {
-  padding: 10px;
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover{
   color: black;
-  margin-top: 20px;
+  background-color: transparent;
+  border: 1px solid black;
 }
-.reviews {
-  margin-top: 60px;
-  display: flex;
-  overflow-y: hidden;
-  scrollbar-color: #979797 #d5d8dc;
-  scrollbar-width: thin;
-  padding: 1%;
-  background-color: rgb(216, 216, 214);
+.reviews__pill{
+  border-radius: 20px;
 }
-
-.reviews::-webkit-scrollbar {
-  display: none;
+.reviews__header__content h2{
+  color: #153280;
 }
-.review {
-  min-width: 31%;
-  height: 250px;
-  object-fit: contain;
-  transition: transform 400ms;
-  margin-right: 3.5%;
-  background-color: white;
-  box-shadow: 4px 4px 8px rgb(185, 185, 185);
-}
-.review:hover {
-  transform: scale(1.06);
-}
-.review_content {
+.reviews__new__btn{
   padding: 10px;
 }
-.img-circle {
-  margin-top: 12px;
-  margin-left: 10px;
-}
-.review_button {
-  width: 200px;
-  height: 50px;
-  font-size: large;
-  margin-left: 80%;
-  margin-bottom: 20px;
-}
-.review__buttonForm {
-  width: 100%;
+.reviews__content, .reviews__form {
   margin-top: 20px;
 }
-
-.review__form {
-  margin-top: 70px;
-  width: 40%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.review__inputRow {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.reviews__container {
-  overflow-x: hidden;
-}
-
-@media (max-width:650px) {
-  .reviews{
-    flex-direction: column;
-  }
-  .review{
-    margin-top: 20px;
-  }
-  .review_header_content1{
-    font-size: 20px;
-  }
-  .review_header_content2{
-    font-size: 14px;
-  }
-}
+.reviews__filter__two .fa-star{
+  color: yellow;
+} 
+.review{
+  min-height: 200px;
+  box-shadow: 4px 8px 8px whitesmoke;
+  padding: 10px;
+  margin: 5px;
+} 
