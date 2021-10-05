@@ -22,7 +22,7 @@ export default function NavTwo() {
       <div className="container-fluid navbarTwoMobile">
         <ul className="nav navbarOption navbar-nav">
           <li className="dropdown">
-            <NavLink class="dropdown-toggle" data-toggle="dropdown" to="#">
+            <NavLink className="dropdown-toggle" data-toggle="dropdown" to="#">
               Courses &nbsp;<span className="caret"></span>
             </NavLink>
             <ul className="dropdown-menu">
@@ -48,7 +48,7 @@ export default function NavTwo() {
           </li>
         </ul>
 
-        <ul class="logo nav navbar-nav navbar-center">
+        <ul className="logo nav navbar-nav navbar-center">
           <li>
             <img
               style={{
@@ -63,7 +63,7 @@ export default function NavTwo() {
           </li>
         </ul>
 
-        <ul class="nav navbar-nav navbar-right">
+        <ul className="nav navbar-nav navbar-right">
           <li>
             <NavLink to="#">Support</NavLink>
           </li>

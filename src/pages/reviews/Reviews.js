@@ -1,19 +1,32 @@
  import {React, useState} from 'react'
-import { NavLink} from 'react-router-dom'
+import { NavLink, useHistory} from 'react-router-dom'
 import './Reviews.css'
 import { useSelector } from 'react-redux'
 import { selectUser } from '../../features/userSlice'
+import ReviewFilter from './ReviewFilter'
  
  function Reviews() {  
   const user = useSelector(selectUser)
   const [leaveReview, setLeaveReview] = useState(false)
   const [text, setText] = useState('')
   const [comment, setcomment] = useState('')
-  const [reviews, setReviews] = useState([])
+  const [reviews, setReviews] = useState([]) 
+  const [Filter, setFilter] = useState('')
+  const [showFilter, setshowFilter] = useState(false)
 
   const giveReview = () => {
     setLeaveReview(!leaveReview)
   }
+
+  const changeFilter = (filter) => {
+     setshowFilter(true)
+     setFilter(filter)
+  }
+
+  const hideFilter = () => {
+    setshowFilter(false)
+  }
+
    return (
      <>
        <div className="reviews__container container-fluid">
@@ -84,28 +97,31 @@ import { selectUser } from '../../features/userSlice'
              <div className="reviews__filter__one">
                 <h4 className="text-primary"><strong>Browse by</strong></h4>
                 <div className="list-group">
-                  <NavLink to="#" className="list-group-item">Assignment help</NavLink>
-                  <NavLink to="#" className="list-group-item">All services</NavLink>
-                  <NavLink to="#" className="list-group-item">Course help</NavLink>
-                  <NavLink to="#" className="list-group-item">Live sessions</NavLink>
-                  <NavLink to="#" className="list-group-item">Exam prep</NavLink>
+                  <NavLink to="#" onClick={() => changeFilter('Assignment Help')} className="list-group-item">Assignment help</NavLink>
+                  <NavLink to="#" onClick={() => changeFilter('All Services')} className="list-group-item">All services</NavLink>
+                  <NavLink to="#" onClick={() => changeFilter('Course Help')} className="list-group-item">Course help</NavLink>
+                  <NavLink to="#" onClick={() => changeFilter('Live Sessions')} className="list-group-item">Live sessions</NavLink>
+                  <NavLink to="#" onClick={() => changeFilter('Exam Prep')} className="list-group-item">Exam prep</NavLink>
                 </div>
              </div>
              <div className="reviews__filter__two">
                 <h4 className="text-primary"><strong>Filter by</strong></h4>
                 <div className="list-group">
-                  <NavLink to="#" className="list-group-item"><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i></NavLink>
-                  <NavLink to="#" className="list-group-item"><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i></NavLink>
-                  <NavLink to="#" className="list-group-item"><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i></NavLink>
-                  <NavLink to="#" className="list-group-item"><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i></NavLink>
-                  <NavLink to="#" className="list-group-item"><i className="fa fa-star" aria-hidden="true"></i></NavLink>
+                  <NavLink to="#" onClick={() => changeFilter('Five Star')} className="list-group-item"><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i></NavLink>
+                  <NavLink to="#" onClick={() => changeFilter('Four Star')} className="list-group-item"><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i></NavLink>
+                  <NavLink to="#" onClick={() => changeFilter('Three Star')} className="list-group-item"><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i></NavLink>
+                  <NavLink to="#" onClick={() => changeFilter('Two Star')} className="list-group-item"><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i></NavLink>
+                  <NavLink to="#" onClick={() => changeFilter('One Star')} className="list-group-item"><i className="fa fa-star" aria-hidden="true"></i></NavLink>
                 </div>
              </div>
            </div>
 
+          {
+            showFilter ? <ReviewFilter filtername = {Filter} hideFilter = {hideFilter}/>
+            :
            <div className="reviews__review__section col-sm-9">
              
-             <h4 className="text-primary"><strong>Recently added reviews</strong></h4>
+             <h3 className="text-primary"><strong>Recently added reviews</strong></h3>
              {/* just repeated the code for better visual */}
              <div className="row">
                <div className="review col-sm-5">
@@ -240,7 +256,8 @@ import { selectUser } from '../../features/userSlice'
                </div>
              </div>
            </div>
-         </div>
+          }
+         </div> 
         )}
        </div>
      </>

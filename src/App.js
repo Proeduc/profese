@@ -18,6 +18,7 @@ import Discussion from './pages/discussion/Discussion'
 import Ask_a_ques from './pages/discussion/Ask_a_ques'
 import Custom from './pages/discussion/Custom'
 import Blog from './pages/blog/Blog'
+import ReviewFilter from './pages/reviews/ReviewFilter'
 
 function App() {
   const user = useSelector(selectUser)
@@ -33,7 +34,7 @@ function App() {
   }
   window.addEventListener('resize', handleWidth)
 
-  console.log(user)
+  // console.log(user)
   useEffect(() => {
     db.collection('users')
       .doc(user?.uid)
@@ -109,6 +110,9 @@ function App() {
         </Route>
         <Route path="/blog">
           <Blog/>
+        </Route>
+        <Route path="/review-filter">
+          <ReviewFilter />
         </Route>
       </Switch>
     </div>
