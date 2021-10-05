@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useState } from 'react' 
 import './Blog.css'
 import Blog_row from './Blog_row'
 import Blog_section from './Blog_section'

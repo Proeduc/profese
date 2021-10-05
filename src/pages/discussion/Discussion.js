@@ -1,117 +1,100 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
-import './Discussion.css'
-import { db, firebase } from '../../firebase'
+ import {React, useState} from 'react'
+ import {Link} from 'react-router-dom'
+import Disscussion_filter from './Disscussion_filter'
+ 
+ function Discussion() {
+    const [Filter, setFilter] = useState('')
+    const [showFilter, setshowFilter] = useState(false)
 
-function Discussion() {
-  const [topics, setTopics] = useState([])
+    const changeFilter = (filter) => {
+        setshowFilter(true)
+        setFilter(filter)
+     }
 
-  useEffect(() => {
-    db.collection('topics').onSnapshot((snapshot) =>
-      setTopics(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))),
-    )
-  }, [])
+     const hideFilter = () => {
+        setshowFilter(false)
+      }
+     return (
+         <>
+            <div className="disscussion_board container">
 
-  console.table(topics[0])
-  return (
-    <>
-      <div className="container qu">
-        <div className="discussion_header container-fluid">
-          <NavLink to="/discussion" className="discussion_header_title">
-            Discussion Board
-          </NavLink>
-          <NavLink to="/ask_a_ques" className="discussion_header_title">
-            Ask a question
-          </NavLink>
-        </div>
-
-        <div className="discussion_main container-fluid">
-          <div className="discussion_search col-lg-3 col-md-3 col-sm-3 col-xs-12">
-            <form>
-              <div className="input-group">
-                <input
-                  type="text"
-                  className="form-control inp"
-                  placeholder="Search Question"
-                />
-
-                <div className="input-group-btn">
-                  <button className="btn btn-primary search_btn" type="submit">
-                    <i className="glyphicon glyphicon-search"></i>
-                  </button>
+                <div className="discussion_filter col-sm-2"> 
+                    <h4 className="text-primary"><strong>Filters</strong></h4>
+                    <div className="list-group">
+                        <Link to="#" onClick={() => changeFilter('Assignment Help')} className="list-group-item">Assignment help</Link>
+                        <Link to="#" onClick={() => changeFilter('All Services')} className="list-group-item">All services</Link>
+                        <Link to="#" onClick={() => changeFilter('Course help')} className="list-group-item">Course help</Link>
+                        <Link to="#" onClick={() => changeFilter('Live session')} className="list-group-item">Live sessions</Link>
+                        <Link to="#" onClick={() => changeFilter('Exam prep')} className="list-group-item">Exam prep</Link>
+                    </div> 
+                    <h4 className="text-primary"><strong>Filters by Subject</strong></h4>
+                    <div className="list-group">
+                        <Link to="#" onClick={() => changeFilter('Engineering')} className="list-group-item">Engineering</Link>
+                        <Link to="#" onClick={() => changeFilter('Mathematics')} className="list-group-item">Mathematics</Link>
+                        <Link to="#" onClick={() => changeFilter('English')} className="list-group-item">English</Link>
+                        <Link to="#" onClick={() => changeFilter('Science')} className="list-group-item">Science</Link> 
+                    </div> 
                 </div>
-              </div>
-            </form>
 
-            <div className="search_subjects">
-              <h2>Browse by Subject</h2>
-              <h4>Chemistry</h4>
-              <h4>Maths</h4>
-              <h4>Biology</h4>
-              <h4>Physics</h4>
-              <h4>Engineering</h4>
+                {
+                 showFilter ? <Disscussion_filter hideFilter={hideFilter} filtername = {Filter} /> :
+                <div className="discussion_feed col-sm-8">
+                     <div className="discussion__content container-fluid">
+                         <h3 className="text-primary">Top questions for you</h3>
+                         <div className="discussion__ques">
+                             <div className="discussion__que">
+                                 <h4 className="discussion__que__title">How do you use electricity to make something cold?</h4>
+                                 <div className="discussion__que__meta">
+                                     <div className="discussion__que__anscnt text-primary"><p><i class="fa fa-edit " ></i> No answers yet</p></div>
+                                     <div className="discussion__que__addans text-primary"><p><i class="fa fa-plus" aria-hidden="true"></i> Add a answer</p></div>
+                                     <div className="discussion__que__likes text-success">5 <i className="fa fa-check-circle-o"></i></div>
+                                     <div className="discussion__que__dislikes text-danger">2 <i className="fa fa-close"></i></div>
+                                 </div>
+                             </div>
+
+                             <div className="discussion__que">
+                                 <h4 className="discussion__que__title">How do you use electricity to make something cold?</h4>
+                                 <img 
+                                  className="img-responsive img-rounded"
+                                  src="https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?cs=srgb&dl=pexels-jaime-reimer-2662116.jpg&fm=jpg" 
+                                  placeholder="ques banner">
+                                 </img>
+                                 <div className="discussion__que__meta">
+                                     <div className="discussion__que__anscnt text-primary"><p><i class="fa fa-edit " ></i> 5 answers yet</p></div>
+                                     <div className="discussion__que__addans text-primary"><p><i class="fa fa-plus" aria-hidden="true"></i> Add a answer</p></div>
+                                     <div className="discussion__que__likes text-success">5 <i className="fa fa-check-circle-o"></i></div>
+                                     <div className="discussion__que__dislikes text-danger">2 <i className="fa fa-close"></i></div>
+                                 </div>
+                             </div>
+
+                             <div className="discussion__que">
+                                 <h4 className="discussion__que__title">How do you use electricity to make something cold?</h4>
+                                 <div className="discussion__que__meta">
+                                     <div className="discussion__que__anscnt text-primary"><p><i class="fa fa-edit " ></i> No answers yet</p></div>
+                                     <div className="discussion__que__addans text-primary"><p><i class="fa fa-plus" aria-hidden="true"></i> Add a answer</p></div>
+                                     <div className="discussion__que__likes text-success">5 <i className="fa fa-check-circle-o"></i></div>
+                                     <div className="discussion__que__dislikes text-danger">2 <i className="fa fa-close"></i></div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                </div>
+
+                }
+
+                <div className="discussion_tips col-sm-2">
+                    <h3><strong>Tips <i className="fa fa-lightbulb-o" aria-hidden="true"></i></strong></h3>
+                    <hr style={{borderColor:"yellow"}}/>
+                    <div className="panel panel-default">
+                       <div className="panel-body">Make sure your question is concise</div>
+                       <div className="panel-body">Upload pictures, diagrams of nessecary!</div>
+                       <div className="panel-body">Use formal language and double check spellings</div>
+                    </div>
+                </div>
             </div>
-          </div>
-
-          <div className="discussion_content col-lg-9 col-md-9 col-sm-9 col-xs-12 ">
-            <h2>
-              <span
-                className="glyphicon glyphicon-star-empty"
-                style={{ color: 'yellow' }}
-              ></span>
-              &nbsp;Top Asked Questions
-            </h2>
-
-            <div className="discussions">
-            <div class="table-responsive que ">  
-            <table class="table ">
-    <thead>
-      <tr>
-       <th>Profile Pic </th>
-        <th>Posted By</th>
-        <th>Subject</th>
-        <th>Question</th>
-        <th>Likes And Dislikes</th>
-       
-      </tr>
-    </thead>
-    <tbody>
-    {topics.map((t) => (
-      <tr key={t.data.id} >
-        <td> <img
-            className="profile_img img-responsive img-circle"
-            alt=""
-            src={t.data.image}
-          /></td>
-        <td><p> {t.data.name} 
-            
-          </p></td>
-        <td> <p>{t.data.subject}</p></td>
-        <td> <p>{t.data.text}</p></td>
-        <td> <p><a href={`/custom/${t.id}`} type="button" class="btn btn-primary">Answers</a></p></td>
-        <td>
-        <span className="glyphicon glyphicon-thumbs-up">
-            &nbsp;19
-          </span>
-          &nbsp;&nbsp;
-          <span className="glyphicon glyphicon-thumbs-down">
-            &nbsp;3
-          </span>
-        </td>
-        
-      </tr>
-      ))}
-    </tbody>
-  </table>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </>
-  )
-}
-
-export default Discussion
+         </>
+     )
+ }
+ 
+ export default Discussion
+ 

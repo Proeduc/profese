@@ -4,7 +4,7 @@ import image from './img.png'
 import Services from './Services/Services'
 import Slide from 'react-reveal/Slide'
 import Fade from 'react-reveal/Fade'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { db } from '../../firebase'
 
 function Home() {
@@ -112,22 +112,22 @@ function Home() {
               <div className="useful__links__content">
                 <div className="home__footer__courses col-lg-4 col-md-4 col-sm-4 col-xs-12">
                   <p>COURSES</p>
-                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<NavLink to="#">Mathematics</NavLink></li>
-                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<NavLink to="#">Science</NavLink></li>
-                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<NavLink to="#">Engineering</NavLink></li>
-                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<NavLink to="#">English</NavLink></li>
-                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<NavLink to="#">More</NavLink></li>
+                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">Mathematics</Link></li>
+                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">Science</Link></li>
+                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">Engineering</Link></li>
+                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">English</Link></li>
+                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">More</Link></li>
                 </div>
                 <div className="home__footer__services col-lg-4 col-md-4 col-sm-4 col-xs-12">
                   <p>SERVICES</p>
-                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<NavLink to="#">Assignment help</NavLink></li>
-                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<NavLink to="#">One-on-one session</NavLink></li>
-                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<NavLink to="#">Practice help</NavLink></li>
-                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<NavLink to="#">Course help</NavLink></li>
+                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">Assignment help</Link></li>
+                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">One-on-one session</Link></li>
+                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">Practice help</Link></li>
+                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">Course help</Link></li>
                 </div>
                 <div className="home__footer__careers col-lg-4 col-md-4 col-sm-4 col-xs-12">
                   <p>CAREERS</p>
-                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<NavLink to="#">Explore opportunities</NavLink></li>
+                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">Explore opportunities</Link></li>
                 </div>
 
               </div>

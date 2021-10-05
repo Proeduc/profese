@@ -1,5 +1,5 @@
  import {React, useState} from 'react'
-import { NavLink, useHistory} from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import './Reviews.css'
 import { useSelector } from 'react-redux'
 import { selectUser } from '../../features/userSlice'
@@ -97,21 +97,21 @@ import ReviewFilter from './ReviewFilter'
              <div className="reviews__filter__one">
                 <h4 className="text-primary"><strong>Browse by</strong></h4>
                 <div className="list-group">
-                  <NavLink to="#" onClick={() => changeFilter('Assignment Help')} className="list-group-item">Assignment help</NavLink>
-                  <NavLink to="#" onClick={() => changeFilter('All Services')} className="list-group-item">All services</NavLink>
-                  <NavLink to="#" onClick={() => changeFilter('Course Help')} className="list-group-item">Course help</NavLink>
-                  <NavLink to="#" onClick={() => changeFilter('Live Sessions')} className="list-group-item">Live sessions</NavLink>
-                  <NavLink to="#" onClick={() => changeFilter('Exam Prep')} className="list-group-item">Exam prep</NavLink>
+                  <Link to="#" onClick={() => changeFilter('Assignment Help')} className="list-group-item">Assignment help</Link>
+                  <Link to="#" onClick={() => changeFilter('All Services')} className="list-group-item">All services</Link>
+                  <Link to="#" onClick={() => changeFilter('Course Help')} className="list-group-item">Course help</Link>
+                  <Link to="#" onClick={() => changeFilter('Live Sessions')} className="list-group-item">Live sessions</Link>
+                  <Link to="#" onClick={() => changeFilter('Exam Prep')} className="list-group-item">Exam prep</Link>
                 </div>
              </div>
              <div className="reviews__filter__two">
                 <h4 className="text-primary"><strong>Filter by</strong></h4>
                 <div className="list-group">
-                  <NavLink to="#" onClick={() => changeFilter('Five Star')} className="list-group-item"><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i></NavLink>
-                  <NavLink to="#" onClick={() => changeFilter('Four Star')} className="list-group-item"><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i></NavLink>
-                  <NavLink to="#" onClick={() => changeFilter('Three Star')} className="list-group-item"><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i></NavLink>
-                  <NavLink to="#" onClick={() => changeFilter('Two Star')} className="list-group-item"><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i></NavLink>
-                  <NavLink to="#" onClick={() => changeFilter('One Star')} className="list-group-item"><i className="fa fa-star" aria-hidden="true"></i></NavLink>
+                  <Link to="#" onClick={() => changeFilter('Five Star')} className="list-group-item"><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i></Link>
+                  <Link to="#" onClick={() => changeFilter('Four Star')} className="list-group-item"><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i></Link>
+                  <Link to="#" onClick={() => changeFilter('Three Star')} className="list-group-item"><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i></Link>
+                  <Link to="#" onClick={() => changeFilter('Two Star')} className="list-group-item"><i className="fa fa-star" aria-hidden="true"></i><i className="fa fa-star" aria-hidden="true"></i></Link>
+                  <Link to="#" onClick={() => changeFilter('One Star')} className="list-group-item"><i className="fa fa-star" aria-hidden="true"></i></Link>
                 </div>
              </div>
            </div>

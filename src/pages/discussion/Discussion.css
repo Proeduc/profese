@@ -1,97 +1,23 @@
-.discussion_header {
-  display: flex;
-  margin-top: 20px;
-}
-.discussion_header_title {
-  background-color: #153280;
-  width: max-content;
-  border-radius: 15px;
-  color: white;
-  padding: 5px 25px 5px 25px;
-  margin-right: 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.discussion_header_title:hover {
-  color: #153280;
-  text-decoration: none;
-  background-color: ghostwhite;
-  font-weight: bold;
-}
-.discussion_main {
-  margin-top: 50px;
-}
-.search_subjects {
-  margin-top: 20px;
-  font-weight: bolder;
-  color: rgb(126, 123, 123);
-}
-.search_subjects h2 {
-  color: black;
-}
-.search_subjects h4:hover {
-  color: black;
-}
-.likes {
-  float: right;
-  font-weight: bold;
-}
-.discussions_que {
-  font-size: large;
-  font-weight: bold;
-}
-.discussion__row {
-  margin-left: 0%;
-  width: 80%;
-}
-.thumbnail__discussion {
-  width: 70%;
-}
-.user_profile {
-  display: flex;
-}
-.inputs {
-  margin-top: 20px;
-}
-.inputs textarea {
-  margin-top: 20px;
-}
-.discussion_tips {
-  background-color: rgb(231, 221, 83);
-  float: right;
-  width: 35%;
-  padding-left: 20px;
-  border-radius: 10px;
-  color: #153280;
-}
-
-.img-circle {
-  width: 50px;
-}
-.ask__form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-  padding-top: 50px;
-}
-.form__input {
-  width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.form__textArea {
-  width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.btn-ask {
-  width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.discussion__question {
-  margin-top: 50px;
-}
+ .discussion_tips{
+     background-color: #153280;
+     border-radius: 10px ;
+     padding: 5px;
+ }
+ .discussion_tips h3{
+    color: yellow;
+ }  
+ .discussion__que{
+     padding: 10px;
+     background-color: white;
+     box-shadow: 4px 4px 8px rgb(208, 209, 209);
+     margin: 10px;
+ }
+ .discussion__que__title{
+     font-weight: bold;
+ }
+ .discussion__que__meta{
+     margin-top: 20px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+ }

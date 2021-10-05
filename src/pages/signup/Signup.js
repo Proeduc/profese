@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Footer from '../../components/Footer/Footer'
 import './signup.css'
-import { NavLink, useHistory } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { db, auth, provider } from '../../firebase'
 
 export default function Signup() {
@@ -144,7 +144,7 @@ export default function Signup() {
                   Sign Up
                 </button>
 
-                <NavLink to="/login">Log In here</NavLink>
+                <Link to="/login">Log In here</Link>
               </div>
             </form>
           </div>

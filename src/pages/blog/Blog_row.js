@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './Blog.css'
 
 function Blog_row(props) {
@@ -28,7 +28,7 @@ function Blog_row(props) {
                                     <p style={{color: "black", padding:"10px"}}><span class="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
                                 </div>
                                 <div class="col-lg-4 col-xs-12">
-                                    <NavLink to="#" class="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</NavLink>
+                                    <Link to="#" class="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</Link>
                                 </div>
                             </div> 
                         </div>
@@ -54,7 +54,7 @@ function Blog_row(props) {
                                     <p style={{color: "black", padding:"10px"}}><span class="icon fa fa-user"></span> <strong>Ritika Dey</strong></p>
                                 </div>
                                 <div class="col-lg-4 col-xs-12">
-                                    <NavLink to="#" class="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</NavLink>
+                                    <Link to="#" class="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</Link>
                                 </div>
                             </div> 
 
@@ -81,7 +81,7 @@ function Blog_row(props) {
                                     <p style={{color: "black", padding:"10px"}}><span class="icon fa fa-user"></span> <strong>Samarth Chadda</strong></p>
                                 </div>
                                 <div class="col-lg-4 col-xs-12">
-                                    <NavLink to="#" class="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</NavLink>
+                                    <Link to="#" class="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</Link>
                                 </div>
                             </div> 
 
