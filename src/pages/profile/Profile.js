@@ -1,51 +1,30 @@
 import React, { useState, useEffect } from 'react'
-import './Profile.css'
-import { useSelector } from 'react-redux'
-import { selectUser } from '../../features/userSlice'
+import './Profile.css' 
 import { Link, useHistory } from 'react-router-dom'
-import Footer from '../../components/Footer/Footer'
-import SaveIcon from '@material-ui/icons/Save'
-import { db } from '../../firebase'
+import Footer from '../../components/Footer/Footer'  
 import Loader from 'react-loader-spinner'
 
-const Profile = ({ avatarUrl }) => {
-  const user = useSelector(selectUser)
-  const history = useHistory()
-
+const Profile = ({ avatarUrl }) => { 
   const [description, setDescription] = useState('not defined')
   const [specialities, setSpecialities] = useState('not defined')
   const [about, setAbout] = useState('not defined')
+ 
 
-  useEffect(() => {
-    db.collection('users')
-      .doc(user?.uid)
-      .collection('data')
-      .doc('data')
-      .get()
-      .then((doc) => {
-        if (doc.exists) {
-          setAbout(`${doc.data().about}`)
-          setDescription(`${doc.data().description}`)
-          setSpecialities(`${doc.data().specialities}`)
-        }
-      })
-  }, [user?.uid])
-
-  if (!user) {
-    return (
-      <div
-        style={{
-          height: 'calc(100vh - 125px)',
-          width: '100%',
-          display: 'grid',
-          placeItems: 'center',
-          backgroundColor: 'rgb(230, 227, 227)',
-        }}
-      >
-        <Loader type="ThreeDots" color="#153280" height={120} width={120} />
-      </div>
-    )
-  } else {
+  // if (!user) {
+  //   return (
+  //     <div
+  //       style={{
+  //         height: 'calc(100vh - 125px)',
+  //         width: '100%',
+  //         display: 'grid',
+  //         placeItems: 'center',
+  //         backgroundColor: 'rgb(230, 227, 227)',
+  //       }}
+  //     >
+  //       <Loader type="ThreeDots" color="#153280" height={120} width={120} />
+  //     </div>
+  //   )
+  // } else {
     return (
       <>
         <div className="user">
@@ -54,7 +33,7 @@ const Profile = ({ avatarUrl }) => {
               {avatarUrl === '' && (
                 <img
                   className="profile_pic img-responsive"
-                  src={`${user?.photo}`}
+                  src="abc"
                   alt=""
                 />
               )}
@@ -66,7 +45,7 @@ const Profile = ({ avatarUrl }) => {
                 />
               )}
 
-              <h2 className="user_name">{user?.displayName}</h2>
+              <h2 className="user_name">username</h2>
               <p className="profile__userProfile">User Profile</p>
               <div className="user_speciality">
                 <p className="user_speciality_name">
@@ -122,6 +101,6 @@ const Profile = ({ avatarUrl }) => {
       </>
     )
   }
-}
+// }
 
 export default Profile

@@ -3,8 +3,7 @@ import './NavOne.css'
 import { NavLink } from 'react-router-dom'
 import NavTow from '../NavTwo/NavTwo'
 
-export default function NavOne() {
-    const [Search, setSearch] = useState('')
+export default function NavOne() { 
 
     return (
         <>

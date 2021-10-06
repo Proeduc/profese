@@ -8,10 +8,7 @@ import Home from './components/Home/Home'
 import Signup from './pages/signup/Signup'
 import Login from './pages/login/Login'
 import { Switch, Route } from 'react-router-dom'
-import Profile from './pages/profile/Profile'
-import { useDispatch, useSelector } from 'react-redux'
-import { selectUser, login, logout } from './features/userSlice'
-import { db, auth } from './firebase'
+import Profile from './pages/profile/Profile'  
 import Settings from './pages/settings/Settings'
 import Reviews from './pages/reviews/Reviews'
 import Discussion from './pages/discussion/Discussion' 
@@ -19,9 +16,7 @@ import Blog from './pages/blog/Blog'
 import ReviewFilter from './pages/reviews/ReviewFilter'
 import Add_ans from './pages/discussion/Add_ans' 
 
-function App() {
-  const user = useSelector(selectUser)
-  const dispatch = useDispatch()
+function App() { 
   const [avatarUrl, setAvatarUrl] = useState('')
  
   const [width, setwidth] = useState(window.innerWidth)
@@ -32,42 +27,6 @@ function App() {
     // console.log(width)
   }
   window.addEventListener('resize', handleWidth)
-
-  // console.log(user)
-  useEffect(() => {
-    db.collection('users')
-      .doc(user?.uid)
-      .collection('data')
-      .doc('data')
-      .get()
-      .then((doc) => {
-        if (doc.exists) {
-          setAvatarUrl(`${doc.data().avatarUrl}`)
-        }
-      })
-  }, [user?.uid])
-
-  useEffect(() => {
-    auth.onAuthStateChanged((authUser) => {
-      if (authUser) {
-        // user is logged in
-        dispatch(
-          login({
-            uid: authUser.uid,
-            photo: authUser.photoURL,
-            email: authUser.email,
-            displayName: authUser.displayName,
-          }),
-        )
-      } else {
-        // user is logged out
-        dispatch(logout())
-      }
-    })
-  }, [])
-
-  // console.log(avatarUrl)
-  // if user logged in as auth changed
  
 
   return (
@@ -77,9 +36,9 @@ function App() {
         <NavOne /> :  <Responsive_nav />
       }
       <Switch>
-        <Route exact path="/settings">
+        {/* <Route exact path="/settings">
           <Settings />
-        </Route>
+        </Route> */}
         <Route exact path="/login">
           <Login />
         </Route>

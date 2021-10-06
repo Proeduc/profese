@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
-import Footer from '../../components/Footer/Footer'
+import React, { useState } from 'react' 
 import './signup.css'
-import { Link, useHistory } from 'react-router-dom'
-import { db, auth, provider } from '../../firebase'
+import { Link, useHistory } from 'react-router-dom' 
 
 export default function Signup() {
   const [email, setemail] = useState('')
@@ -24,15 +22,6 @@ export default function Signup() {
     // post request if validate is true
 
     if (validate()) {
-      auth.createUserWithEmailAndPassword(email, password).then((cred) => {
-        return db.collection('users').doc(cred.user.uid).set({
-          email: email,
-          id: cred.user.uid,
-          birth_date: birth_date,
-          profile: profile,
-          name: name,
-        })
-      })
       // redirect to home page
       history.push('/profile')
     } else {

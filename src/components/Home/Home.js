@@ -4,19 +4,9 @@ import image from './img.png'
 import Services from './Services/Services'
 import Slide from 'react-reveal/Slide'
 import Fade from 'react-reveal/Fade'
-import { Link } from 'react-router-dom'
-import { db } from '../../firebase'
+import { Link } from 'react-router-dom' 
 
-function Home() {
-  const [reviews, setReviews] = useState([])
-
-  useEffect(() => {
-    db.collection('reviews').onSnapshot((snapshot) =>
-      setReviews(
-        snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() })),
-      ),
-    )
-  }, [])
+function Home() { 
 
   return (
     <>

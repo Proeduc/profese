@@ -1,12 +1,10 @@
  import {React, useState} from 'react'
 import { Link} from 'react-router-dom'
-import './Reviews.css'
-import { useSelector } from 'react-redux'
-import { selectUser } from '../../features/userSlice'
+import './Reviews.css' 
 import ReviewFilter from './ReviewFilter'
  
  function Reviews() {  
-  const user = useSelector(selectUser)
+  const user = "abc"
   const [leaveReview, setLeaveReview] = useState(false)
   const [text, setText] = useState('')
   const [comment, setcomment] = useState('')

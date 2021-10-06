@@ -1,18 +1,12 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import './NavTwo.css'
-import { useSelector } from 'react-redux'
-import { selectUser } from '../../features/userSlice'
-import { Link, useHistory } from 'react-router-dom'
-import { auth, firebase } from '../../firebase'
+import './NavTwo.css' 
+import { Link, useHistory } from 'react-router-dom' 
 import logo from './logo.png'
 
-export default function NavTwo() {
-  const user = useSelector(selectUser)
+export default function NavTwo() { 
   const history = useHistory()
-
-  const logOut = () => {
-    auth.signOut()
+  const logOut = () => { 
 
     history.push('/')
   }
@@ -66,24 +60,16 @@ export default function NavTwo() {
         <ul className="nav navbar-nav navbar-right">
           <li>
             <NavLink to="#">Support</NavLink>
-          </li>
-          {user ? (
-            <li onClick={logOut}>
+          </li> 
+            {/* <li onClick={logOut}>
               <NavLink to="/login">Logout</NavLink>
-            </li>
-          ) : (
+            </li>  */}
             <li>
               <NavLink to="/login">Login</NavLink>
-            </li>
-          )}
-          <li>
-            {user ? (
-              <NavLink to="/profile">Profile</NavLink>
-            ) : (
-              <NavLink to="/signup">Signup</NavLink>
-            )}
-          </li>
-          <li>{user && <NavLink to="/settings">Settings</NavLink>}</li>
+            </li> 
+          <li>  
+              <NavLink to="/signup">Signup</NavLink> 
+          </li> 
         </ul>
       </div>
     </nav>

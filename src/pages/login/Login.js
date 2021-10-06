@@ -1,102 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import { NavLink, useHistory } from 'react-router-dom'
-import Footer from '../../components/Footer/Footer'
-import './Login.css'
-import { db, auth, firebase, provider, providerFacebook } from '../../firebase'
-import { useSelector } from 'react-redux'
-import { selectUser } from '../../features/userSlice'
+import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom' 
+import './Login.css' 
 
-function Login() {
-  const user = useSelector(selectUser)
+function Login() { 
   const [mail, setMail] = useState('')
-  const [password, setPassword] = useState('')
-  const history = useHistory()
-  const [loading, setLoading] = useState(false)
-  const [userData, setUserData] = useState([])
-
-  const logInGoogle = () => {
-    //gmail popup
-    setLoading(true)
-    auth
-      .signInWithPopup(provider)
-      .then((cred) => {
-        //adding user to the database
-        return db
-          .collection('users')
-          .doc(cred.user.uid)
-          .get()
-          .then((doc) => {
-            if (doc.exists) {
-              return db.collection('users').doc(cred.user.uid).update({
-                name: cred.user.displayName,
-                id: cred.user.uid,
-                timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-                newUser: cred.additionalUserInfo.isNewUser,
-              })
-            } else {
-              return db.collection('users').doc(cred.user.uid).set({
-                name: cred.user.displayName,
-                id: cred.user.uid,
-                newUser: cred.additionalUserInfo.isNewUser,
-                timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-              })
-            }
-          })
-      })
-      .catch((error) => alert(error.message))
-
-    auth.onAuthStateChanged((authUser) => {
-      if (authUser) {
-        setLoading(false)
-      }
-    })
-    if (loading === false) {
-      history.push('/profile')
-    }
-  }
-
-  const logInFacebook = () => {
-    //facebook popup
-    auth
-      .signInWithPopup(providerFacebook)
-      .then((cred) => {
-        //adding user to the database
-        return db
-          .collection('users')
-          .doc(cred.user.uid)
-          .get()
-          .then((doc) => {
-            if (doc.exists) {
-              return db.collection('users').doc(cred.user.uid).update({
-                name: cred.user.displayName,
-                id: cred.user.uid,
-                timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-                newUser: cred.additionalUserInfo.isNewUser,
-              })
-            } else {
-              return db.collection('users').doc(cred.user.uid).set({
-                name: cred.user.displayName,
-                id: cred.user.uid,
-                newUser: cred.additionalUserInfo.isNewUser,
-                timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-              })
-            }
-          })
-      })
-      .catch((error) => alert(error.message))
-
-    history.push('profile')
-  }
-
-  const logIn = (e) => {
-    e.preventDefault()
-    //request with email and password
-    auth
-      .signInWithEmailAndPassword(mail, password)
-      .catch((error) => alert(error.message))
-    // if response get then redirect
-    history.push('/profile')
-  }
+  const [password, setPassword] = useState('') 
   return (
     <>
       <div className="login container">
@@ -110,10 +18,10 @@ function Login() {
           </div>
           <div className="login_input col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div className="social_login container-fluid">
-              <button className="btn g_btn" onClick={logInGoogle}>
+              <button className="btn g_btn" >
                 Continue with Google
               </button>
-              <button className="btn f_btn" onClick={logInFacebook}>
+              <button className="btn f_btn">
                 Continue with Facebook
               </button>
             </div>
@@ -143,8 +51,7 @@ function Login() {
               />
 
               <label>Forgot Password?</label>
-              <button
-                onClick={logIn}
+              <button 
                 className="login_btn btn btn-block btn-primary"
               >
                 Log in

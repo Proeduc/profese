@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import './Responsive_nav.css'
-import {a} from 'react-router-dom'
+import React from 'react'
+import './Responsive_nav.css' 
 import logo from '../NavTwo/logo.png'
 
 export default function Responsive_nav() { 
@@ -34,7 +33,7 @@ export default function Responsive_nav() {
             <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a> 
             <ul className="nav navbar-nav">
                 <li><a href="/">Home</a></li>
-                <li><a href="#">Blogs</a></li>
+                <li><a href="/blog">Blogs</a></li>
                 <li><a href="/discussion">Discussion Board</a></li>
                 <li><a href="/reviews">Reviews</a></li>
             </ul>
