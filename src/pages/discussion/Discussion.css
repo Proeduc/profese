@@ -21,3 +21,23 @@
      justify-content: space-around;
      align-items: center;
  }
+ .discussion__feed__new, .discussion__add__ans{
+     border: 1px solid black;
+     padding: 20px;
+     border-radius: 5px;
+ }
+ .discussion__feed__new__header, .discussion__add__ans__header{
+     display: flex;
+     align-items: center;
+     justify-content: flex-start; 
+     margin-bottom: 20px;
+}
+.discussion__feed__new__header img, .discussion__add__ans__header img{
+    width: 50px;
+    height: auto;
+}
+.discussion__feed__new__attachments, .discussion__add__ans__attachments{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}

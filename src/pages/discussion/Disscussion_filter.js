@@ -1,4 +1,6 @@
 import React from 'react'
+import './Discussion.css'
+import {Link} from 'react-router-dom'
 
 function Disscussion_filter(props) {
     return (
@@ -12,7 +14,8 @@ function Disscussion_filter(props) {
                             <h4 className="discussion__que__title">How do you use electricity to make something cold?</h4>
                             <div className="discussion__que__meta">
                                 <div className="discussion__que__anscnt text-primary"><p><i class="fa fa-edit " ></i> No answers yet</p></div>
-                                <div className="discussion__que__addans text-primary"><p><i class="fa fa-plus" aria-hidden="true"></i> Add a answer</p></div>
+                                <div className="discussion__que__addans text-primary"><p><i class="fa fa-plus" aria-hidden="true"></i><Link to="/add-ans"> Add a answer</Link></p></div>
+                                <div className="discussion__que__anscnt text-primary"><i class="fa fa-tag" aria-hidden="true"></i> Tag</div>       
                                 <div className="discussion__que__likes text-success">5 <i className="fa fa-check-circle-o"></i></div>
                                 <div className="discussion__que__dislikes text-danger">2 <i className="fa fa-close"></i></div>
                             </div>
@@ -27,7 +30,8 @@ function Disscussion_filter(props) {
                             </img>
                             <div className="discussion__que__meta">
                                 <div className="discussion__que__anscnt text-primary"><p><i class="fa fa-edit " ></i> 5 answers yet</p></div>
-                                <div className="discussion__que__addans text-primary"><p><i class="fa fa-plus" aria-hidden="true"></i> Add a answer</p></div>
+                                <div className="discussion__que__addans text-primary"><p><i class="fa fa-plus" aria-hidden="true"></i><Link to="/add-ans"> Add a answer</Link></p></div>
+                                <div className="discussion__que__anscnt text-primary"><i class="fa fa-tag" aria-hidden="true"></i> Tag</div>      
                                 <div className="discussion__que__likes text-success">5 <i className="fa fa-check-circle-o"></i></div>
                                 <div className="discussion__que__dislikes text-danger">2 <i className="fa fa-close"></i></div>
                             </div>
@@ -37,7 +41,8 @@ function Disscussion_filter(props) {
                         <h4 className="discussion__que__title">How do you use electricity to make something cold?</h4>
                         <div className="discussion__que__meta">
                             <div className="discussion__que__anscnt text-primary"><p><i class="fa fa-edit " ></i> No answers yet</p></div>
-                            <div className="discussion__que__addans text-primary"><p><i class="fa fa-plus" aria-hidden="true"></i> Add a answer</p></div>
+                            <div className="discussion__que__addans text-primary"><p><i class="fa fa-plus" aria-hidden="true"></i><Link to="/add-ans"> Add a answer</Link></p></div>
+                            <div className="discussion__que__anscnt text-primary"><i class="fa fa-tag" aria-hidden="true"></i> Tag</div>      
                             <div className="discussion__que__likes text-success">5 <i className="fa fa-check-circle-o"></i></div>
                             <div className="discussion__que__dislikes text-danger">2 <i className="fa fa-close"></i></div>
                         </div>

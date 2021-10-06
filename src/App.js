@@ -14,11 +14,10 @@ import { selectUser, login, logout } from './features/userSlice'
 import { db, auth } from './firebase'
 import Settings from './pages/settings/Settings'
 import Reviews from './pages/reviews/Reviews'
-import Discussion from './pages/discussion/Discussion'
-import Ask_a_ques from './pages/discussion/Ask_a_ques'
-import Custom from './pages/discussion/Custom'
+import Discussion from './pages/discussion/Discussion' 
 import Blog from './pages/blog/Blog'
 import ReviewFilter from './pages/reviews/ReviewFilter'
+import Add_ans from './pages/discussion/Add_ans' 
 
 function App() {
   const user = useSelector(selectUser)
@@ -95,25 +94,22 @@ function App() {
         </Route>
         <Route exact path="/discussion">
           <Discussion />
-        </Route>
-        <Route exact path="/ask_a_ques">
-          <Ask_a_ques  />
-        </Route>
+        </Route> 
         <Route exact path="/settings">
           <Settings />
         </Route>
         <Route exact path="/">
           <Home />
-        </Route>
-        <Route path="/custom/:id">
-          <Custom/>
-        </Route>
+        </Route> 
         <Route path="/blog">
           <Blog/>
         </Route>
         <Route path="/review-filter">
           <ReviewFilter />
         </Route>
+        <Route path="/add-ans">
+          <Add_ans />
+        </Route> 
       </Switch>
     </div>
   )

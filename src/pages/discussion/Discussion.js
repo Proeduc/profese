@@ -1,6 +1,7 @@
- import {React, useState} from 'react'
- import {Link} from 'react-router-dom'
+import {React, useState} from 'react'
+import {Link} from 'react-router-dom'
 import Disscussion_filter from './Disscussion_filter'
+import "./Discussion.css"
  
  function Discussion() {
     const [Filter, setFilter] = useState('')
@@ -39,14 +40,41 @@ import Disscussion_filter from './Disscussion_filter'
                 {
                  showFilter ? <Disscussion_filter hideFilter={hideFilter} filtername = {Filter} /> :
                 <div className="discussion_feed col-sm-8">
+                    <div className="discussion__feed__new container-fluid">
+                        <div className="discussion__feed__new__header">
+                            <img 
+                              src="https://www.bing.com/th?id=OIP.gxn_fMRYjgGPp7I9lh81FgHaGS&w=153&h=133&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2"
+                              className="img-circle img-responsive"
+                              alt="profile image" />
+                            <h4>&nbsp;<strong>Ritika Dey</strong>&nbsp;&nbsp;</h4>
+                        </div>
+                        <div className="discussion__feed__new__form">
+                            <input 
+                              name="new_ques"
+                              className="form-control"
+                              placeholder="Enter your question here"
+                              type="text"
+                              />
+                            <div className="discussion__feed__new__attachments">
+                                <input  
+                                  type="file" />
+
+                                <input
+                                  type="submit"
+                                  value="Post"
+                                  className="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
                      <div className="discussion__content container-fluid">
                          <h3 className="text-primary">Top questions for you</h3>
                          <div className="discussion__ques">
                              <div className="discussion__que">
                                  <h4 className="discussion__que__title">How do you use electricity to make something cold?</h4>
                                  <div className="discussion__que__meta">
-                                     <div className="discussion__que__anscnt text-primary"><p><i class="fa fa-edit " ></i> No answers yet</p></div>
-                                     <div className="discussion__que__addans text-primary"><p><i class="fa fa-plus" aria-hidden="true"></i> Add a answer</p></div>
+                                     <div className="discussion__que__anscnt text-primary"><p><i className="fa fa-edit " ></i> No answers yet</p></div>
+                                     <div className="discussion__que__addans text-primary"><p><i className="fa fa-plus" aria-hidden="true"></i><Link to="/add-ans"> Add a answer</Link></p></div>
+                                     <div className="discussion__que__anscnt text-primary"><i className="fa fa-tag" aria-hidden="true"></i> Tag</div>
                                      <div className="discussion__que__likes text-success">5 <i className="fa fa-check-circle-o"></i></div>
                                      <div className="discussion__que__dislikes text-danger">2 <i className="fa fa-close"></i></div>
                                  </div>
@@ -60,8 +88,9 @@ import Disscussion_filter from './Disscussion_filter'
                                   placeholder="ques banner">
                                  </img>
                                  <div className="discussion__que__meta">
-                                     <div className="discussion__que__anscnt text-primary"><p><i class="fa fa-edit " ></i> 5 answers yet</p></div>
-                                     <div className="discussion__que__addans text-primary"><p><i class="fa fa-plus" aria-hidden="true"></i> Add a answer</p></div>
+                                     <div className="discussion__que__anscnt text-primary"><p><i className="fa fa-edit " ></i> 5 answers yet</p></div>
+                                     <div className="discussion__que__addans text-primary"><p><i className="fa fa-plus" aria-hidden="true"></i><Link to="/add-ans"> Add a answer</Link></p></div>
+                                     <div className="discussion__que__anscnt text-primary"><i className="fa fa-tag" aria-hidden="true"></i> Tag</div>
                                      <div className="discussion__que__likes text-success">5 <i className="fa fa-check-circle-o"></i></div>
                                      <div className="discussion__que__dislikes text-danger">2 <i className="fa fa-close"></i></div>
                                  </div>
@@ -70,8 +99,9 @@ import Disscussion_filter from './Disscussion_filter'
                              <div className="discussion__que">
                                  <h4 className="discussion__que__title">How do you use electricity to make something cold?</h4>
                                  <div className="discussion__que__meta">
-                                     <div className="discussion__que__anscnt text-primary"><p><i class="fa fa-edit " ></i> No answers yet</p></div>
-                                     <div className="discussion__que__addans text-primary"><p><i class="fa fa-plus" aria-hidden="true"></i> Add a answer</p></div>
+                                     <div className="discussion__que__anscnt text-primary"><p><i className="fa fa-edit " ></i> No answers yet</p></div>
+                                     <div className="discussion__que__addans text-primary"><p><i className="fa fa-plus" aria-hidden="true"></i><Link to="/add-ans"> Add a answer</Link></p></div>
+                                     <div className="discussion__que__anscnt text-primary"><i className="fa fa-tag" aria-hidden="true"></i> Tag</div>
                                      <div className="discussion__que__likes text-success">5 <i className="fa fa-check-circle-o"></i></div>
                                      <div className="discussion__que__dislikes text-danger">2 <i className="fa fa-close"></i></div>
                                  </div>
