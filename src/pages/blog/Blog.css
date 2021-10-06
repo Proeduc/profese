@@ -7,7 +7,7 @@
     padding: 20px;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 60vh; 
+    height: max-content; 
 }
 
 .blog__header__brand p{
@@ -17,12 +17,7 @@
   color: white;
   padding: 5px 25px 5px 25px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.blog__header__search .input-group{
-    float: right;
-    width: 50%;
-}
+} 
 .blog__featured__title{
     font-weight: bold;
     color: white;
@@ -99,7 +94,7 @@
     border-radius: 7px;
 }
 .blog__row__blog img{
-   width: 400px;
+   max-width: 400px;
    margin: 20px;
    border-radius: 10px;
 } 
@@ -167,4 +162,17 @@
 }
 .blog__section__row{
     margin: 20px;
+}
+
+@media(max-width:650px){
+    .blog__row__blog img{
+        width: 200px;
+    }
+    .blog__row__blog h3{
+        text-align: center;
+    }
+    .blog__section__blog{
+        margin: 10px;
+        padding: 10px;
+    } 
 }

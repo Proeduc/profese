@@ -17,10 +17,10 @@ function Blog() {
             <div className="blog container-fluid">
                 <div className="blog__header container-fluid">
                     <div className="row">
-                        <div className="blog__header__brand col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div className="blog__header__brand col-sm-8">
                             <p>Blog</p>
                         </div>
-                        <div className="blog__header__search col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div className="blog__header__search col-sm-4">
                             <form>
                                 <div className="input-group">
                                     <input type="text" className="form-control" placeholder="Search Blogs"/>
@@ -36,7 +36,7 @@ function Blog() {
                     <div className="blog__featured">
                         <h2 className="blog__featured__title">Featured Posts</h2>
                         <div className="blog__featured__slides">
-                           <div className="blog__featured__slide col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                           <div className="blog__featured__slide col-sm-3">
                                <img 
                                   src="https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?cs=srgb&dl=pexels-jaime-reimer-2662116.jpg&fm=jpg" 
                                   placeholder="blog banner">
@@ -46,7 +46,7 @@ function Blog() {
                                    <button className="btn btn-default">Continue </button>
                                </div>
                            </div>
-                           <div className="blog__featured__slide col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                           <div className="blog__featured__slide col-sm-3">
                                <img 
                                   src="https://images.pexels.com/photos/4004374/pexels-photo-4004374.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
                                   placeholder="blog banner">
@@ -56,7 +56,7 @@ function Blog() {
                                    <button className="btn btn-default">Continue </button>
                                </div>
                            </div>
-                           <div className="blog__featured__slide col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                           <div className="blog__featured__slide col-sm-3">
                                <img 
                                   src="https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?cs=srgb&dl=pexels-jaime-reimer-2662116.jpg&fm=jpg" 
                                   placeholder="blog banner">
@@ -66,7 +66,7 @@ function Blog() {
                                    <button className="btn btn-default">Continue </button>
                                </div>
                            </div>
-                           <div className="blog__featured__slide col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                           <div className="blog__featured__slide col-sm-3">
                                <img 
                                   src="https://images.pexels.com/photos/4842544/pexels-photo-4842544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
                                   placeholder="blog banner">

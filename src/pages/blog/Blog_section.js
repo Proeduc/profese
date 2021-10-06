@@ -12,10 +12,10 @@ export default function Blog_section(props) {
 
               <div className="blog__section__content container">
                   <div className="row blog__section__row"> 
-                      <div className="blog__section__blog col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                      <div className="blog__section__blog col-sm-6">
                         <div className="blog__row__blog">
                             <div className="blog__row__content"> 
-                                <img 
+                                <img  
                                     src="https://images.pexels.com/photos/4842544/pexels-photo-4842544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
                                     placeholder="blog banner">
                                 </img>
@@ -41,7 +41,7 @@ export default function Blog_section(props) {
                       </div>
 
 
-                      <div className="blog__section__blog col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                      <div className="blog__section__blog col-sm-6">
                         <div className="blog__row__blog">
                             <div className="blog__row__content"> 
                                 <img 
@@ -75,7 +75,7 @@ export default function Blog_section(props) {
                   {/* second row */}
 
                   <div className="row blog__section__row"> 
-                      <div className="blog__section__blog col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                      <div className="blog__section__blog col-sm-6">
                         <div className="blog__row__blog">
                             <div className="blog__row__content"> 
                                 <img 
@@ -104,7 +104,7 @@ export default function Blog_section(props) {
                       </div>
 
 
-                      <div className="blog__section__blog col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                      <div className="blog__section__blog col-sm-6">
                         <div className="blog__row__blog">
                             <div className="blog__row__content"> 
                                 <img 
@@ -135,7 +135,7 @@ export default function Blog_section(props) {
 
                 {/* third row */}
                 <div className="row blog__section__row"> 
-                      <div className="blog__section__blog col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                      <div className="blog__section__blog col-sm-6">
                         <div className="blog__row__blog">
                             <div className="blog__row__content"> 
                                 <img 
@@ -164,7 +164,7 @@ export default function Blog_section(props) {
                       </div>
 
 
-                      <div className="blog__section__blog col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                      <div className="blog__section__blog col-sm-6">
                         <div className="blog__row__blog">
                             <div className="blog__row__content"> 
                                 <img 
