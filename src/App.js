@@ -15,6 +15,7 @@ import Discussion from './pages/discussion/Discussion'
 import Blog from './pages/blog/Blog'
 import ReviewFilter from './pages/reviews/ReviewFilter'
 import Add_ans from './pages/discussion/Add_ans' 
+import Service from './pages/service/Service'
 
 function App() { 
   const [avatarUrl, setAvatarUrl] = useState('')
@@ -54,9 +55,9 @@ function App() {
         <Route exact path="/discussion">
           <Discussion />
         </Route> 
-        <Route exact path="/settings">
+        {/* <Route exact path="/settings">
           <Settings />
-        </Route>
+        </Route> */}
         <Route exact path="/">
           <Home />
         </Route> 
@@ -69,6 +70,9 @@ function App() {
         <Route path="/add-ans">
           <Add_ans />
         </Route> 
+        <Route path="/service">
+          <Service />
+        </Route>
       </Switch>
     </div>
   )

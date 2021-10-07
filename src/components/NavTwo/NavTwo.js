@@ -32,7 +32,7 @@ export default function NavTwo() {
             </ul>
           </li>
           <li>
-            <NavLink to="#">Services</NavLink>
+            <NavLink to="/service">Services</NavLink>
           </li>
           <li>
             <NavLink to="#">Careers at Profese</NavLink>

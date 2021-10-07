@@ -1,6 +1,7 @@
 import React from 'react'
 import './Responsive_nav.css' 
 import logo from '../NavTwo/logo.png'
+import { NavLink } from 'react-router-dom'
 
 export default function Responsive_nav() { 
 
@@ -30,33 +31,33 @@ export default function Responsive_nav() {
             /> 
         </span>
          <div id="mySidenav" className="sidenav">
-            <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a> 
+            <NavLink to="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</NavLink> 
             <ul className="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/blog">Blogs</a></li>
-                <li><a href="/discussion">Discussion Board</a></li>
-                <li><a href="/reviews">Reviews</a></li>
+                <li><NavLink to="/">Home</NavLink></li>
+                <li><NavLink to="/blog">Blogs</NavLink></li>
+                <li><NavLink to="/discussion">Discussion Board</NavLink></li>
+                <li><NavLink to="/reviews">Reviews</NavLink></li>
             </ul>
 
             <ul className="nav navbarOption navbar-nav">
             <li className="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <NavLink className="dropdown-toggle" data-toggle="dropdown" to="#">
                 Courses &nbsp;<span className="caret"></span>
-                </a>
+                </NavLink>
                 <ul className="dropdown-menu">
-                    <li><a href="#">Mathematics</a></li>
-                    <li> <a href="#">Science</a></li>
-                    <li><a href="#">English</a> </li>
+                    <li><NavLink to="#">Mathematics</NavLink></li>
+                    <li> <NavLink to="#">Science</NavLink></li>
+                    <li><NavLink to="#">English</NavLink> </li>
                 </ul>
             </li>
             <li>
-                <a href="#">Services</a>
+                <NavLink to="#">Services</NavLink>
             </li>
             <li>
-                <a href="#">Careers at Profese</a>
+                <NavLink to="#">Careers at Profese</NavLink>
             </li>
             <li>
-                <a href="#">Ask a Tutor</a>
+                <NavLink to="#">Ask a Tutor</NavLink>
             </li>
             </ul>
         </div>
