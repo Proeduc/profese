@@ -8,14 +8,13 @@ import Home from './components/Home/Home'
 import Signup from './pages/signup/Signup'
 import Login from './pages/login/Login'
 import { Switch, Route } from 'react-router-dom'
-import Profile from './pages/profile/Profile'  
-import Settings from './pages/settings/Settings'
+import Profile from './pages/profile/Profile'   
 import Reviews from './pages/reviews/Reviews'
 import Discussion from './pages/discussion/Discussion' 
 import Blog from './pages/blog/Blog'
 import ReviewFilter from './pages/reviews/ReviewFilter'
 import Add_ans from './pages/discussion/Add_ans' 
-import Service from './pages/service/Service'
+// import Service from './pages/service/Service'
 
 function App() { 
   const [avatarUrl, setAvatarUrl] = useState('')
@@ -36,10 +35,7 @@ function App() {
         width > 650 ? 
         <NavOne /> :  <Responsive_nav />
       }
-      <Switch>
-        {/* <Route exact path="/settings">
-          <Settings />
-        </Route> */}
+      <Switch> 
         <Route exact path="/login">
           <Login />
         </Route>
@@ -54,10 +50,7 @@ function App() {
         </Route>
         <Route exact path="/discussion">
           <Discussion />
-        </Route> 
-        {/* <Route exact path="/settings">
-          <Settings />
-        </Route> */}
+        </Route>  
         <Route exact path="/">
           <Home />
         </Route> 
@@ -70,9 +63,9 @@ function App() {
         <Route path="/add-ans">
           <Add_ans />
         </Route> 
-        <Route path="/service">
+        {/* <Route path="/service">
           <Service />
-        </Route>
+        </Route> */}
       </Switch>
     </div>
   )
