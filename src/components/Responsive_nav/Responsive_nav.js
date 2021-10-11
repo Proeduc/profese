@@ -31,7 +31,7 @@ export default function Responsive_nav() {
             /> 
         </span>
          <div id="mySidenav" className="sidenav">
-            <NavLink to="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</NavLink> 
+            <NavLink to="#" className="closebtn" onClick={closeNav}>&times;</NavLink> 
             <ul className="nav navbar-nav">
                 <li><NavLink to="/">Home</NavLink></li>
                 <li><NavLink to="/blog">Blogs</NavLink></li>

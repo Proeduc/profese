@@ -20,20 +20,20 @@ export default function Blog_section(props) {
                                     placeholder="blog banner">
                                 </img>
 
-                                <h3 class="blog__title">
+                                <h3 className="blog__title">
                                     <strong>What is Lorem Ipsum?</strong>
                                 </h3> 
                                 
-                                <div class="blog__desc">
+                                <div className="blog__desc">
                                     Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's....
                                 </div> 
 
-                                <div class="row blog__meta">
-                                    <div class="col-lg-8 col-xs-12">
-                                        <p style={{color: "black", padding:"10px"}}><span class="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
+                                <div className="row blog__meta">
+                                    <div className="col-lg-8 col-xs-12">
+                                        <p style={{color: "black", padding:"10px"}}><span className="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
                                     </div>
-                                    <div class="col-lg-4 col-xs-12">
-                                        <Link to="#" class="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</Link>
+                                    <div className="col-lg-4 col-xs-12">
+                                        <Link to="#" className="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</Link>
                                     </div>
                                 </div> 
                             </div>
@@ -49,20 +49,20 @@ export default function Blog_section(props) {
                                     placeholder="blog banner">
                                 </img>
 
-                                <h3 class="blog__title">
+                                <h3 className="blog__title">
                                     <strong>What is Lorem Ipsum?</strong>
                                 </h3> 
                                 
-                                <div class="blog__desc">
+                                <div className="blog__desc">
                                     Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's....
                                 </div> 
 
-                                <div class="row blog__meta">
-                                    <div class="col-lg-8 col-xs-12">
-                                        <p style={{color: "black", padding:"10px"}}><span class="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
+                                <div className="row blog__meta">
+                                    <div className="col-lg-8 col-xs-12">
+                                        <p style={{color: "black", padding:"10px"}}><span className="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
                                     </div>
-                                    <div class="col-lg-4 col-xs-12">
-                                        <Link to="#" class="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</Link>
+                                    <div className="col-lg-4 col-xs-12">
+                                        <Link to="#" className="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</Link>
                                     </div>
                                 </div> 
                             </div>
@@ -83,20 +83,20 @@ export default function Blog_section(props) {
                                     placeholder="blog banner">
                                 </img>
 
-                                <h3 class="blog__title">
+                                <h3 className="blog__title">
                                     <strong>What is Lorem Ipsum?</strong>
                                 </h3> 
                                 
-                                <div class="blog__desc">
+                                <div className="blog__desc">
                                     Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's....
                                 </div> 
 
-                                <div class="row blog__meta">
-                                    <div class="col-lg-8 col-xs-12">
-                                        <p style={{color: "black", padding:"10px"}}><span class="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
+                                <div className="row blog__meta">
+                                    <div className="col-lg-8 col-xs-12">
+                                        <p style={{color: "black", padding:"10px"}}><span className="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
                                     </div>
-                                    <div class="col-lg-4 col-xs-12">
-                                        <Link to="#" class="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</Link>
+                                    <div className="col-lg-4 col-xs-12">
+                                        <Link to="#" className="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</Link>
                                     </div>
                                 </div> 
                             </div>
@@ -112,20 +112,20 @@ export default function Blog_section(props) {
                                     placeholder="blog banner">
                                 </img>
 
-                                <h3 class="blog__title">
+                                <h3 className="blog__title">
                                     <strong>What is Lorem Ipsum?</strong>
                                 </h3> 
                                 
-                                <div class="blog__desc">
+                                <div className="blog__desc">
                                     Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's....
                                 </div> 
 
-                                <div class="row blog__meta">
-                                    <div class="col-lg-8 col-xs-12">
-                                        <p style={{color: "black", padding:"10px"}}><span class="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
+                                <div className="row blog__meta">
+                                    <div className="col-lg-8 col-xs-12">
+                                        <p style={{color: "black", padding:"10px"}}><span className="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
                                     </div>
-                                    <div class="col-lg-4 col-xs-12">
-                                        <Link to="#" class="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</Link>
+                                    <div className="col-lg-4 col-xs-12">
+                                        <Link to="#" className="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</Link>
                                     </div>
                                 </div> 
                             </div>
@@ -143,20 +143,20 @@ export default function Blog_section(props) {
                                     placeholder="blog banner">
                                 </img>
 
-                                <h3 class="blog__title">
+                                <h3 className="blog__title">
                                     <strong>What is Lorem Ipsum?</strong>
                                 </h3> 
                                 
-                                <div class="blog__desc">
+                                <div className="blog__desc">
                                     Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's....
                                 </div> 
 
-                                <div class="row blog__meta">
-                                    <div class="col-lg-8 col-xs-12">
-                                        <p style={{color: "black", padding:"10px"}}><span class="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
+                                <div className="row blog__meta">
+                                    <div className="col-lg-8 col-xs-12">
+                                        <p style={{color: "black", padding:"10px"}}><span className="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
                                     </div>
-                                    <div class="col-lg-4 col-xs-12">
-                                        <Link to="#" class="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</Link>
+                                    <div className="col-lg-4 col-xs-12">
+                                        <Link to="#" className="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</Link>
                                     </div>
                                 </div> 
                             </div>
@@ -172,20 +172,20 @@ export default function Blog_section(props) {
                                     placeholder="blog banner">
                                 </img>
 
-                                <h3 class="blog__title">
+                                <h3 className="blog__title">
                                     <strong>What is Lorem Ipsum?</strong>
                                 </h3> 
                                 
-                                <div class="blog__desc">
+                                <div className="blog__desc">
                                     Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's....
                                 </div> 
 
-                                <div class="row blog__meta">
-                                    <div class="col-lg-8 col-xs-12">
-                                        <p style={{color: "black", padding:"10px"}}><span class="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
+                                <div className="row blog__meta">
+                                    <div className="col-lg-8 col-xs-12">
+                                        <p style={{color: "black", padding:"10px"}}><span className="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
                                     </div>
-                                    <div class="col-lg-4 col-xs-12">
-                                        <Link to="#" class="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</Link>
+                                    <div className="col-lg-4 col-xs-12">
+                                        <Link to="#" className="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</Link>
                                     </div>
                                 </div> 
                             </div>

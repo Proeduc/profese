@@ -90,8 +90,8 @@ function Home() {
               
               <div className="contact__info__content">
                 <hr/>
-                <p className="contact__info__address"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;ADDRESS : C-4 Behind MA Plazaz , New Delhi</p>
-                <p className="contact__info__telephone"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;PHONE: +91 8299729830</p>
+                <p className="contact__info__address"><i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;ADDRESS : C-4 Behind MA Plazaz , New Delhi</p>
+                <p className="contact__info__telephone"><i className="fa fa-phone" aria-hidden="true"></i>&nbsp;PHONE: +91 8299729830</p>
                 <p className="contact__info__whatsapp"><i className="fa fa-whatsapp"></i>&nbsp;WHATSAPP: +91 8299729830</p>
               </div>
             </div>
@@ -102,22 +102,22 @@ function Home() {
               <div className="useful__links__content">
                 <div className="home__footer__courses col-lg-4 col-md-4 col-sm-4 col-xs-12">
                   <p>COURSES</p>
-                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">Mathematics</Link></li>
-                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">Science</Link></li>
-                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">Engineering</Link></li>
-                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">English</Link></li>
-                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">More</Link></li>
+                  <li><i className="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">Mathematics</Link></li>
+                  <li><i className="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">Science</Link></li>
+                  <li><i className="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">Engineering</Link></li>
+                  <li><i className="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">English</Link></li>
+                  <li><i className="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">More</Link></li>
                 </div>
                 <div className="home__footer__services col-lg-4 col-md-4 col-sm-4 col-xs-12">
                   <p>SERVICES</p>
-                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">Assignment help</Link></li>
-                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">One-on-one session</Link></li>
-                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">Practice help</Link></li>
-                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">Course help</Link></li>
+                  <li><i className="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">Assignment help</Link></li>
+                  <li><i className="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">One-on-one session</Link></li>
+                  <li><i className="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">Practice help</Link></li>
+                  <li><i className="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">Course help</Link></li>
                 </div>
                 <div className="home__footer__careers col-lg-4 col-md-4 col-sm-4 col-xs-12">
                   <p>CAREERS</p>
-                  <li><i class="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">Explore opportunities</Link></li>
+                  <li><i className="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="#">Explore opportunities</Link></li>
                 </div>
 
               </div>

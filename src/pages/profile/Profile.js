@@ -65,10 +65,10 @@ const Profile = ({ avatarUrl }) => {
                 <div className="row">
                   <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <h4>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
+                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star"></i>
+                      <i className="fa fa-star"></i>
                       <div className="profile__reviews">5 Reviews</div>
                     </h4>
                   </div>
