@@ -33,21 +33,26 @@ export default function Responsive_nav() {
          <div id="mySidenav" className="sidenav">
             <NavLink to="#" className="closebtn" onClick={closeNav}>&times;</NavLink> 
             <ul className="nav navbar-nav">
-                <li><NavLink to="/">Home</NavLink></li>
-                <li><NavLink to="/blog">Blogs</NavLink></li>
-                <li><NavLink to="/discussion">Discussion Board</NavLink></li>
-                <li><NavLink to="/reviews">Reviews</NavLink></li>
-            </ul>
-
+                <li><NavLink to="/" onClick={closeNav}>Home</NavLink></li>
+                <li><NavLink to="/blog" onClick={closeNav}>Blogs</NavLink></li>
+                <li><NavLink to="/discussion" onClick={closeNav}>Discussion Board</NavLink></li>
+                <li><NavLink to="/reviews" onClick={closeNav}>Reviews</NavLink></li>
+            </ul> 
             <ul className="nav navbarOption navbar-nav">
-            <li>
-                <NavLink to="#">Services</NavLink>
+            <li>  
+              <NavLink to="#" className=" service_dd dropdown-toggle" type="button" data-toggle="dropdown">Services <span className="caret"></span></NavLink>
+              <ul className="dropdown-menu services__dropdown">
+                <li><NavLink to="/assignment-help" onClick={closeNav}>Assignment Help</NavLink></li>
+                <li><NavLink to="/live-sessions" onClick={closeNav}>One-on-One Live sessions</NavLink></li>
+                <li><NavLink to="/course-help" onClick={closeNav}>Course Help</NavLink></li>
+                <li><NavLink to="/practice-exam" onClick={closeNav}>Practice Exam</NavLink></li>
+              </ul> 
             </li>
             <li>
-                <NavLink to="#">Careers at Profese</NavLink>
+                <NavLink to="#" onClick={closeNav}>Careers at Profese</NavLink>
             </li>
             <li>
-                <NavLink to="#">Ask a Tutor</NavLink>
+                <NavLink to="#" onClick={closeNav}>Ask a Tutor</NavLink>
             </li>
             </ul>
         </div>
