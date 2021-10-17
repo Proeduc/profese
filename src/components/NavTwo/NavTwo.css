@@ -17,3 +17,9 @@
   text-decoration: none;
   background-color: transparent;
 }
+.services__dropdown{
+  padding: 10px; 
+}
+.services__dropdown li{
+  font-weight: bold;
+}

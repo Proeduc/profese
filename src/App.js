@@ -13,8 +13,11 @@ import Reviews from './pages/reviews/Reviews'
 import Discussion from './pages/discussion/Discussion' 
 import Blog from './pages/blog/Blog'
 import ReviewFilter from './pages/reviews/ReviewFilter'
-import Add_ans from './pages/discussion/Add_ans' 
-// import Service from './pages/service/Service'
+import Add_ans from './pages/discussion/Add_ans'  
+import Assignment_help from './pages/service/Assignment_help'
+import One_on_one from './pages/service/One_on_one'
+import Practice_exam from './pages/service/Practice_exam'
+import Course_help from './pages/service/Course_help'
 
 function App() { 
   const [avatarUrl, setAvatarUrl] = useState('')
@@ -63,9 +66,18 @@ function App() {
         <Route path="/add-ans">
           <Add_ans />
         </Route> 
-        {/* <Route path="/service">
-          <Service />
-        </Route> */}
+        <Route path="/assignment-help">
+          <Assignment_help />
+        </Route>
+        <Route path="/live-sessions" >
+          <One_on_one />
+        </Route>
+        <Route path="/course-help" >
+          <Course_help />
+        </Route>
+        <Route path="/practice-exam" >
+          <Practice_exam />
+        </Route>
       </Switch>
     </div>
   )

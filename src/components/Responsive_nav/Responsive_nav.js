@@ -40,16 +40,6 @@ export default function Responsive_nav() {
             </ul>
 
             <ul className="nav navbarOption navbar-nav">
-            <li className="dropdown">
-                <NavLink className="dropdown-toggle" data-toggle="dropdown" to="#">
-                Courses &nbsp;<span className="caret"></span>
-                </NavLink>
-                <ul className="dropdown-menu">
-                    <li><NavLink to="#">Mathematics</NavLink></li>
-                    <li> <NavLink to="#">Science</NavLink></li>
-                    <li><NavLink to="#">English</NavLink> </li>
-                </ul>
-            </li>
             <li>
                 <NavLink to="#">Services</NavLink>
             </li>

@@ -15,8 +15,14 @@ export default function NavTwo() {
     <nav className="navbar navtwo">
       <div className="container-fluid navbarTwoMobile">
         <ul className="nav navbarOption navbar-nav"> 
-          <li>
-            <NavLink to="/service">Services</NavLink>
+          <li>  
+              <NavLink to="#" className="dropdown-toggle" type="button" data-toggle="dropdown">Services <span className="caret"></span></NavLink>
+              <ul className="dropdown-menu services__dropdown">
+                <li><NavLink to="/assignment-help">Assignment Help</NavLink></li>
+                <li><NavLink to="/live-sessions">One-on-One Live sessions</NavLink></li>
+                <li><NavLink to="/course-help">Course Help</NavLink></li>
+                <li><NavLink to="/practice-exam">Practice Exam</NavLink></li>
+              </ul> 
           </li>
           <li>
             <NavLink to="#">Careers at Profese</NavLink>

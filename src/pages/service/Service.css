@@ -1,0 +1,30 @@
+.assignment__help__title, .Course__help__title, .live__session__title, .practice__exam__title{
+    font-weight: bold;
+}
+.assignment__help__desc, .Course__help__desc, .live__session__desc, .practice__exam__desc{
+    font-weight: bold;
+    font-size: large;
+}
+.assignment__help__type__title, .practice__exam__type__title{
+    background-color: #153280;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.assignment__help__form, .Course__help__form, .live__session__form, .practice__exam__form{
+    background-color: #4d67ad;
+    color: white;
+    margin-bottom: 20px;
+}
+.form__container{
+    padding: 20px;
+}
+.live__Session__img{ 
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+}
+.live__Session__img img{
+    width: 80%;
+}
