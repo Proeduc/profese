@@ -9,7 +9,8 @@ function Course_help() {
                <h3 className="text-primary Course__help__title">Course Help</h3>
                <hr style={{borderTop:"2px dotted #153280"}}/>
                <p className="Course__help__desc text-justify">
-               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                   We you with a tutor expert in the subject you need help. This service is best for students who need help with a subject and conceptual 
+                   issues, with a tutor to guide you through an entire course until you master the material.
                </p>
             </div>
             {/* course help header end */}

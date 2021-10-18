@@ -1,0 +1,54 @@
+.careers__header{
+    max-height: 50vh;
+}
+.careers__header img{
+    width: 100%;
+    max-height: 50vh;
+    object-fit: cover;
+}
+.careers__header__text{
+    position: relative;
+    top: -200px;
+    left: 20px;
+    background-color: black;
+    opacity: 0.7;
+    padding: 10px;
+    max-width: 45vw;
+}
+.careers__header__text h1, .careers__header__text h4{
+    font-weight: bold; 
+    color: white;
+} 
+.about__us__title, .why__join__title{
+    font-weight: bold;
+}
+.careers__job__openings{
+    padding: 10px;
+    margin: 15px;
+}
+.job__openings__title{
+    text-align: center;
+    color: #153280;
+    font-weight: bold;
+}
+.job__opening{
+    padding: 10px;
+}
+.job__opening__content{
+    box-shadow: 4px 8px 8px whitesmoke;
+    padding: 10px;
+}
+.job__role{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.job__details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (max-width:650px){
+    .careers__header__text{
+        max-width: 95vw;
+    }
+}

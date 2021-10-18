@@ -18,6 +18,7 @@ import Assignment_help from './pages/service/Assignment_help'
 import One_on_one from './pages/service/One_on_one'
 import Practice_exam from './pages/service/Practice_exam'
 import Course_help from './pages/service/Course_help'
+import Careers from './pages/careers/Careers'
 
 function App() { 
   const [avatarUrl, setAvatarUrl] = useState('')
@@ -57,26 +58,29 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route> 
-        <Route path="/blog">
+        <Route exact path="/blog">
           <Blog/>
         </Route>
-        <Route path="/review-filter">
+        <Route exact path="/review-filter">
           <ReviewFilter />
         </Route>
-        <Route path="/add-ans">
+        <Route exact path="/add-ans">
           <Add_ans />
         </Route> 
-        <Route path="/assignment-help">
+        <Route exact path="/assignment-help">
           <Assignment_help />
         </Route>
-        <Route path="/live-sessions" >
+        <Route exact path="/live-sessions" >
           <One_on_one />
         </Route>
-        <Route path="/course-help" >
+        <Route exact path="/course-help" >
           <Course_help />
         </Route>
-        <Route path="/practice-exam" >
+        <Route exact path="/practice-exam" >
           <Practice_exam />
+        </Route>
+        <Route exact path="/careers">
+          <Careers />
         </Route>
       </Switch>
     </div>

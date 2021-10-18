@@ -25,7 +25,7 @@ export default function NavTwo() {
               </ul> 
           </li>
           <li>
-            <NavLink to="#">Careers at Profese</NavLink>
+            <NavLink to="/careers">Careers at Profese</NavLink>
           </li>
           <li>
             <NavLink to="#">Ask a Tutor</NavLink>

@@ -19,9 +19,7 @@ function Services() {
                 <img className="img-responsive" alt="" src={assignment_help} />
                 <h1>Assignment Help</h1>
                 <h4>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s.
+                   For students who need help with homeworks and projects.
                 </h4>
                 <Link to="/assignment-help" className="btn btn-primary get_started">
                   Get started
@@ -33,9 +31,7 @@ function Services() {
                 <img className="img-responsive" alt="" src={course_help} />
                 <h1>Course Help</h1>
                 <h4>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s.
+                   For students who need general help with course material.
                 </h4>
                 <Link to="/course-help" className="btn btn-primary get_started">
                   Get started
@@ -51,9 +47,7 @@ function Services() {
                 <img className="img-responsive" alt="" src={practice_exam} />
                 <h1>Practice Exam</h1>
                 <h4>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s.
+                   For students who need some more practice with course material.
                 </h4>
                 <Link to="/practice-exam" className="btn btn-primary get_started">
                   Get started
@@ -65,9 +59,7 @@ function Services() {
                 <img className="img-responsive" alt="" src={one_on_one} />
                 <h1>Live session</h1>
                 <h4>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s.
+                   Private sessions specifically tailored to your needs.
                 </h4>
                 <Link to="/live-sessions" className="btn btn-primary get_started">
                   Get started

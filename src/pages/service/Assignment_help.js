@@ -9,8 +9,9 @@ function Assignment_help() {
                <h3 className="text-primary assignment__help__title">Assignment Help</h3>
                <hr style={{borderTop:"2px dotted #153280"}}/>
                <p className="assignment__help__desc text-justify">
-                   Profese provides best assignment help service by a team of expert tutors. We guarantee best quality,
-                   plagiarism free, 24*7 assignment help service. We deliver our final work always on time.
+                   Profese provides best assignment help service by a team of expert tutors. Assignment help is ideal for students who need guidance through specific
+                   assignments, like homework, projects, and labs. Out tutors will ensure you achieve the highest marks and give you a deeper 
+                   understanding of the material with thorough explanations.
                </p>
            </div>
 

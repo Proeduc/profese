@@ -9,7 +9,9 @@ function Practice_exam() {
                <h3 className="text-primary practice__exam__title">Practice Exam</h3>
                <hr style={{borderTop:"2px dotted #153280"}}/>
                <p className="practice__exam__desc text-justify">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                 Practice Exams are best for students who are confidents enough with course material to start
+                 trying problems on theri own but may need some guidance through challenging problems or test-taking strategies.
+                 Our tutors will give you the practice and guidance you need to ace your next exam.  
                </p>
             </div>
             {/* practice exam header end */}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './NavOne.css'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import NavTow from '../NavTwo/NavTwo'
 
 export default function NavOne() { 
@@ -11,9 +11,9 @@ export default function NavOne() {
             <div className="container-fluid">
                 <div className="navbar-header">
                     <ul className="nav navbar-nav">
-                        <li><NavLink to="https://www.linkedin.com/company/71097398/admin/"><i className="fa fa-linkedin"></i></NavLink></li> 
-                        <li><NavLink to="https://www.facebook.com/profeseducation"><i className="fa fa-facebook-f"></i></NavLink></li>
-                        <li><NavLink to="https://www.instagram.com/invites/contact/?i=d4i696sm61vp&utm_content=i8mwrkz"><i className="fa fa-instagram"></i></NavLink></li>
+                        <li><a href="https://www.linkedin.com/company/71097398/admin/" target="_blank"><i className="fa fa-linkedin"></i></a></li> 
+                        <li><a href="https://www.facebook.com/profeseducation" target="_blank"><i className="fa fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/invites/contact/?i=d4i696sm61vp&utm_content=i8mwrkz" target="_blank"><i className="fa fa-instagram"></i></a></li>
                     </ul>
                 </div>
 
