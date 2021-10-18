@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+.support__faq__title{
+    color: #153280;
+    font-weight: bold;
+}
+.support__faq__Content{ 
+    padding: 10px; 
+}
+.support__faq{
+    border-top: 1px dotted black;
+    padding: 5px;
+    margin: 10px;
+}
+.support__faq__ans{
+    padding: 10px;
+    font-size: medium;
+}
+.support__form{
+    background-color: #153280;
+    color: white;
+    box-shadow: 2px 4px 4px #153280; 
+    margin-top: 50px;
+}
+.support__form__title{
+    font-family: 'Italianno', cursive;
+}
+.support__form__btn{
+    margin: 10px;
+}

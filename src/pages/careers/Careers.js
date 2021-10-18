@@ -5,10 +5,10 @@ function Careers() {
     return (
         <>
             <div className="careers__header">
-                <img src="https://image.freepik.com/free-photo/book-with-green-board-background_1150-3837.jpg" className="img-responsive"/>
+                <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNhcmVlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" className="img-responsive"/>
                 <div className="careers__header__text">
                 <h1>Join Us</h1> 
-                <h4 className="text-justify"> Excel your professional career with Profese today. Be with a group of people who believe in stand</h4>
+                <h4 className="text-justify"> Excel your professional career with Profese today. Be with a group of people who work hard, stand together and laugh a lot. </h4>
                 </div>
             </div>
 
@@ -24,16 +24,9 @@ function Careers() {
 
 
                <div className="careers__why__join">
-                   <h3 className="text-primary why__join__title">Why join us?</h3>
-                   {/* change this with original content */}
-                   <div className="list-group row">
-                       <li className="col-sm-6 list-group-item"><i className="fa fa-user" aria-hidden="true"></i> Point 1</li>
-                       <li className="col-sm-6 list-group-item"><i className="fa fa-user" aria-hidden="true"></i> Point 2</li> 
-                   </div>
-                   <div className="list-group row">
-                       <li className="col-sm-6 list-group-item"><i className="fa fa-user" aria-hidden="true"></i> Point 3</li>
-                       <li className="col-sm-6 list-group-item"><i className="fa fa-user" aria-hidden="true"></i> Point 4</li> 
-                   </div>
+                   <h3 className="text-primary why__join__title">Why join us?</h3> 
+                   <iframe width="550" height="315" src="https://www.youtube.com/embed/DrRzK5-2-b8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                   <iframe width="550" height="315" src="https://www.youtube.com/embed/DrRzK5-2-b8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                </div>
 
 

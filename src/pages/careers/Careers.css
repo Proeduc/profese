@@ -47,6 +47,9 @@
     justify-content: space-between;
     align-items: center;
 }
+.careers__why__join iframe{
+    margin: 5px;
+}
 @media (max-width:650px){
     .careers__header__text{
         max-width: 95vw;

@@ -19,6 +19,7 @@ import One_on_one from './pages/service/One_on_one'
 import Practice_exam from './pages/service/Practice_exam'
 import Course_help from './pages/service/Course_help'
 import Careers from './pages/careers/Careers'
+import Support from './pages/support/Support'
 
 function App() { 
   const [avatarUrl, setAvatarUrl] = useState('')
@@ -81,6 +82,9 @@ function App() {
         </Route>
         <Route exact path="/careers">
           <Careers />
+        </Route>
+        <Route exact path="/support">
+          <Support />
         </Route>
       </Switch>
     </div>
