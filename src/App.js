@@ -20,6 +20,7 @@ import Practice_exam from './pages/service/Practice_exam'
 import Course_help from './pages/service/Course_help'
 import Careers from './pages/careers/Careers'
 import Support from './pages/support/Support'
+import AskTutor from './pages/Ask_a_tutor/AskTutor'
 
 function App() { 
   const [avatarUrl, setAvatarUrl] = useState('')
@@ -85,6 +86,9 @@ function App() {
         </Route>
         <Route exact path="/support">
           <Support />
+        </Route>
+        <Route exact path="/ask-tutor">
+          <AskTutor />
         </Route>
       </Switch>
     </div>
