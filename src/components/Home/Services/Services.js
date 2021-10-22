@@ -15,11 +15,13 @@ function Services() {
         <Fade bottom>
           <div className="services__row">
             <div className="service col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <div className="thumbnail">
-                <img className="img-responsive" alt="" src={assignment_help} />
+              <div className="home__thumbnail thumbnail">
+                <div className="home__service__img thumbnail">
+                    <img className="img-responsive" alt="" src={assignment_help} /> 
+                </div>
                 <h1>Assignment Help</h1>
                 <h4>
-                   For students who need help with homeworks and projects.
+                  For students who need help with homeworks and projects.
                 </h4>
                 <Link to="/assignment-help" className="btn btn-primary get_started">
                   Get started
@@ -27,8 +29,10 @@ function Services() {
               </div>
             </div>
             <div className="service col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <div className="thumbnail">
-                <img className="img-responsive" alt="" src={course_help} />
+              <div className="home__thumbnail thumbnail">
+                <div className="home__service__img thumbnail">
+                  <img className="img-responsive" alt="" src={course_help} />
+                </div>
                 <h1>Course Help</h1>
                 <h4>
                    For students who need general help with course material.
@@ -43,8 +47,10 @@ function Services() {
         <Fade bottom>
           <div className="services__row">
             <div className="service col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <div className="thumbnail">
-                <img className="img-responsive" alt="" src={practice_exam} />
+              <div className="home__thumbnail thumbnail">
+                <div className="home__service__img thumbnail">
+                  <img className="img-responsive" alt="" src={practice_exam} />
+                </div>
                 <h1>Practice Exam</h1>
                 <h4>
                    For students who need some more practice with course material.
@@ -55,8 +61,10 @@ function Services() {
               </div>
             </div>
             <div className="service col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <div className="thumbnail">
-                <img className="img-responsive" alt="" src={one_on_one} />
+              <div className="home__thumbnail thumbnail">
+                <div className="home__service__img thumbnail">
+                  <img className="img-responsive" alt="" src={one_on_one} />
+                </div>
                 <h1>Live session</h1>
                 <h4>
                    Private sessions specifically tailored to your needs.
