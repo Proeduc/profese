@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 .blog{
     padding: 0;
 }
@@ -164,6 +165,61 @@
     margin: 20px;
 }
 
+
+/* single blog style */
+.blog__single__title{
+    text-align: center;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+.blog__single__img img{  
+    height: 50vh;
+    width: 100%;
+}
+.blog__single__sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.blog__single__likes i{
+    color:crimson; 
+    font-size: 20px;
+}
+.blog__single__likes p{
+    font-size: 20px;
+}
+.blog__single__comments i,
+.blog__single__comments p{
+    font-size: 20px;
+} 
+.blog__single__text{
+    font-size: 15px;
+}
+.blog__single__share{
+    display: flex;
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+.blog__single__share i{
+    color: black;
+    font-size: 15px;
+}
+.blog__single__twitter i:hover, .blog__single__facebook i:hover, .blog__single__linkedin i:hover{  
+    color: #153280;
+}
+.blog__single__form__title{
+    font-weight: bold;
+    font-family: 'Italianno', cursive;
+}
+.blog__single__leave__comment{
+    margin-bottom: 30px;
+}
+
+/* responsive styles */
 @media(max-width:650px){
     .blog__row__blog img{
         width: 200px;
@@ -174,5 +230,5 @@
     .blog__section__blog{
         margin: 10px;
         padding: 10px;
-    } 
+    }   
 }

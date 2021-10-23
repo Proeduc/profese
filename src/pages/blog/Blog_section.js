@@ -33,7 +33,7 @@ export default function Blog_section(props) {
                                         <p style={{color: "black", padding:"10px"}}><span className="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
                                     </div>
                                     <div className="col-lg-4 col-xs-12">
-                                        <Link to="#" className="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</Link>
+                                        <Link to="#" className="btn btn-primary" style={{float:"right", margin:"10px"}} onClick={() => props.ShowSingleBlog("Blog title from backend here")}>Read More</Link>
                                     </div>
                                 </div> 
                             </div>
@@ -62,7 +62,7 @@ export default function Blog_section(props) {
                                         <p style={{color: "black", padding:"10px"}}><span className="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
                                     </div>
                                     <div className="col-lg-4 col-xs-12">
-                                        <Link to="#" className="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</Link>
+                                        <Link to="#" className="btn btn-primary" style={{float:"right", margin:"10px"}} onClick={() => props.ShowSingleBlog("Blog title from backend here")}>Read More</Link>
                                     </div>
                                 </div> 
                             </div>
@@ -96,7 +96,7 @@ export default function Blog_section(props) {
                                         <p style={{color: "black", padding:"10px"}}><span className="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
                                     </div>
                                     <div className="col-lg-4 col-xs-12">
-                                        <Link to="#" className="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</Link>
+                                        <Link to="#" className="btn btn-primary" style={{float:"right", margin:"10px"}} onClick={() => props.ShowSingleBlog("Blog title from backend here")}>Read More</Link>
                                     </div>
                                 </div> 
                             </div>
@@ -125,7 +125,7 @@ export default function Blog_section(props) {
                                         <p style={{color: "black", padding:"10px"}}><span className="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
                                     </div>
                                     <div className="col-lg-4 col-xs-12">
-                                        <Link to="#" className="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</Link>
+                                        <Link to="#" className="btn btn-primary" style={{float:"right", margin:"10px"}} onClick={() => props.ShowSingleBlog("Blog title from backend here")}>Read More</Link>
                                     </div>
                                 </div> 
                             </div>
@@ -156,7 +156,7 @@ export default function Blog_section(props) {
                                         <p style={{color: "black", padding:"10px"}}><span className="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
                                     </div>
                                     <div className="col-lg-4 col-xs-12">
-                                        <Link to="#" className="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</Link>
+                                        <Link to="#" className="btn btn-primary" style={{float:"right", margin:"10px"}} onClick={() => props.ShowSingleBlog("Blog title from backend here")}>Read More</Link>
                                     </div>
                                 </div> 
                             </div>
@@ -185,7 +185,7 @@ export default function Blog_section(props) {
                                         <p style={{color: "black", padding:"10px"}}><span className="icon fa fa-user"></span> <strong>Aditi Singh</strong></p>
                                     </div>
                                     <div className="col-lg-4 col-xs-12">
-                                        <Link to="#" className="btn btn-primary" style={{float:"right", margin:"10px"}}>Read More</Link>
+                                        <Link to="#" className="btn btn-primary" style={{float:"right", margin:"10px"}} onClick={() => props.ShowSingleBlog("Blog title from backend here")}>Read More</Link>
                                     </div>
                                 </div> 
                             </div>
