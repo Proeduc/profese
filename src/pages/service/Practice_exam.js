@@ -23,49 +23,19 @@ function Practice_exam() {
                <hr style={{borderTop:"2px dotted #153280"}}/>
 
                 {/* keep these three col-m-4 divs just apply loop inside them */}
-                <div className="col-sm-4">
-                    {/* just keep one Practice Exam type div and apply loop */}
-                    <div className="practice__exam__type">
-                        <h4 className="practice__exam__type__title">Engineering Practice Exam</h4>
-                        <div className="list-group">
-                            <li className="list-group-item">Computer Science Engg</li>
-                            <li className="list-group-item">Electronics & Communicaions Engg</li>
-                            <li className="list-group-item">Electrical Engg</li>
-                            <li className="list-group-item">Mechanical Engg</li>
-                            <li className="list-group-item">Civil Engg</li>
-                            <li className="list-group-item">Engineering Labs</li>
-                        </div> 
-                    </div>
-                    <div className="practice__exam__type">
-                        <h4 className="practice__exam__type__title">Nursing Practice Exam</h4>
-                        <div className="list-group">
-                            <li className="list-group-item">Bichemistry Practice Exam</li>
-                            <li className="list-group-item">Nursing Foundation Practice Exam</li>
-                            <li className="list-group-item">Pharmacology Practice Exam</li> 
-                        </div> 
-                    </div>
+                <div className="col-sm-4"> 
                     <div className="practice__exam__type">
                         <h4 className="practice__exam__type__title">Programming Practice Exam</h4>
                         <div className="list-group">
                             <li className="list-group-item">Java Practice Exam</li>
                             <li className="list-group-item">C++ Practice Exam</li> 
                             <li className="list-group-item">Python Practice Exam</li> 
-                            <li className="list-group-item">C Practice Exam</li> 
-                            <li className="list-group-item">C# Practice Exam</li>  
-                            <li className="list-group-item">Dynamic programming Practice Exam</li>  
+                            <li className="list-group-item">C Practice Exam</li>  
                         </div> 
                     </div>
                 </div>
 
-                <div className="col-sm-4">
-                    {/* just keep one Practice Exam type div and apply loop */}
-                    <div className="practice__exam__type">
-                        <h4 className="practice__exam__type__title">English Practice Exam</h4>
-                        <div className="list-group">
-                            <li className="list-group-item">Grammar Practice Exam</li>   
-                            <li className="list-group-item">Alphabet and phonics Practice Exam</li>  
-                        </div> 
-                    </div>
+                <div className="col-sm-4"> 
                     <div className="practice__exam__type">
                         <h4 className="practice__exam__type__title">DBMS Practice Exam</h4>
                         <div className="list-group">
@@ -74,37 +44,35 @@ function Practice_exam() {
                             <li className="list-group-item">Join Practice Exam</li>  
                         </div> 
                     </div>
-                    <div className="practice__exam__type">
-                        <h4 className="practice__exam__type__title">Science Practice Exam</h4>
+
+                    <div className="assignment__help__type">
+                        <h4 className="assignment__help__type__title">Computer Science Practice Exam</h4>
                         <div className="list-group">
-                            <li className="list-group-item">Chemistry Practice Exam</li> 
-                            <li className="list-group-item">Physics Practice Exam</li> 
-                            <li className="list-group-item">Biology Practice Exam</li> 
+                            <li className="list-group-item">Computer Network Practice Exam</li> 
+                            <li className="list-group-item">OS Practice Exam</li> 
+                            <li className="list-group-item">Computer organisation Practice Exam</li>  
                         </div> 
-                    </div>
+                    </div> 
                 </div>
 
-                <div className="col-sm-4">
-                    {/* just keep one Practice Exam type div and apply loop */}
-                    <div className="practice__exam__type">
-                        <h4 className="practice__exam__type__title">Mathematics Practice Exam</h4>
+                <div className="col-sm-4"> 
+                   <div className="assignment__help__type">
+                        <h4 className="assignment__help__type__title">Web Developement Practice Exam</h4>
+                        <div className="list-group">
+                            <li className="list-group-item">HTML Practice Exam</li> 
+                            <li className="list-group-item">CSS Practice Exam</li> 
+                            <li className="list-group-item">Javascript Practice Exam</li>  
+                        </div> 
+                    </div>
+                    <div className="assignment__help__type">
+                        <h4 className="assignment__help__type__title">Computer Science Practice Exam</h4>
                         <div className="list-group">
                             <li className="list-group-item">Discrete mathematics Practice Exam</li> 
-                            <li className="list-group-item">Geometry Practice Exam</li> 
-                            <li className="list-group-item">Algebra Practice Exam</li> 
-                            <li className="list-group-item">Calculus Practice Exam</li>  
+                            <li className="list-group-item">Design and Analysis of Algorithms Practice Exam</li> 
+                            <li className="list-group-item">Automata theory Practice Exam</li> 
+                            <li className="list-group-item">Compiler design Practice Exam</li>  
                         </div> 
-                    </div>
-                    <div className="practice__exam__type">
-                        <h4 className="practice__exam__type__title">Miscellaneous Practice Exam</h4>
-                        <div className="list-group">
-                            <li className="list-group-item">Arts Practice Exam</li> 
-                            <li className="list-group-item">Business Practice Exam</li> 
-                            <li className="list-group-item">Architecture Practice Exam</li> 
-                            <li className="list-group-item">Project</li> 
-                            <li className="list-group-item">Law Practice Exam</li> 
-                        </div> 
-                    </div>
+                    </div> 
                 </div>
            </div>
            {/* Practice Exam container end */}

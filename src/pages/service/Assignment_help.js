@@ -21,40 +21,15 @@ function Assignment_help() {
                <hr style={{borderTop:"2px dotted #153280"}}/>
 
                 {/* keep these three col-m-4 divs just apply loop inside them */}
-                <div className="col-sm-4">
-                    {/* just keep one assignment help type div and apply loop */}
-                    <div className="assignment__help__type">
-                        <h4 className="assignment__help__type__title">Engineering Assignment Help</h4>
-                        <div className="list-group">
-                            <li className="list-group-item">Computer Science Engg help</li>
-                            <li className="list-group-item">Electronics & Communicaions Engg help</li>
-                            <li className="list-group-item">Electrical Engg help</li>
-                            <li className="list-group-item">Mechanical Engg help</li>
-                            <li className="list-group-item">Civil Engg help</li>
-                            <li className="list-group-item">Engineering Labs help</li>
-                        </div> 
-                    </div>
-                    <div className="assignment__help__type">
-                        <h4 className="assignment__help__type__title">Nursing Assignment Help</h4>
-                        <div className="list-group">
-                            <li className="list-group-item">Bichemistry assignment help</li>
-                            <li className="list-group-item">Nursing Foundation assignment help</li>
-                            <li className="list-group-item">Pharmacology assignment help</li> 
-                        </div> 
-                    </div>
+                <div className="col-sm-4">  
                     <div className="assignment__help__type">
                         <h4 className="assignment__help__type__title">Programming Assignment Help</h4>
                         <div className="list-group">
                             <li className="list-group-item">Java assignment help</li>
                             <li className="list-group-item">C++ assignment help</li> 
                             <li className="list-group-item">Python assignment help</li> 
-                            <li className="list-group-item">C assignment help</li> 
-                            <li className="list-group-item">C# assignment help</li> 
-                            <li className="list-group-item">Golang assignment help</li> 
-                            <li className="list-group-item">DSA assignment help</li> 
-                            <li className="list-group-item">Dynamic programming assignment help</li> 
-                            <li className="list-group-item">Android assignment help</li> 
-                            <li className="list-group-item">Web developement assignment help</li> 
+                            <li className="list-group-item">C assignment help</li>  
+                            <li className="list-group-item">DSA assignment help</li>     
                         </div> 
                     </div>
                 </div>
@@ -62,52 +37,34 @@ function Assignment_help() {
                 <div className="col-sm-4">
                     {/* just keep one assignment help type div and apply loop */}
                     <div className="assignment__help__type">
-                        <h4 className="assignment__help__type__title">English Assignment Help</h4>
+                        <h4 className="assignment__help__type__title">Computer Science Assignment Help</h4>
                         <div className="list-group">
-                            <li className="list-group-item">Grammar Assignment Help</li> 
-                            <li className="list-group-item">Text book Assignment Help</li> 
-                            <li className="list-group-item">Alphabet and phonics Assignment Help</li>  
+                            <li className="list-group-item">DBMS Assignment Help</li> 
+                            <li className="list-group-item">OS Assignment Help</li> 
+                            <li className="list-group-item">Computer organisation Assignment Help</li>  
                         </div> 
-                    </div>
+                    </div> 
                     <div className="assignment__help__type">
-                        <h4 className="assignment__help__type__title">Science Assignment Help</h4>
+                        <h4 className="assignment__help__type__title">Web Developement Assignment Help</h4>
                         <div className="list-group">
-                            <li className="list-group-item">Chemistry assignment help</li> 
-                            <li className="list-group-item">Physics assignment help</li> 
-                            <li className="list-group-item">Biology assignment help</li> 
+                            <li className="list-group-item">HTML Assignment Help</li> 
+                            <li className="list-group-item">CSS Assignment Help</li> 
+                            <li className="list-group-item">Javascript Assignment Help</li>  
                         </div> 
-                    </div>
+                    </div> 
                 </div>
 
                 <div className="col-sm-4">
                     {/* just keep one assignment help type div and apply loop */}
                     <div className="assignment__help__type">
-                        <h4 className="assignment__help__type__title">Mathematics Assignment Help</h4>
+                        <h4 className="assignment__help__type__title">Computer Science Assignment Help</h4>
                         <div className="list-group">
                             <li className="list-group-item">Discrete mathematics assignment help</li> 
-                            <li className="list-group-item">Geometry assignment help</li> 
-                            <li className="list-group-item">Algebra assignment help</li> 
-                            <li className="list-group-item">Calculus assignment help</li>  
+                            <li className="list-group-item">Design and Analysis of Algorithms assignment help</li> 
+                            <li className="list-group-item">Automata theory assignment help</li> 
+                            <li className="list-group-item">Compiler design assignment help</li>  
                         </div> 
-                    </div>
-                    <div className="assignment__help__type">
-                        <h4 className="assignment__help__type__title">DBMS Assignment Help</h4>
-                        <div className="list-group">
-                            <li className="list-group-item">SQL assignment help</li> 
-                            <li className="list-group-item">NoSQL assignment help</li> 
-                            <li className="list-group-item">Join assignment help</li>  
-                        </div> 
-                    </div>
-                    <div className="assignment__help__type">
-                        <h4 className="assignment__help__type__title">Miscellaneous Assignment Help</h4>
-                        <div className="list-group">
-                            <li className="list-group-item">Arts assignment help</li> 
-                            <li className="list-group-item">Business assignment help</li> 
-                            <li className="list-group-item">Architecture assignment help</li> 
-                            <li className="list-group-item">Project help</li> 
-                            <li className="list-group-item">Law assignment help</li> 
-                        </div> 
-                    </div>
+                    </div> 
                 </div>
            </div>
            {/* assignment help container end */}

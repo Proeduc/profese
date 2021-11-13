@@ -18,22 +18,21 @@ function Course_help() {
             {/* course help container */}
             <div className="course__help__container container">
                 <h3 className="text-primary Course__help__title">Course Help Subjects</h3>
-                <hr style={{borderTop:"2px dotted #153280"}}/>
-
+                <hr style={{borderTop:"2px dotted #153280"}}/> 
                 <div className="row">
-                    <div className="col-sm-4 list-group"><li className="list-group-item">Engineering</li></div>
-                    <div className="col-sm-4 list-group"><li className="list-group-item">Science</li></div>
-                    <div className="col-sm-4 list-group"><li className="list-group-item">Mathematics</li></div>
+                    <div className="col-sm-4 list-group"><li className="list-group-item">DBMS</li></div>
+                    <div className="col-sm-4 list-group"><li className="list-group-item">OS</li></div>
+                    <div className="col-sm-4 list-group"><li className="list-group-item">Computer Network</li></div>
                 </div>
                 <div className="row">
-                    <div className="col-sm-4 list-group"><li className="list-group-item">Law</li></div>
-                    <div className="col-sm-4 list-group"><li className="list-group-item">MBBS</li></div>
-                    <div className="col-sm-4 list-group"><li className="list-group-item">Arts</li></div>
+                    <div className="col-sm-4 list-group"><li className="list-group-item">Discrete mathematics</li></div>
+                    <div className="col-sm-4 list-group"><li className="list-group-item">Automata theory</li></div>
+                    <div className="col-sm-4 list-group"><li className="list-group-item">Compiler design</li></div>
                 </div>
                 <div className="row">
-                    <div className="col-sm-4 list-group"><li className="list-group-item">Management</li></div>
-                    <div className="col-sm-4 list-group"><li className="list-group-item">Computer Science</li></div>
-                    <div className="col-sm-4 list-group"><li className="list-group-item">Finance</li></div>
+                    <div className="col-sm-4 list-group"><li className="list-group-item">Data structures</li></div>
+                    <div className="col-sm-4 list-group"><li className="list-group-item">Design and Analysis of Algorithms.</li></div>
+                    <div className="col-sm-4 list-group"><li className="list-group-item">Computer Architecture and Organisation</li></div>
                 </div>
             </div>
             {/* course help container end */}
