@@ -1,106 +1,83 @@
-import React, { useState, useEffect } from 'react'
-import './Profile.css' 
-import { Link, useHistory } from 'react-router-dom'
-import Footer from '../../components/Footer/Footer'  
-import Loader from 'react-loader-spinner'
-
-const Profile = ({ avatarUrl }) => { 
-  const [description, setDescription] = useState('not defined')
-  const [specialities, setSpecialities] = useState('not defined')
-  const [about, setAbout] = useState('not defined')
+ import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+ import './Profile.css'
+import UserAns from './UserAns'
+import UserBasics from './UserBasics'
+import UserEdu from './UserEdu'
+import UserQues from './UserQues'
  
+ function Profile() {
+   const [ShowBasics, setShowBasics] = useState(false)
+   const [ShowAns, setShowAns] = useState(false)
+   const [ShowEdu, setShowEdu] = useState(false)
+   const [ShowQues, setShowQues] = useState(false)
 
-  // if (!user) {
-  //   return (
-  //     <div
-  //       style={{
-  //         height: 'calc(100vh - 125px)',
-  //         width: '100%',
-  //         display: 'grid',
-  //         placeItems: 'center',
-  //         backgroundColor: 'rgb(230, 227, 227)',
-  //       }}
-  //     >
-  //       <Loader type="ThreeDots" color="#153280" height={120} width={120} />
-  //     </div>
-  //   )
-  // } else {
-    return (
-      <>
-        <div className="user">
-          <div className="user__container">
-            <div className="user_details">
-              {avatarUrl === '' && (
-                <img
-                  className="profile_pic img-responsive"
-                  src="abc"
-                  alt=""
-                />
-              )}
-              {avatarUrl !== '' && (
-                <img
-                  className="profile_pic img-responsive"
-                  src={`${avatarUrl}`}
-                  alt=""
-                />
-              )}
+   const changeBasics = () => {
+    setShowBasics(true)
+    setShowAns(false)
+    setShowEdu(false)
+    setShowQues(false)
+   }
 
-              <h2 className="user_name">username</h2>
-              <p className="profile__userProfile">User Profile</p>
-              <div className="user_speciality">
-                <p className="user_speciality_name">
-                  <i className="fa fa-graduation-cap">&nbsp;&nbsp;</i>Computer
-                  Science
-                </p>
-                <p className="user_speciality_name">
-                  <i className="fa fa-graduation-cap">&nbsp;&nbsp;</i>UX Design
-                </p>
+   const changeEdu = () => {
+    setShowBasics(false)
+    setShowAns(false)
+    setShowEdu(true)
+    setShowQues(false)
+   }
+
+   const changeAns = () => {
+    setShowBasics(false)
+    setShowAns(true)
+    setShowEdu(false)
+    setShowQues(false)
+   }
+
+   const changeQues = () => {
+    setShowBasics(false)
+    setShowAns(false)
+    setShowEdu(false)
+    setShowQues(true)
+   }
+   return (
+     <>
+       <div className="profile__container container">
+
+         {/* profile sidenav */}
+          <div className="col-sm-4 profile__nav">
+              <div className="profile__image" align="center">
+                 {/* profile image, get image src from backend */}
+                 <img className="img-responsive img-circle" src="https://images.pexels.com/photos/3671083/pexels-photo-3671083.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Profile image"/>
+                 <h3><strong>Ritika Dey</strong></h3>
               </div>
-              <button className="msg_user_btn btn">Message</button>
-            </div>
-
-            <div className="user_overview">
-              <div className="user_overview_content">
-                <p>Overview</p>
-                <div className="row">
-                  <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <h4>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <div className="profile__reviews">5 Reviews</div>
-                    </h4>
+              <div className="profile__nav__list">
+                  <div className="list-group">
+                    <Link to="#" className="list-group-item" onClick={() => changeBasics()}>Basics</Link>
+                    <Link to="#" className="list-group-item" onClick={() => changeEdu()}>Education</Link> 
+                    <Link to="#" className="list-group-item" onClick={() => changeAns()}>Answers</Link> 
+                    <Link to="#" className="list-group-item" onClick={() => changeQues()}>Questions</Link> 
+                    {/* change the below url for ask a question don't change above urls*/}
+                    <Link to="/ask" className="list-group-item">Ask Questions</Link> 
                   </div>
-                  <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <h4 className="user__overviewDescription">{description}</h4>
-
-                    {/* here i didn't got appropriate icons */}
-                  </div>
-                  <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <h4 className="user__overviewDescription">
-                      {specialities}
-                    </h4>
-
-                    {/* here i didn't got appropriate icons */}
-                  </div>
-                </div>
               </div>
-
-              <div className="user_about">
-                <p>About Me</p>
-                <div className="user_about_content">
-                  <h4 className="user__overviewDescription">{about}</h4>
-                </div>
+              <div className="profile__image__upload" align="center">
+                <button className="btn btn-primary">Upload New Image</button>
               </div>
-            </div>
           </div>
-        </div>
-        {/* setting is not in the design and I'm bit confused where to put it so I just skipped it. */}
-        <Footer />
-      </>
-    )
-  }
-// }
+         {/* profile sidenav end */}
 
-export default Profile
+         {/* profile data */}
+          <div className="col-sm-8 profile__data"> 
+              <button style={{float:"right", borderRadius:"50%"}} className="btn btn-primary"><i className="fa fa-edit" aria-hidden="true"></i></button>
+              { 
+                ShowBasics ? <UserBasics /> : (ShowEdu ? <UserEdu /> : (ShowAns ? <UserAns /> : ShowQues ? <UserQues /> : <UserBasics />))
+              }
+          </div>
+         {/* profile data end */}
+       </div>
+     </>
+   )
+ }
+ 
+ export default Profile
+ 

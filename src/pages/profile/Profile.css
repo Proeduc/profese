@@ -1,102 +1,94 @@
-.user {
-  display: grid;
-  place-items: center;
-  background-color: rgb(230, 227, 227);
-  height: calc(100vh - 125px);
-  width: 100%;
-  padding-bottom: 30px;
-}
+ .profile__container{
+   background-color: rgb(247, 247, 247);
+   margin-top: 30px;
+   padding: 10px;
+   height: 75vh;
+   box-shadow: 4px 4px 4px grey;
+ }
+ .profile__image{
+   height: 40%;
+   margin: 20px;
+ }
+ .profile__image img{
+   width: 200px;
+   height: 200px;
+   border: 5px solid #153280;
+ }
 
-.user__container {
-  display: flex;
-  max-width: 1000px;
-}
 
-.user_details {
-  background-color: white;
-  padding: 20px;
-  min-width: 300px;
-}
+ /* user basics style */
+ .user__basics__container{ 
+   padding: 10px;
+ }
+ .user__basics__title,  .user__details h4{
+   color: #153280;
+   font-weight: bold;
+ }
+ .user__details{
+   margin: 15px 0 15px 0;
+ }
 
-.profile_pic {
-  height: 100px;
-  width: 100px;
-  margin: auto;
-  object-fit: fill;
-  border-radius: 100%;
-}
 
-.user_name {
-  text-align: center;
+ /* user education style */
+ .user__edu__container{
+   padding: 10px;
+ }
+ .user__edu__title{
+  color: #153280;
   font-weight: bold;
 }
 
-.profile__userProfile {
-  width: 100%;
-  text-align: center;
-}
 
-.user_speciality .fa {
-  color: gray;
-}
-
-.user_speciality_name {
-  text-align: center;
-}
-
-.msg_user_btn {
+/* user ans style */
+.user__ans__container{
   padding: 10px;
-  background-color: palevioletred;
-  color: white;
-  font-weight: bold;
-  width: 70%;
-  margin-left: 15% !important;
-  margin-right: 15% !important;
 }
-.profile__reviews {
-  margin-top: 10px;
+.user__ans__title{
+ color: #153280;
+ font-weight: bold;
 }
-
-.user_about {
-  margin-top: 20px;
+.user__ans__details{
+  height: 55vh;
+  overflow-y: scroll;
 }
-
-.user_overview_content,
-.user_about {
+.user__answer{
   background-color: white;
-  padding: 20px;
-  margin-left: 20px;
-}
-.user_overview_content p,
-.user_about p {
-  font-weight: bold;
-  font-size: large;
-}
+  margin: 10px 0 10px 0;
+  padding: 5px 5px 5px 10px;
+}  
 
-.user__overviewDescription {
-  cursor: pointer;
+
+/* user ques style */
+.user__ques__container{
   padding: 10px;
+}
+.user__ques__title{
+ color: #153280;
+ font-weight: bold;
+}
+.user__ques__details{
+  height: 55vh;
+  overflow-y: scroll;
+}
+.user__question{
+  background-color: white;
+  margin: 10px 0 10px 0;
+  padding: 5px 5px 5px 10px;
+}  
+
+
+/* scrollbar style */
+::-webkit-scrollbar {
+  width: 10px;
+} 
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
   border-radius: 10px;
 }
-
-.profile__save {
-  cursor: pointer;
-  font-size: 20px !important;
-  margin-left: 10px;
-}
-
-.profile__edition {
-  display: flex;
-  align-items: center;
-}
-
-.profile__input {
-  width: 90%;
-}
-
-.profile__authentication {
-  width: 100%;
-  margin-top: 20%;
-  display: grid;
-  place-items: center;
+::-webkit-scrollbar-thumb {
+  background:#153280; 
+  border-radius: 10px;
+} 
+::-webkit-scrollbar-thumb:hover {
+  background: #102561; 
 }

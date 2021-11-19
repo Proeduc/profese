@@ -49,11 +49,14 @@ export default function NavTwo() {
 
         <ul className="nav navbar-nav navbar-right">
           <li>
+            <NavLink to="/profile">Profile</NavLink>
+          </li>
+          <li>
             <NavLink to="/support">Support</NavLink>
-          </li>  
-            <li>
-              <NavLink to="/login">Login</NavLink>
-            </li> 
+          </li>   
+          <li>
+            <NavLink to="/login">Login</NavLink>
+          </li> 
           <li>  
               <NavLink to="/signup">Signup</NavLink> 
           </li> 
