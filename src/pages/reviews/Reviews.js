@@ -43,8 +43,7 @@ import ReviewFilter from './ReviewFilter'
                 {leaveReview === true && user !== null && (
                   <button
                     onClick={giveReview}
-                    className="btn-lg btn-primary"
-                  >
+                    className="btn-lg btn-primary">
                     Back To Reviews
                   </button>
                 )}
@@ -79,6 +78,41 @@ import ReviewFilter from './ReviewFilter'
               /> 
             </div>
           </div> 
+          <div className="form-group">
+             <label className="control-label col-sm-2" for="rating">Rate us: </label>
+              <div className="star__rating">
+                <label>
+                    <input type="radio" name="stars" value="1" />
+                    <span className="icon">★</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="stars" value="2" />
+                    <span className="icon">★</span>
+                    <span className="icon">★</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="stars" value="3" />
+                    <span className="icon">★</span>
+                    <span className="icon">★</span>
+                    <span className="icon">★</span>   
+                  </label>
+                  <label>
+                    <input type="radio" name="stars" value="4" />
+                    <span className="icon">★</span>
+                    <span className="icon">★</span>
+                    <span className="icon">★</span>
+                    <span className="icon">★</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="stars" value="5" />
+                    <span className="icon">★</span>
+                    <span className="icon">★</span>
+                    <span className="icon">★</span>
+                    <span className="icon">★</span>
+                    <span className="icon">★</span>
+                  </label>
+              </div>
+          </div>
           <div className="form-group">
             <div className="col-sm-offset-2 col-sm-10">
               <button type="submit" className="btn btn-default">Submit</button>
