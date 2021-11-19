@@ -49,7 +49,7 @@ function App() {
           <Signup />
         </Route>
         <Route exact path="/profile">
-          <Profile avatarUrl={avatarUrl} />
+          <Profile />
         </Route>
         <Route exact path="/reviews">
           <Reviews />
