@@ -1,12 +1,13 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react' 
+import { FacebookShareButton, LinkedinShareButton, TwitterShareButton } from 'react-share'
 
 function Blog_single(props) {
+  //  console.log(window.location.href)
     return (
         <>
           <div className="blog__single container-fluid">
               <div className="blog__single__header">
-                    <button className="blog__Section__back btn btn-default" onClick={props.back}><i className="fa fa-arrow-circle-left"></i> Back</button> 
+                <button className="blog__Section__back btn btn-default" onClick={props.back}><i className="fa fa-arrow-circle-left"></i> Back</button> 
               </div>
 
               <div className="blog__single__content container">
@@ -40,9 +41,28 @@ function Blog_single(props) {
 
 
                           <div className="blog__single__share">
-                              <div className="blog__single__twitter"><Link to="#"><i className="fa fa-twitter"></i></Link></div>
-                              <div className="blog__single__facebook"><Link to="#"><i className="fa fa-facebook"></i></Link></div>
-                              <div className="blog__single__linkedin"><Link to="#"><i className="fa fa-linkedin"></i></Link></div>
+                            <FacebookShareButton
+                                // replace the value of url with window.location.href while implementation 
+                                url={"abc.coms"}
+                                quote={"Read out our latest blog on Profese"}
+                                hashtag="#blog#blog_share" > 
+                                <i className="fa fa-facebook"></i>
+                            </FacebookShareButton>
+
+                            <LinkedinShareButton
+                                // replace the value of source with window.location.href while implementation 
+                                source={"abc.com"}
+                                title={"Read out our latest blog on Profese"}>
+                                <i className="fa fa-linkedin"></i>
+                            </LinkedinShareButton>
+
+                            <TwitterShareButton
+                                // replace the value of via with window.location.href while implementation 
+                                via={"abc.com"}
+                                title={"Read out our latest blog on Profese"}
+                                hastags={"#blog#blog_share"}>
+                                <i className="fa fa-twitter"></i>
+                            </TwitterShareButton> 
                           </div>
 
                           <div className="blog__single__meta">                  
