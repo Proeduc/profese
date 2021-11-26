@@ -67,6 +67,30 @@ import ReviewFilter from './ReviewFilter'
             </div>
           </div>
           <div className="form-group">
+            <label className="control-label col-sm-2" for="email">Name: </label>
+            <div className="col-sm-10">
+              <input
+                value={comment}
+                className="form-control"
+                onChange={(e) => setcomment(e.target.value)}
+                type="text"
+                required
+              /> 
+            </div>
+          </div>
+          <div className="form-group">
+            <label className="control-label col-sm-2" for="email">Course: </label>
+            <div className="col-sm-10">
+              <input
+                value={comment}
+                className="form-control"
+                onChange={(e) => setcomment(e.target.value)}
+                type="text"
+                required
+              /> 
+            </div>
+          </div>
+          <div className="form-group">
             <label className="control-label col-sm-2" for="pwd">Review: </label>
             <div className="col-sm-10">
               <textarea
