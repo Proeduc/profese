@@ -9,6 +9,10 @@ function UserBasics() {
                 <hr style={{border:"1px solid #153280"}}/>
                 
                 <div className="user__email user__details col-sm-6">
+                    <h3><i className="fa fa-id-card" aria-hidden="true"></i> User Id </h3>
+                    <h4>123acd</h4>
+                </div>
+                <div className="user__email user__details col-sm-6">
                     <h3><i className="fa fa-envelope" aria-hidden="true"></i> Email </h3>
                     <h4>riti@gmail.com</h4>
                 </div>

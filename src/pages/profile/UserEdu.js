@@ -9,6 +9,11 @@ function UserEdu() {
                 <hr style={{border:"1px solid #153280"}}/>
 
                 <div className="user__college user__details col-sm-6">
+                    <h3><i className="fa fa-briefcase" aria-hidden="true"></i> Profession </h3>
+                    <h4>Tutor</h4>
+                </div>
+
+                <div className="user__college user__details col-sm-6">
                     <h3><i className="fa fa-university" aria-hidden="true"></i> Institution </h3>
                     <h4>Jharkhand Technical University</h4>
                 </div>
