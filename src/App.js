@@ -1,5 +1,4 @@
-/* eslint-disable react/jsx-pascal-case */
-/* eslint-disable react-hooks/exhaustive-deps */
+ 
  import { useEffect, useState } from 'react'
 import './App.css'
 import NavOne from './components/NavOne/NavOne' 
@@ -21,6 +20,7 @@ import Course_help from './pages/service/Course_help'
 import Careers from './pages/careers/Careers'
 import Support from './pages/support/Support'
 import AskTutor from './pages/Ask_a_tutor/AskTutor'
+import Admin from './pages/Admin/Admin'
 
 function App() { 
   const [avatarUrl, setAvatarUrl] = useState('')
@@ -89,6 +89,9 @@ function App() {
         </Route>
         <Route exact path="/ask-tutor">
           <AskTutor />
+        </Route>
+        <Route exact path="/admin">
+          <Admin />
         </Route>
       </Switch>
     </div>

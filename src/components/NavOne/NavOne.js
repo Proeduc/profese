@@ -22,6 +22,7 @@ export default function NavOne() {
                     <li><NavLink to="/blog">BLOGS</NavLink></li>
                     <li><NavLink to="/discussion">DISCUSSION BOARD</NavLink></li>
                     <li><NavLink to="/reviews">REVIEWS</NavLink></li>
+                    <li><NavLink to="/admin">ADMIN</NavLink></li>
                 </ul>
                 <ul className="nav navbar-nav navbar-right">
                     <li><NavLink to="#"><i className="fa fa-whatsapp" style={{color:"white"}}></i> +91 8299729830</NavLink></li>

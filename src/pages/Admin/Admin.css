@@ -1,0 +1,112 @@
+/* dashboard style */
+.dashboard__header{
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 4px 4px 4px rgb(214, 214, 214);
+    border-radius: 10px;
+    border: 1px solid rgb(214, 214, 214);
+}
+.sidebar_item{
+    padding: 18px;
+} 
+.admin__panel__sidebar a.list-group-item {
+    color: white;
+    background-color: #153280; 
+}
+.admin__panel__sidebar a.list-group-item:hover , .admin__panel__sidebar a.list-group-item:focus {
+    color: #153280;
+    font-weight: bold;
+    background-color: white;
+}
+.req__cards{
+    padding: 5px;
+    margin-top: 10px;
+}
+.req__cards__content{
+    background-color: rgb(241, 241, 119);
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.dashboard__contents{
+    margin-top: 20px;
+    padding: 10px;
+    box-shadow: 4px 4px 4px rgb(214, 214, 214);
+    border-radius: 10px;
+    border: 1px solid rgb(214, 214, 214);
+}
+.dashboard__chart__newuser, .dashboard__chart__usertraffic{
+    margin-top: 20px;
+}
+.dashboard__lists{
+    padding: 10px;
+}
+.pending__reviews, .new__customers{ 
+    margin-top: 20px;
+}
+.pending__review, .customer{ 
+    height: max-content;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    box-shadow: 4px 4px 4px rgb(214, 214, 214); 
+    border: 1px solid rgb(214, 214, 214);
+}
+
+
+/* requested assignment style */
+.req__assignment__table{
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 4px 4px 4px rgb(214, 214, 214); 
+    border: 1px solid rgb(214, 214, 214);
+}
+
+
+
+/* requested course style */
+.req__course__table{
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 4px 4px 4px rgb(214, 214, 214); 
+    border: 1px solid rgb(214, 214, 214);
+}
+
+
+
+/* requested live session style */
+.req__session__table{
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 4px 4px 4px rgb(214, 214, 214); 
+    border: 1px solid rgb(214, 214, 214);
+}
+
+
+
+/* requested exam style */
+.req__exam__table{
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 4px 4px 4px rgb(214, 214, 214); 
+    border: 1px solid rgb(214, 214, 214);
+}
+
+
+/* queries style */
+.queries__table{
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 4px 4px 4px rgb(214, 214, 214); 
+    border: 1px solid rgb(214, 214, 214);
+}
+
+
+/* add career style */
+.add__career__form{
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 4px 4px 4px rgb(214, 214, 214); 
+    border: 1px solid rgb(214, 214, 214);
+} 
