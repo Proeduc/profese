@@ -11,7 +11,8 @@ import Queries from './Queries'
 import TutorReq from './TutorReq'
 import TutorApproved from './TutorApproved'
 import Dashboard from './Dashboard'
-import { DashboardOutlined, AssignmentIndOutlined, SubjectOutlined, VideoCallOutlined, BookOutlined, WorkOutline, QueryBuilderOutlined, AssignmentTurnedInOutlined, GroupAddOutlined, GroupOutlined} from '@material-ui/icons' 
+import User from './User'
+import { DashboardOutlined, AssignmentIndOutlined, SubjectOutlined, VideoCallOutlined, BookOutlined, WorkOutline, PeopleOutline, QueryBuilderOutlined, AssignmentTurnedInOutlined, GroupAddOutlined, GroupOutlined} from '@material-ui/icons' 
 
 function Admin() {
     const [Dashb, setDashboard] = useState(false)
@@ -24,6 +25,7 @@ function Admin() {
     const [Querie, setQueries] = useState(false) 
     const [Trequest, setTrequest] = useState(false)
     const [TApproved, setTApproved] = useState(false)
+    const [Users, setUsers] = useState(false)
 
 
     const changePage = (str) => {
@@ -38,6 +40,7 @@ function Admin() {
             setQueries(false)
             setTrequest(false)
             setTApproved(false)
+            setUsers(false)
         }
         else if(str === "Assignments"){
             setDashboard(false)
@@ -50,6 +53,7 @@ function Admin() {
             setQueries(false)
             setTrequest(false)
             setTApproved(false)
+            setUsers(false)
         }
         else if(str === "Course Help"){
             setDashboard(false)
@@ -62,6 +66,7 @@ function Admin() {
             setQueries(false)
             setTrequest(false)
             setTApproved(false)
+            setUsers(false)
         }
         else if(str === "Live Sessions"){
             setDashboard(false)
@@ -74,6 +79,7 @@ function Admin() {
             setQueries(false)
             setTrequest(false)
             setTApproved(false)
+            setUsers(false)
         }
         else if(str === "Add Blog"){
             setDashboard(false)
@@ -86,6 +92,7 @@ function Admin() {
             setQueries(false)
             setTrequest(false)
             setTApproved(false)
+            setUsers(false)
         }
         else if(str === "Add Career"){
             setDashboard(false)
@@ -98,6 +105,7 @@ function Admin() {
             setQueries(false)
             setTrequest(false)
             setTApproved(false)
+            setUsers(false)
         }
         else if(str === "Queries"){
             setDashboard(false)
@@ -110,6 +118,7 @@ function Admin() {
             setQueries(true)
             setTrequest(false)
             setTApproved(false)
+            setUsers(false)
         } 
         else if(str === "Tutor Requests"){
             setDashboard(false)
@@ -122,6 +131,7 @@ function Admin() {
             setQueries(false)
             setTrequest(true)
             setTApproved(false)
+            setUsers(false)
         }
         else if(str === "Approved Tutors"){
             setDashboard(false)
@@ -134,6 +144,7 @@ function Admin() {
             setQueries(false)
             setTrequest(false)
             setTApproved(true)
+            setUsers(false)
         }
         else if(str === "Practice Exam"){
             setDashboard(false)
@@ -146,6 +157,20 @@ function Admin() {
             setQueries(false)
             setTrequest(false)
             setTApproved(false)
+            setUsers(false)
+        }
+        else{
+            setDashboard(false)
+            setAssignment(false)
+            setCourse(false)
+            setPractice(false)
+            setSessions(false)
+            setAddBlog(false)
+            setAddCareer(false)
+            setQueries(false)
+            setTrequest(false)
+            setTApproved(false)
+            setUsers(true)
         }
     }
     return (
@@ -162,6 +187,7 @@ function Admin() {
                         <Link to="#" onClick={() => changePage('Add Blog')} className="list-group-item sidebar_item"><BookOutlined/> Add Blog</Link>
                         <Link to="#" onClick={() => changePage('Add Career')} className="list-group-item sidebar_item"><WorkOutline/> Add Career</Link>
                         <Link to="#" onClick={() => changePage('Queries')} className="list-group-item sidebar_item"><QueryBuilderOutlined /> Queries</Link> 
+                        <Link to="#" onClick={() => changePage('User')} className="list-group-item sidebar_item"><PeopleOutline/> Customers</Link>
                         <Link to="#" onClick={() => changePage('Tutor Requests')} className="list-group-item sidebar_item"><GroupAddOutlined/> Tutor Requests</Link>
                         <Link to="#" onClick={() => changePage('Approved Tutors')} className="list-group-item sidebar_item"><GroupOutlined/> Approved Tutors</Link> 
                     </div> 
@@ -190,11 +216,16 @@ function Admin() {
                                                         <Queries />
                                                         :
                                                         (Trequest ?
-                                                            <TutorReq /> :
+                                                            <TutorReq /> 
+                                                            :
                                                             (TApproved ?
                                                                 <TutorApproved />
                                                                 :
-                                                                <Dashboard />
+                                                                (Users ? 
+                                                                    <User />
+                                                                    :
+                                                                    <Dashboard />
+                                                                )
                                                             )
                                                         )
                                                     )

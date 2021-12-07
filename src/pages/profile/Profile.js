@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom'
 import UserAns from './UserAns'
 import UserBasics from './UserBasics'
 import UserEdu from './UserEdu'
-import UserQues from './UserQues' 
-import Modal from 'react-modal'
+import UserQues from './UserQues'  
  
  function Profile() {
    const [ShowBasics, setShowBasics] = useState(false)
