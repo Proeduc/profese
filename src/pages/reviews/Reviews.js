@@ -11,6 +11,11 @@ import ReviewFilter from './ReviewFilter'
   const [reviews, setReviews] = useState([]) 
   const [Filter, setFilter] = useState('')
   const [showFilter, setshowFilter] = useState(false)
+  const [Rating, setRating] = useState(0)
+
+  const changeRating = (e) => {
+    setRating(e.target.value)
+  }
 
   const giveReview = () => {
     setLeaveReview(!leaveReview)
@@ -106,29 +111,29 @@ import ReviewFilter from './ReviewFilter'
              <label className="control-label col-sm-2" for="rating">Rate us: </label>
               <div className="star__rating">
                 <label>
-                    <input type="radio" name="stars" value="1" />
+                    <input type="radio" name="stars" value="1" onChange={changeRating} />
                     <span className="icon">★</span>
                   </label>
                   <label>
-                    <input type="radio" name="stars" value="2" />
+                    <input type="radio" name="stars" value="2" onChange={changeRating} />
                     <span className="icon">★</span>
                     <span className="icon">★</span>
                   </label>
                   <label>
-                    <input type="radio" name="stars" value="3" />
+                    <input type="radio" name="stars" value="3" onChange={changeRating} />
                     <span className="icon">★</span>
                     <span className="icon">★</span>
                     <span className="icon">★</span>   
                   </label>
                   <label>
-                    <input type="radio" name="stars" value="4" />
+                    <input type="radio" name="stars" value="4" onChange={changeRating} />
                     <span className="icon">★</span>
                     <span className="icon">★</span>
                     <span className="icon">★</span>
                     <span className="icon">★</span>
                   </label>
                   <label>
-                    <input type="radio" name="stars" value="5" />
+                    <input type="radio" name="stars" value="5" onChange={changeRating} />
                     <span className="icon">★</span>
                     <span className="icon">★</span>
                     <span className="icon">★</span>
