@@ -1,15 +1,13 @@
 .navbar {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   border-radius: 0;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 ul > li:before {
   content: none !important;
 }
-
-.navbar__one {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-}
+ 

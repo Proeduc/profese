@@ -1,6 +1,6 @@
 import React from 'react'
 import './Responsive_nav.css' 
-import logo from '../NavTwo/logo.png'
+import logo from '../NavOne/logo.png'
 import { NavLink } from 'react-router-dom'
 
 export default function Responsive_nav() { 

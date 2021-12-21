@@ -5,6 +5,7 @@ import Services from './Services/Services'
 import Slide from 'react-reveal/Slide'
 import Fade from 'react-reveal/Fade'
 import { Link } from 'react-router-dom' 
+import { Facebook, Instagram, LinkedIn } from '@material-ui/icons'
 
 function Home() { 
 
@@ -93,6 +94,7 @@ function Home() {
                 <p className="contact__info__address"><i className="fa fa-map-marker" aria-hidden="true"></i>&nbsp;ADDRESS : C-4 Behind MA Plazaz , New Delhi</p>
                 <p className="contact__info__telephone"><i className="fa fa-phone" aria-hidden="true"></i>&nbsp;PHONE: +91 8299729830</p>
                 <p className="contact__info__whatsapp"><i className="fa fa-whatsapp"></i>&nbsp;WHATSAPP: +91 8299729830</p>
+                
               </div>
             </div>
             <div className="home__useful__link col-lg-8 col-md-8 col-sm-12 col-xs-12">
@@ -115,9 +117,14 @@ function Home() {
                   <li><i className="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="/practice-exam">Practice help</Link></li>
                   <li><i className="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="/course-help">Course help</Link></li>
                 </div>
-                <div className="home__footer__careers col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <p>CAREERS</p>
+                <div className="home__footer__careers col-lg-4 col-md-4 col-sm-4 col-xs-12"> 
                   <li><i className="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="/careers">Explore opportunities</Link></li>
+                  <li><i className="fa fa-angle-right" aria-hidden="true"></i>&nbsp;<Link to="/support">Support</Link></li>
+                  <ul className="nav navbar-nav">
+                    <li><a href="https://www.linkedin.com/company/71097398/admin/" target="_blank"><LinkedIn fontSize='large' /></a></li> 
+                    <li><a href="https://www.facebook.com/profeseducation" target="_blank"><Facebook fontSize='large' /></a></li>
+                    <li><a href="https://www.instagram.com/invites/contact/?i=d4i696sm61vp&utm_content=i8mwrkz" target="_blank"><Instagram fontSize='large' /></a></li>
+                  </ul>
                 </div>
 
               </div>

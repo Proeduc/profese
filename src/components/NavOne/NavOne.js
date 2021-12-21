@@ -1,19 +1,28 @@
 import React, { useState } from 'react'
 import './NavOne.css'
-import { Link, NavLink } from 'react-router-dom'
-import NavTow from '../NavTwo/NavTwo'
+import { NavLink } from 'react-router-dom' 
+import logo from './logo.png'
 
 export default function NavOne() { 
-
+   
     return (
         <>
         <nav className="navbar navbar-inverse">
             <div className="container-fluid">
                 <div className="navbar-header">
-                    <ul className="nav navbar-nav">
-                        <li><a href="https://www.linkedin.com/company/71097398/admin/" target="_blank"><i className="fa fa-linkedin"></i></a></li> 
-                        <li><a href="https://www.facebook.com/profeseducation" target="_blank"><i className="fa fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.instagram.com/invites/contact/?i=d4i696sm61vp&utm_content=i8mwrkz" target="_blank"><i className="fa fa-instagram"></i></a></li>
+                    <ul className="logo nav navbar-nav">
+                        <li>
+                            <img
+                            style={{
+                                height: '65px',
+                                width: '150px',
+                                objectFit: 'contain',
+                                marginTop: '-5px',
+                            }}
+                            src={logo}
+                            alt="logo"
+                            />
+                        </li>
                     </ul>
                 </div>
 
@@ -24,12 +33,29 @@ export default function NavOne() {
                     <li><NavLink to="/reviews">REVIEWS</NavLink></li>
                     <li><NavLink to="/admin">ADMIN</NavLink></li>
                 </ul>
-                <ul className="nav navbar-nav navbar-right">
-                    <li><NavLink to="#"><i className="fa fa-whatsapp" style={{color:"white"}}></i> +91 8299729830</NavLink></li>
+                <ul className="nav navbar-nav navbar-right"> 
+                    <li>  
+                        <NavLink to="#" className="dropdown-toggle" type="button" data-toggle="dropdown">Services <span className="caret"></span></NavLink>
+                        <ul className="dropdown-menu services__dropdown">
+                            <li><NavLink to="/assignment-help">Assignment Help</NavLink></li>
+                            <li><NavLink to="/live-sessions">One-on-One Live sessions</NavLink></li>
+                            <li><NavLink to="/course-help">Course Help</NavLink></li>
+                            <li><NavLink to="/practice-exam">Practice Exam</NavLink></li>
+                        </ul> 
+                    </li>
+                    {/* show profile link only when user is logged in */}
+                    <li>
+                        <NavLink to="/profile">Profile</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/ask-tutor">Ask a Tutor</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/login">Login</NavLink>
+                    </li> 
                 </ul>
             </div>
-        </nav> 
-        <NavTow />
+        </nav>  
         </>
     )
 }
