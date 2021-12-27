@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
  .discussion_tips{
      background-color: #153280;
      border-radius: 10px ;
@@ -14,6 +15,8 @@
  }
  .discussion__que__title{
      font-weight: bold;
+     color: #153280;
+     font-family: 'Acme', sans-serif;
  }
  .discussion__que__meta, .discussion__que__upper{
      margin-top: 20px;
