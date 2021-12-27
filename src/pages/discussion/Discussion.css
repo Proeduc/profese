@@ -15,7 +15,7 @@
  .discussion__que__title{
      font-weight: bold;
  }
- .discussion__que__meta{
+ .discussion__que__meta, .discussion__que__upper{
      margin-top: 20px;
      display: flex;
      justify-content: space-around;
