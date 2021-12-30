@@ -71,9 +71,12 @@ import "./Discussion.css"
                          <div className="discussion__ques">
                              <div className="discussion__que">
                                  <div className='discussion__que__upper'>
-                                    <h4 className="discussion__que__title">How do you use electricity to make something cold?</h4>
-                                    <div className="discussion__que__likes text-success">5 <i className="fa fa-check-circle-o"></i></div>
-                                    <div className="discussion__que__dislikes text-danger">2 <i className="fa fa-close"></i></div>
+                                    <div className="discussion__like__dislike col-xs-2">
+                                        <div  align="center"><i className="fa fa-caret-up" aria-hidden="true" style={{fontWeight:"bold", fontSize:"24px"}}></i></div>
+                                        <div className='discussion__like__count' align="center" style={{fontWeight:"bold"}}>5</div>
+                                        <div align="center"><i className='fa fa-caret-down' aria-hidden="true" style={{fontWeight:"bold", fontSize:"24px"}}></i></div>
+                                    </div>
+                                    <div className="discussion__que__title col-xs-10"><h4>How do you use electricity to make something cold?</h4></div> 
                                  </div>
                                  <div className="discussion__que__meta">
                                     <div className="discussion__que__anscnt text-primary"><p><i className="fa fa-edit " ></i> No answers yet</p></div>
@@ -83,10 +86,14 @@ import "./Discussion.css"
                              </div>
 
                              <div className="discussion__que">
+                                 {/* add like dislike section in answer not in ques */}
                                 <div className='discussion__que__upper'>
-                                    <h4 className="discussion__que__title">How do you use electricity to make something cold?</h4>
-                                    <div className="discussion__que__likes text-success">5 <i className="fa fa-check-circle-o"></i></div>
-                                    <div className="discussion__que__dislikes text-danger">2 <i className="fa fa-close"></i></div>
+                                    <div className="discussion__like__dislike col-xs-2">
+                                        <div align="center"><i className="fa fa-caret-up" aria-hidden="true" style={{fontWeight:"bold", fontSize:"24px"}}></i></div>
+                                        <div className='discussion__like__count' align="center" style={{fontWeight:"bold"}}>5</div>
+                                        <div align="center"><i className='fa fa-caret-down' aria-hidden="true" style={{fontWeight:"bold", fontSize:"24px"}}></i></div>
+                                    </div>
+                                    <div className="discussion__que__title col-xs-10"><h4>How do you use electricity to make something cold?</h4></div> 
                                 </div>
                                 <img 
                                     className="img-responsive img-rounded"
@@ -102,9 +109,12 @@ import "./Discussion.css"
 
                              <div className="discussion__que">
                                 <div className='discussion__que__upper'>
-                                    <h4 className="discussion__que__title">How do you use electricity to make something cold?</h4>
-                                    <div className="discussion__que__likes text-success">5 <i className="fa fa-check-circle-o"></i></div>
-                                    <div className="discussion__que__dislikes text-danger">2 <i className="fa fa-close"></i></div>
+                                    <div className="discussion__like__dislike col-xs-2">
+                                        <div align="center"><i className="fa fa-caret-up" aria-hidden="true" style={{fontWeight:"bold", fontSize:"24px"}}></i></div>
+                                        <div className='discussion__like__count' align="center" style={{fontWeight:"bold"}}>5</div>
+                                        <div align="center"><i className='fa fa-caret-down' aria-hidden="true" style={{fontWeight:"bold", fontSize:"24px"}}></i></div>
+                                    </div>
+                                    <div className="discussion__que__title col-xs-10"><h4>How do you use electricity to make something cold?</h4></div> 
                                 </div>
                                  <div className="discussion__que__meta">
                                      <div className="discussion__que__anscnt text-primary"><p><i className="fa fa-edit " ></i> No answers yet</p></div>

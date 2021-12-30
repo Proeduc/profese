@@ -52,7 +52,7 @@ function Blog() {
                                     src="https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?cs=srgb&dl=pexels-jaime-reimer-2662116.jpg&fm=jpg" 
                                     placeholder="blog banner">
                                 </img>
-                                <h4>Blog Title here Blog Title here Blog Title here Blog Title here Blog Title here</h4>
+                                <h4 className='featured__post__title'>What is Atomic theory?</h4>
                                 <div className="blog__continue">
                                     <button className="btn btn-default" onClick={() => ShowSingleBlog("Blog title from backend here")}>Continue </button>
                                 </div>
@@ -62,7 +62,7 @@ function Blog() {
                                     src="https://images.pexels.com/photos/4004374/pexels-photo-4004374.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
                                     placeholder="blog banner">
                                 </img>
-                                <h4>Blog Title here Blog Title here Blog Title here Blog Title here Blog Title here</h4>
+                                <h4 className='featured__post__title'>What is mass communication?</h4>
                                 <div className="blog__continue">
                                     <button className="btn btn-default" onClick={() => ShowSingleBlog("Blog title from backend here")}>Continue </button>
                                 </div>
@@ -72,7 +72,7 @@ function Blog() {
                                     src="https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?cs=srgb&dl=pexels-jaime-reimer-2662116.jpg&fm=jpg" 
                                     placeholder="blog banner">
                                 </img>
-                                <h4>Blog Title here Blog Title here Blog Title here Blog Title here Blog Title here</h4>
+                                <h4 className='featured__post__title'>What is mass communication?</h4>
                                 <div className="blog__continue">
                                     <button className="btn btn-default" onClick={() => ShowSingleBlog("Blog title from backend here")}>Continue </button>
                                 </div>
@@ -82,7 +82,7 @@ function Blog() {
                                     src="https://images.pexels.com/photos/4842544/pexels-photo-4842544.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
                                     placeholder="blog banner">
                                 </img>
-                                <h4>Blog Title here  Blog Title here Blog Title here Blog Title here Blog Title here</h4>
+                                <h4 className='featured__post__title'>Blog Title here</h4>
                                 <div className="blog__continue">
                                     <button className="btn btn-default" onClick={() => ShowSingleBlog("Blog title from backend here")}>Continue </button>
                                 </div>

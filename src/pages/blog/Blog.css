@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 .blog{
     padding: 0;
 }
@@ -218,7 +219,10 @@
 .blog__single__leave__comment{
     margin-bottom: 30px;
 }
-
+.featured__post__title{
+    text-shadow: 2px 1px #979797;
+    font-family: 'Acme', sans-serif;
+}
 /* responsive styles */
 @media(max-width:650px){
     .blog__row__blog img{
