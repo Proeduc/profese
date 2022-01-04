@@ -92,7 +92,16 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #102561; 
 }
-
+.profile__shortcut__buttons{
+  float: right;
+}
+.profile__shortcut__btn{
+  float: right;
+  border-radius: 50%;
+  margin: 2px;
+  background-color: #153280;
+  
+}
 
 /* modal style */
 

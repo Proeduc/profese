@@ -7,7 +7,7 @@ export default function NavOne() {
    
     return (
         <>
-        <nav className="navbar navbar-inverse">
+        <nav className="navbar ">
             <div className="container-fluid">
                 <div className="navbar-header">
                     <ul className="logo nav navbar-nav">

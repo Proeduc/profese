@@ -1,5 +1,5 @@
  import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
  import './Profile.css'
 import UserAns from './UserAns'
 import UserBasics from './UserBasics'
@@ -12,6 +12,7 @@ import UserQues from './UserQues'
    const [ShowEdu, setShowEdu] = useState(false)
    const [ShowQues, setShowQues] = useState(false)
    const [IsModalOpen, setIsModalOpen] = useState(false)
+   const history = useHistory()
 
    const changeBasics = () => {
     setShowBasics(true)
@@ -69,10 +70,15 @@ import UserQues from './UserQues'
 
          {/* profile data */}
           <div className="col-sm-8 profile__data">  
-              {/* modal content */} 
-              <button type="button" className="btn btn-info" data-toggle="modal" data-target="#profileModal" style={{float:"right", borderRadius:"50%"}}><i className="fa fa-edit" aria-hidden="true"></i></button>
-
+            <div className='profile__shortcut__buttons'>
+              <button title='Edit profile' className="btn btn-info profile__shortcut__btn" data-toggle="modal" data-target="#profileModal"><i className="fa fa-edit"></i></button>
+              <button title='Cart' onClick={() => {history.push('/cart')}} className="btn btn-info profile__shortcut__btn"><i className='fa fa-shopping-cart'></i></button>
+              <button title='Notifications' onClick={() => {history.push('/')}} className="btn btn-info profile__shortcut__btn"><i className='fa fa-bell'></i></button>
+              <button title='My Purchases' onClick={() => {history.push('/')}} className="btn btn-info profile__shortcut__btn"><i className='fa fa-list-alt'></i></button>
+            </div>
+              
               {/* <!-- Modal --> */}
+              {/* modal content */} 
               <div id="profileModal" className="modal fade" role="dialog">
                 <div className="modal-dialog">
                   {/* <!-- Modal content--> */}

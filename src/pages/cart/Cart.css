@@ -1,0 +1,60 @@
+.cart__header{
+    padding: 0;
+    height: 100px;
+    object-fit: contain;
+    background: linear-gradient(60deg,white, #5b6b96, white )
+}
+
+.cart__header__pill{
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.cart__summary, .cart__items{ 
+    padding: 10px;
+}
+
+.cart__summary__contains, .cart__item__contain{
+    border: 1px solid rgb(196, 196, 196);
+    padding: 10px;
+}
+
+.cart__summary__title{
+    margin-bottom: 20px;
+    color: rgb(114, 114, 114);
+}
+
+.cart__item__header{
+    display: flex;
+    justify-content: space-around;
+    overflow-x: scroll;
+    padding: 5px; 
+}
+
+.cart__item__header::-webkit-scrollbar {
+    display: none;
+}
+
+.cart__item__header .btn{
+    color: white;
+}
+
+.cart__item__header .btn1{
+    background-color: tomato;
+}
+
+.cart__item__header .btn2{
+    background-color: teal;
+}
+
+.cart__item__header .btn3{
+    background-color: yellowgreen;
+}
+
+.cart__item__header .btn4{
+    background-color: #5b6b96;
+}
+
+.cart__item__list{
+    padding: 10px;
+}
