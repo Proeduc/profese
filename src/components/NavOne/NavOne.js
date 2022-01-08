@@ -35,7 +35,7 @@ export default function NavOne() {
                 </ul>
                 <ul className="nav navbar-nav navbar-right"> 
                     <li>  
-                        <NavLink to="#" className="dropdown-toggle" type="button" data-toggle="dropdown">Services <span className="caret"></span></NavLink>
+                        <NavLink to="#" className="dropdown-toggle" type="button" data-toggle="dropdown">SERVICES <span className="caret"></span></NavLink>
                         <ul className="dropdown-menu services__dropdown">
                             <li><NavLink to="/assignment-help">Assignment Help</NavLink></li>
                             <li><NavLink to="/live-sessions">One-on-One Live sessions</NavLink></li>
@@ -45,13 +45,13 @@ export default function NavOne() {
                     </li>
                     {/* show profile link only when user is logged in */}
                     <li>
-                        <NavLink to="/profile">Profile</NavLink>
+                        <NavLink to="/profile">PROFILE</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/ask-tutor">Ask a Tutor</NavLink>
+                        <NavLink to="/ask-tutor">ASK A TUTOR</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/login">Login</NavLink>
+                        <NavLink to="/login">LOGIN</NavLink>
                     </li> 
                 </ul>
             </div>
