@@ -84,21 +84,30 @@ function Cart() {
                                 <td>5</td>
                             </tr>
                             <tr>
-                                <td><b>Total Price</b></td>
+                                <td>Total Price</td>
                                 {/*value from backend */}
-                                <td><b><i className='fa fa-rupee'></i>1000</b></td>
+                                <td><i className='fa fa-rupee'></i>1000</td>
                             </tr> 
                             <tr>
-                                <td><b>Tax: </b></td>
+                                <td>Tax: </td>
                                 {/* 18% of total amount */}
-                                <td><b>+<i className='fa fa-rupee'></i>100</b></td>
+                                <td>+ <i className='fa fa-rupee'></i>100</td>
                             </tr>
+                            <tr>
+                                <td>Discount: </td>
+                                {/* Not decided yet */}
+                                <td>- <i className='fa fa-rupee'></i>10</td>
+                            </tr>
+                            <tr>
+                                <td><b>GRAND TOTAL</b></td>
+                                {/*value from backend */}
+                                <td><b><i className='fa fa-rupee'></i>1090</b></td>
+                            </tr> 
                         </tbody>
                     </table>
                         
                     {/*value from backend */}
-                    <button className='btn btn-block btn-primary'>Pay <i className='fa fa-rupee'></i>1100**</button>
-                    <p>**GST included</p> 
+                    <button className='btn btn-block btn-primary'>Pay <i className='fa fa-rupee'></i>1090</button> 
                 </div>
             </div>
         </div>
