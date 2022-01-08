@@ -72,6 +72,17 @@ function Course_help() {
                         <button type="submit" className="btn btn-primary">Submit</button> 
                     </div>
                 </form> 
+
+
+                <div className='services__tips col-sm-2'>
+                    <h3><strong>Tips <i className="fa fa-lightbulb-o" aria-hidden="true"></i></strong></h3>
+                    <hr style={{borderColor:"white"}}/>
+                    <div className="panel ">
+                       <div className="panel-body" style={{color:"#4d67ad", fontWeight:"bold"}}>Make sure your questions are concise</div>
+                       <div className="panel-body" style={{color:"#4d67ad", fontWeight:"bold"}}>For multiple pages upload in PDF format.</div>
+                       <div className="panel-body" style={{color:"#4d67ad", fontWeight:"bold"}}>Use formal language and double check spellings</div>
+                    </div>
+                </div>
             </div>
         </>
     )
