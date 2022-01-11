@@ -1,0 +1,72 @@
+.purchases__header{
+    padding: 0;
+    height: 100px;
+    object-fit: contain;
+    background: linear-gradient(60deg,white, #5b6b96, white )
+}
+
+.purchases__header__pill{
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.purchases__contain{
+    padding: 10px;
+}
+
+.purchases__cards{
+    padding: 10px;
+}
+.purchases__cards .purchases__search{
+    width: 60%;
+}
+
+/* assignment purchases */
+.assignment__purchases{
+    padding: 15px;
+}
+.assignment__purchases__title{
+    font-weight: bold;
+    color: rgb(124, 124, 124);
+}
+.assignment__purchases__card{ 
+    margin-bottom: 10px;
+}
+.assignment__purchases__card .card{
+    border: 1px solid darkgrey;
+    padding: 10px;
+}
+
+
+/* course purchases */
+.course__purchases{
+    padding: 15px;
+}
+.course__purchases__title{
+    font-weight: bold;
+    color: rgb(124, 124, 124);
+}
+.course__purchases__card{ 
+    margin-bottom: 10px;
+}
+.course__purchases__card .card{
+    border: 1px solid darkgrey;
+    padding: 10px;
+}
+
+
+/* exam purchases */
+.exam__purchases{
+    padding: 15px;
+}
+.exam__purchases__title{
+    font-weight: bold;
+    color: rgb(124, 124, 124);
+}
+.exam__purchases__card{ 
+    margin-bottom: 10px;
+}
+.exam__purchases__card .card{
+    border: 1px solid darkgrey;
+    padding: 10px;
+}

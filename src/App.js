@@ -22,6 +22,7 @@ import Support from './pages/support/Support'
 import AskTutor from './pages/Ask_a_tutor/AskTutor'
 import Admin from './pages/Admin/Admin'
 import Cart from './pages/cart/Cart'
+import Purchases from './pages/purchases/Purchases'
 
 function App() { 
   const [avatarUrl, setAvatarUrl] = useState('')
@@ -96,6 +97,9 @@ function App() {
         </Route>
         <Route exact path="/cart">
           <Cart />
+        </Route>
+        <Route exact path="/purchases">
+          <Purchases />
         </Route>
       </Switch>
     </div>

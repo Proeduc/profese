@@ -40,7 +40,7 @@ function Cart() {
     return (
         <div className='container-fluid '>
             <div className='cart__header container-fluid'>
-                <h3 className='cart__header__pill btn btn-primary'>My Cart</h3>
+                <h3 className='cart__header__pill btn btn-primary'>MY CART</h3>
             </div>
 
             <div className='cart__items col-sm-9'>
