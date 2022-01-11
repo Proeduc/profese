@@ -15,6 +15,16 @@
    border: 5px solid #153280;
  }
 
+ .profile__shortcut__btn .badge{
+  position: absolute;
+  top: -6px;
+  right: 100px;
+  /* padding: 5px 5px; */
+  border-radius: 50%;
+  background: red;
+  color: white;
+ }
+
 
  /* user basics style */
  .user__basics__container{ 

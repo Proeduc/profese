@@ -110,3 +110,11 @@
     box-shadow: 4px 4px 4px rgb(214, 214, 214); 
     border: 1px solid rgb(214, 214, 214);
 } 
+
+/* add notification style */
+.add__notification__form{
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 4px 4px 4px rgb(214, 214, 214); 
+    border: 1px solid rgb(214, 214, 214);
+}

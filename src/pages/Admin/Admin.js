@@ -12,7 +12,8 @@ import TutorReq from './TutorReq'
 import TutorApproved from './TutorApproved'
 import Dashboard from './Dashboard'
 import User from './User'
-import { DashboardOutlined, AssignmentIndOutlined, SubjectOutlined, VideoCallOutlined, BookOutlined, WorkOutline, PeopleOutline, QueryBuilderOutlined, AssignmentTurnedInOutlined, GroupAddOutlined, GroupOutlined} from '@material-ui/icons' 
+import Notification from './Notification'
+import { DashboardOutlined, AssignmentIndOutlined, SubjectOutlined, VideoCallOutlined, BookOutlined, WorkOutline, PeopleOutline, QueryBuilderOutlined, AssignmentTurnedInOutlined, GroupAddOutlined, GroupOutlined, NotificationImportant} from '@material-ui/icons' 
 
 function Admin() {
     const [Dashb, setDashboard] = useState(false)
@@ -26,6 +27,7 @@ function Admin() {
     const [Trequest, setTrequest] = useState(false)
     const [TApproved, setTApproved] = useState(false)
     const [Users, setUsers] = useState(false)
+    const [Notifications, setNotification] = useState(false)
 
 
     const changePage = (str) => {
@@ -41,6 +43,7 @@ function Admin() {
             setTrequest(false)
             setTApproved(false)
             setUsers(false)
+            setNotification(false)
         }
         else if(str === "Assignments"){
             setDashboard(false)
@@ -54,6 +57,7 @@ function Admin() {
             setTrequest(false)
             setTApproved(false)
             setUsers(false)
+            setNotification(false)
         }
         else if(str === "Course Help"){
             setDashboard(false)
@@ -67,6 +71,7 @@ function Admin() {
             setTrequest(false)
             setTApproved(false)
             setUsers(false)
+            setNotification(false)
         }
         else if(str === "Live Sessions"){
             setDashboard(false)
@@ -80,6 +85,7 @@ function Admin() {
             setTrequest(false)
             setTApproved(false)
             setUsers(false)
+            setNotification(false)
         }
         else if(str === "Add Blog"){
             setDashboard(false)
@@ -93,6 +99,7 @@ function Admin() {
             setTrequest(false)
             setTApproved(false)
             setUsers(false)
+            setNotification(false)
         }
         else if(str === "Add Career"){
             setDashboard(false)
@@ -106,6 +113,7 @@ function Admin() {
             setTrequest(false)
             setTApproved(false)
             setUsers(false)
+            setNotification(false)
         }
         else if(str === "Queries"){
             setDashboard(false)
@@ -119,6 +127,7 @@ function Admin() {
             setTrequest(false)
             setTApproved(false)
             setUsers(false)
+            setNotification(false)
         } 
         else if(str === "Tutor Requests"){
             setDashboard(false)
@@ -132,6 +141,7 @@ function Admin() {
             setTrequest(true)
             setTApproved(false)
             setUsers(false)
+            setNotification(false)
         }
         else if(str === "Approved Tutors"){
             setDashboard(false)
@@ -145,6 +155,7 @@ function Admin() {
             setTrequest(false)
             setTApproved(true)
             setUsers(false)
+            setNotification(false)
         }
         else if(str === "Practice Exam"){
             setDashboard(false)
@@ -158,6 +169,21 @@ function Admin() {
             setTrequest(false)
             setTApproved(false)
             setUsers(false)
+            setNotification(false)
+        }
+        else if(str === 'Notification'){
+            setDashboard(false)
+            setAssignment(false)
+            setCourse(false)
+            setPractice(false)
+            setSessions(false)
+            setAddBlog(false)
+            setAddCareer(false)
+            setQueries(false)
+            setTrequest(false)
+            setTApproved(false)
+            setUsers(false)
+            setNotification(true)
         }
         else{
             setDashboard(false)
@@ -171,6 +197,7 @@ function Admin() {
             setTrequest(false)
             setTApproved(false)
             setUsers(true)
+            setNotification(false)
         }
     }
     return (
@@ -190,6 +217,7 @@ function Admin() {
                         <Link to="#" onClick={() => changePage('User')} className="list-group-item sidebar_item"><PeopleOutline/> Customers</Link>
                         <Link to="#" onClick={() => changePage('Tutor Requests')} className="list-group-item sidebar_item"><GroupAddOutlined/> Tutor Requests</Link>
                         <Link to="#" onClick={() => changePage('Approved Tutors')} className="list-group-item sidebar_item"><GroupOutlined/> Approved Tutors</Link> 
+                        <Link to="#" onClick={() => changePage('Notification')} className="list-group-item sidebar_item"><NotificationImportant /> Notification</Link> 
                     </div> 
                 </div>
                 <div className="admin__panel__content col-sm-10">
@@ -224,7 +252,11 @@ function Admin() {
                                                                 (Users ? 
                                                                     <User />
                                                                     :
-                                                                    <Dashboard />
+                                                                    (Notifications ? 
+                                                                        <Notification />
+                                                                        :
+                                                                        <Dashboard />
+                                                                    )
                                                                 )
                                                             )
                                                         )

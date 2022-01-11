@@ -73,7 +73,7 @@ import UserQues from './UserQues'
             <div className='profile__shortcut__buttons'>
               <button title='Edit profile' className="btn btn-info profile__shortcut__btn" data-toggle="modal" data-target="#profileModal"><i className="fa fa-edit"></i></button>
               <button title='Cart' onClick={() => {history.push('/cart')}} className="btn btn-info profile__shortcut__btn"><i className='fa fa-shopping-cart'></i></button>
-              <button title='Notifications' onClick={() => {history.push('/')}} className="btn btn-info profile__shortcut__btn"><i className='fa fa-bell'></i></button>
+              <button title='Notifications' onClick={() => {history.push('/notification')}} className="btn btn-info profile__shortcut__btn"><i className='fa fa-bell'></i><span className='badge'>3</span></button>
               <button title='My Purchases' onClick={() => {history.push('/purchases')}} className="btn btn-info profile__shortcut__btn"><i className='fa fa-list-alt'></i></button>
             </div>
               

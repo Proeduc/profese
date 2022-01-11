@@ -1,0 +1,30 @@
+.notifcation__header{
+    display: flex;
+    align-items: center; 
+}
+.notifcation__header button{
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+}
+.notification{
+    box-shadow: 2px 4px 4px gray;
+    border: 1px solid gray;
+    margin: 10px;
+    border-radius: 5px;
+    padding-top: 10px;
+}
+.notification__time{
+    color: gray;
+}
+.notification__title{
+    font-weight: bold;
+    font-style: oblique;
+}
+.notification__body{
+    text-align: justify; 
+}
+
+.notifications__list{
+    border: 1px solid black;
+}
