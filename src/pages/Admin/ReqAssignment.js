@@ -30,6 +30,7 @@ function ReqAssignment() {
                                 <th>Image</th>
                                 <th>Download</th>
                                 <th>Status</th>
+                                <th>Solution</th>
                             </tr>
                         </thead>
 
@@ -47,6 +48,7 @@ function ReqAssignment() {
                                 {/* i done this with states for exmple but in main code you have to change the status in database so apply same logic but with db value and remove this state value */}
                                 {/* and do the same for course help practice exam and live session as well.. */}
                                 <td>{Status} {Status === 'Pending' ? <i className="fa fa-edit" onClick={ChangeStatus}></i> : ''}</td>
+                                <td>Added</td>
                             </tr>
 
 
@@ -60,11 +62,61 @@ function ReqAssignment() {
                                 <td><img className="img-responsive" src="https://media.istockphoto.com/photos/the-student-life-picture-id862661268?b=1&k=20&m=862661268&s=170667a&w=0&h=SQ2yAt1TLD6zg_AiAbZdmApZ8N0CmfGRWE_c52LBd6w=" alt="assignment image" width="40px" /></td>
                                 <td><Link to="#">Click here</Link></td>
                                 <td>{Status} {Status === 'Pending' ? <i className="fa fa-edit" onClick={ChangeStatus}></i> : ''}</td>
+                                <td><button className='btn btn-primary' data-toggle="modal" data-target="#solutionModal">Add Solution</button></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
+
+
+
+
+            {/* <!-- Modal --> */} 
+              <div id="solutionModal" className="modal fade" role="dialog">
+                <div className="modal-dialog">
+                  {/* <!-- Modal content--> */}
+                  <div className="modal-content">
+
+                    <div className="modal-header">
+                      <button type="button" className="close" data-dismiss="modal">&times;</button>
+                      <h4 className="modal-title">Add solution for this assignment</h4>
+                    </div>
+
+                    <div className="modal-body">
+                        <div className="form-group">
+                          <label htmlFor="name">Price:</label>
+                          <input 
+                              type="number"
+                              name="price"   
+                              className="form-control" 
+                              placeholder="Add total price for this assignment" required/>
+                        </div>  
+
+                        <div className="form-group">
+                          <label htmlFor="remarks">Remarks</label>
+                          <input 
+                              type="text" 
+                              name="institution"  
+                              className="form-control" 
+                              placeholder="Add remarks if any, OPTIONAL"/>
+                        </div>
+
+                        <div className='form-group'>
+                            <label htmlFor='solutionfile'>Solution File(PDF):</label>
+                            <input
+                              type="file"
+                              name='solutionfile'
+                              className='form-control' required/>
+                        </div>
+
+
+                        <button className="btn btn-primary">Post Solution</button>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+            
         </>
     )
 }
