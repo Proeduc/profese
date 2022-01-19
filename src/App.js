@@ -39,11 +39,8 @@ function App() {
  
 
   return (
-    <div className="App">
-      {
-        width > 650 ? 
-        <NavOne /> :  <Responsive_nav />
-      }
+    <div className="App"> 
+      <NavOne /> 
       <Switch> 
         <Route exact path="/login">
           <Login />
