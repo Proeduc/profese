@@ -1,8 +1,7 @@
  
  import { useEffect, useState } from 'react'
 import './App.css'
-import NavOne from './components/NavOne/NavOne' 
-import Responsive_nav from './components/Responsive_nav/Responsive_nav'
+import NavOne from './components/NavOne/NavOne'  
 import Home from './components/Home/Home'
 import Signup from './pages/signup/Signup'
 import Login from './pages/login/Login'
@@ -25,17 +24,7 @@ import Cart from './pages/cart/Cart'
 import Purchases from './pages/purchases/Purchases'
 import Notification from './pages/notification/Notification'
 
-function App() { 
-  const [avatarUrl, setAvatarUrl] = useState('')
- 
-  const [width, setwidth] = useState(window.innerWidth)
-
-  // for handling responsive navbar
-  const handleWidth = () =>{
-    setwidth(window.innerWidth)
-    // console.log(width)
-  }
-  window.addEventListener('resize', handleWidth)
+function App() {  
  
 
   return (
