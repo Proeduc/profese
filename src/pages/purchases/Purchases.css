@@ -70,3 +70,20 @@
     border: 1px solid darkgrey;
     padding: 10px;
 }
+
+
+/* session purchases */
+.session__purchases{
+    padding: 15px;
+}
+.session__purchases__title{
+    font-weight: bold;
+    color: rgb(124, 124, 124);
+}
+.session__purchases__card{ 
+    margin-bottom: 10px;
+}
+.session__purchases__card .card{
+    border: 1px solid darkgrey;
+    padding: 10px;
+}

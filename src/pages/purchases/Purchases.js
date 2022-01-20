@@ -4,27 +4,38 @@ import AssignmentPurchase from './AssignmentPurchase'
 import CoursePurchase from './CoursePurchase'
 import ExamPurchase from './ExamPurchase'
 import './Purchases.css'
+import SessionPurchases from './SessionPurchases'
 
 function Purchases() {
     const [assignment, setassignment] = useState(false)
     const [course, setcourse] = useState(false)
     const [exam, setexam] = useState(false)
+    const [session, setsession] = useState(false)
 
     const changeFilter = (filter) => {
          if(filter === 'Assignment Help'){
              setassignment(true)
              setcourse(false)
              setexam(false)
+             setsession(false)
          }
          else if(filter === 'Course help'){
             setassignment(false)
             setcourse(true)
             setexam(false)
+            setsession(false)
+         }
+         else if(filter === "Exam prep"){
+            setassignment(false)
+            setcourse(false)
+            setexam(true)
+            setsession(false)
          }
          else{
              setassignment(false)
              setcourse(false)
-             setexam(true)
+             setexam(false)
+             setsession(true)
          }
     }
 
@@ -43,6 +54,7 @@ function Purchases() {
                             <Link to="#" onClick={() => changeFilter('Assignment Help')} className="list-group-item">Assignment help</Link> 
                             <Link to="#" onClick={() => changeFilter('Course help')} className="list-group-item">Course help</Link> 
                             <Link to="#" onClick={() => changeFilter('Exam prep')} className="list-group-item">Exam prep</Link>
+                            <Link to="#" onClick={() => changeFilter('Live session')} className="list-group-item">Live session</Link>
                         </div> 
                     </div>
 
@@ -60,7 +72,7 @@ function Purchases() {
 
 
                         {
-                            course ? <CoursePurchase /> : exam ? <ExamPurchase /> : <AssignmentPurchase />
+                            course ? <CoursePurchase /> : exam ? <ExamPurchase /> : session ? <SessionPurchases/> : <AssignmentPurchase />
                         }
                     </div>
                 </div>

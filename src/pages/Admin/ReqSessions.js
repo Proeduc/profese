@@ -104,6 +104,14 @@ function ReqSessions() {
                               placeholder='Add duration' />
                         </div>
 
+                        <div className='form-group'>
+                            <label htmlFor='timeanddate'>Time and Date</label>
+                            <input
+                              type='datetime-local'
+                              name='timeanddate'
+                              className='form-control'
+                              placeholder='Add duration' />
+                        </div>
                         <button className="btn btn-primary">Post Solution</button>
                     </div> 
                   </div>

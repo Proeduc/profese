@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function ExamPurchase() {
     // temp count for showing the design
-    const [purchaseCount, setpurchaseCount] = useState(0)
+    const [purchaseCount, setpurchaseCount] = useState(1)
     return ( 
         <div className="exam__purchases">
             <h3 className='exam__purchases__title'>Practice Exam Purchases</h3>
@@ -24,7 +24,8 @@ function ExamPurchase() {
                                 <h5 className="card-title"><b>Practice Exam Topic</b></h5>
                                 <p className="card-text"><i className='fa fa-rupee'></i> 500 <span className="text-success">PAID</span></p>
                                 <Link to="/reviews">Rate Us</Link><br/>
-                                <Link to="#" className="btn btn-primary">View Questions</Link>
+                                <Link to="#" className="btn btn-primary" style={{marginBottom:"10px"}}>View Questions</Link> 
+                                <Link to="#" className="btn btn-primary">View Solutions</Link>
                             </div> 
                         </div>
                     </div>
